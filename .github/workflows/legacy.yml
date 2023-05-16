@@ -54,6 +54,6 @@ jobs:
       - name: Run RuboCop
         run: bundle exec rubocop -DES
       - name: Run RuboCop for Ruby 1.8
-        run: bundle exec rubocop -DES --config ${{ github.workspace }}/config/ruby1_8.yml
+        run: bundle exec rubocop -DES
       - name: Run tests
         run: bundle exec rake test
