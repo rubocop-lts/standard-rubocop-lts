@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.description = "Extended Standard Ruby Configs for Finely Aged Rubies; Compatible with rubocop-lts"
   spec.homepage = "https://rubocop-lts.gitlab.io/"
   spec.license = "MIT"
-  spec.required_ruby_version = ">= 2.6.0"
+  spec.required_ruby_version = ">= 2.7.0"
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "#{spec.homepage}/tree/v#{spec.version}"
@@ -53,7 +53,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency("rubocop-md", "~> 1.2")                     # >= 2.6.0
   spec.add_development_dependency("rubocop-packaging", "~> 0.5")              # >= 2.6.0
   spec.add_development_dependency("rubocop-rake", "~> 0.6")                   # >= 2.5.0
-  spec.add_development_dependency("rubocop-rspec", "~> 2.22")     # >= 2.7.0
+  spec.add_development_dependency("rubocop-rspec", "~> 2.22")                 # >= 2.7.0
   spec.add_development_dependency("rubocop-thread_safety", "~> 0.5")          # >= 2.5.0
   spec.add_development_dependency "standard-rubocop-lts", ["~> 1.0", "< 2"]   # >= 2.6.0
 end

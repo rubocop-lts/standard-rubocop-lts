@@ -80,8 +80,6 @@ GEM
       rubocop (~> 1.33)
       rubocop-capybara (~> 2.17)
       rubocop-factory_bot (~> 2.22)
-    rubocop-shopify (2.13.0)
-      rubocop (~> 1.50)
     rubocop-thread_safety (0.5.1)
       rubocop (>= 0.90.0)
     ruby-progressbar (1.13.0)
@@ -124,7 +122,6 @@ DEPENDENCIES
   rubocop-packaging (~> 0.5)
   rubocop-rake (~> 0.6)
   rubocop-rspec (~> 2.22)
-  rubocop-shopify (~> 2.13)
   rubocop-thread_safety (~> 0.5)
   simplecov (~> 0.22)
   simplecov-cobertura
