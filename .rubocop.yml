@@ -4,5 +4,9 @@ inherit_from:
   - config/ruby-1.8.yml
 
 require:
+  - rubocop-md
   - rubocop-rake
   - rubocop-rspec
+  - rubocop-thread_safety
+  # RuboCop Gradual can be used in "Require mode", which is a way to replace rubocop with rubocop-gradual:
+  - rubocop/gradual/patch
