@@ -1,13 +1,8 @@
-AllCops:
-  TargetRubyVersion: 2.6
+# NOTE: Would make sense to track spec.required_ruby_version in the gemspec,
+#       However, it is more valuable to dog-food every config this gem provides by loading config/ruby-1.8.yml
+inherit_from:
+  - config/ruby-1.8.yml
 
-Style/StringLiterals:
-  Enabled: true
-  EnforcedStyle: double_quotes
-
-Style/StringLiteralsInInterpolation:
-  Enabled: true
-  EnforcedStyle: double_quotes
-
-Layout/LineLength:
-  Max: 120
+require:
+  - rubocop-rake
+  - rubocop-rspec

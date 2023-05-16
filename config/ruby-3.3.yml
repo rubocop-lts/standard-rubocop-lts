@@ -1,0 +1,6 @@
+inherit_from: ./base.yml
+
+# TODO: Load basic rules for this version of Ruby from standard, once Standard includes it!
+# See: https://github.com/standardrb/standard/pull/560
+#   inherit_gem:
+#     standard: config/ruby-3.2.yml

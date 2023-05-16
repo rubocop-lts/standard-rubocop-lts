@@ -1,0 +1,5 @@
+inherit_from: ./ruby-2.6.yml
+
+# Load basic rules for this version of Ruby from standard.
+inherit_gem:
+  standard: config/ruby-2.5.yml

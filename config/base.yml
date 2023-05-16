@@ -1,0 +1,20 @@
+# We want Exclude directives from different
+#   config files to get merged, not overwritten
+inherit_mode:
+  merge:
+    - Exclude
+
+require:
+  - rubocop-performance
+  - standard
+  - standard-performance
+  - standard-custom
+
+inherit_gem:
+  rubocop-performance: config/default.yml
+  standard: config/base.yml
+  standard-performance: config/base.yml
+  standard-custom: config/base.yml
+
+AllCops:
+  NewCops: enable

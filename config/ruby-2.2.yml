@@ -1,0 +1,21 @@
+inherit_from: ./ruby-2.3.yml
+
+require:
+  - rubocop-performance
+  - standard
+  - standard-performance
+  - standard-custom
+
+# Load basic rules for this version of Ruby from standard.
+inherit_gem:
+  # Duplicated from config/base.yml because of the yaml hierarchy.
+  rubocop-performance: config/default.yml
+  # Ruby version-specific overrides for specific additional gems.
+  standard: config/ruby-2.2.yml
+  standard-custom: config/ruby-2.2.yml
+  standard-performance: config/ruby-2.2.yml
+
+# Disabled in standard's base.yml.  Keeping here in case removed from base.
+#  As of Ruby 3, string literals are frozen in all files.
+Style/FrozenStringLiteralComment:
+  Enabled: false

@@ -1,0 +1,41 @@
+inherit_from: ./ruby-1.9.yml
+
+# NOTE: The lowest TargetRubyVersion that can be declared is 2.0
+#   AllCops:
+#     TargetRubyVersion: 1.8
+
+# Load basic rules for this version of Ruby from standard.
+inherit_gem:
+  standard: config/ruby-1.8.yml
+
+##############################################################################
+# Additional rules that allow preservation of ruby 1.8.7 / ree compatibility #
+#   These are not in standard, and are the primary reason this gem exists.   #
+##############################################################################
+
+# Ruby 1.8.7 needs the . on chain of method calls at the end of a line
+Layout/DotPosition:
+  EnforcedStyle: trailing
+
+# Disabled in standard's base.yml.  Keeping here in case it is removed from base.
+Style/Documentation:
+  Enabled: false
+
+# Set in standard's base.yml.  Keeping here in case it is changed in base.
+Style/PercentLiteralDelimiters:
+  Enabled: true
+  PreferredDelimiters:
+    default: ()
+    '%i': '[]'
+    '%I': '[]'
+    '%r': '{}'
+    '%w': '[]'
+    '%W': '[]'
+
+# Missing from standard's base.yml. Works in concert with Style/PercentLiteralDelimiters
+Style/SymbolArray:
+  EnforcedStyle: brackets
+
+# Missing from standard's base.yml. Works in concert with Style/PercentLiteralDelimiters
+Style/WordArray:
+  EnforcedStyle: brackets

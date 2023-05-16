@@ -1,12 +1,55 @@
 # frozen_string_literal: true
 
-require "bundler/gem_tasks"
+%w[
+  bundler/gem_tasks
+  rake/testtask
+  rspec/core/rake_task
+].each { |f| require f }
+
 require "rspec/core/rake_task"
+RSpec::Core::RakeTask.new(:spec) do |spec|
+  spec.pattern = FileList["spec/**/*_spec.rb"]
+end
+desc "alias test task to spec"
+task test: :spec
 
-RSpec::Core::RakeTask.new(:spec)
+begin
+  require "yard"
 
-require "rubocop/rake_task"
+  YARD::Rake::YardocTask.new do |t|
+    t.files = [
+      # Splats (alphabetical)
+      "lib/**/*.rb",
+      "sig/**/*.rbs",
+      # Files (alphabetical)
+      "CHANGELOG.md",
+      "CODE_OF_CONDUCT.md",
+      "CONTRIBUTING.md",
+      "LICENSE.txt",
+      "README.md",
+      "rubocop-lts.yml",
+      "SECURITY.md"
+    ]
+    t.options = ["-m", "markdown"] # optional
+  end
+rescue LoadError
+  task :yard do
+    warn "NOTE: yard isn't installed, or is disabled for #{RUBY_VERSION} in the current environment"
+  end
+end
 
-RuboCop::RakeTask.new
+defaults = %i[test]
 
-task default: %i[spec rubocop]
+begin
+  require "rubocop/gradual/rake_task"
+
+  RuboCop::Gradual::RakeTask.new
+
+  defaults << :rubocop_gradual
+rescue LoadError
+  task :rubocop_gradual do
+    warn "NOTE: rubocop-gradual isn't installed, or is disabled for #{RUBY_VERSION} in the current environment"
+  end
+end
+
+task default: defaults
