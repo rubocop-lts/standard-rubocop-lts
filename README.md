@@ -90,9 +90,6 @@ Only reach as far back as you need to go!
 
 [standardrb]: https://github.com/standardrb/standard
 
-## Usage
-
-
 ### 👪 A Gem Family
 
 The `rubocop-lts` family of gems has a version supporting any version of Ruby you need.
