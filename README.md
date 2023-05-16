@@ -18,7 +18,7 @@
 
 ---
 
-NOTE: You might be interested in [`rubocop-lts`](https://github.com/rubocop-lts/rubocop-lts#-how-to-untie-gorgons-knot) which sits as a higher level than this gem, and can keep pace with whatever version of Ruby you happen to be on.
+NOTE: You might be interested in [`rubocop-lts`][rlts] which sits as a higher level than this gem, and can keep pace with whatever version of Ruby you happen to be on.
 
 | Gem Name                      | Version                             | Downloads                                                            | CI                                                                    | Activity                                                                                                                                              |
 |-------------------------------|-------------------------------------|----------------------------------------------------------------------|-----------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -111,7 +111,7 @@ They can be used as development dependencies for libraries or applications.
 - [`rubocop-ruby3_1`][rr31]
 - [`rubocop-ruby3_2`][rr32]
 
-[rrlts]: https://github.com/rubocop-lts/rubocop-lts#-how-to-untie-gorgons-knot
+[rlts]: https://github.com/rubocop-lts/rubocop-lts#-how-to-untie-gorgons-knot
 [stdrlts]: https://github.com/rubocop-lts/standard-rubocop-lts
 [rr18]: https://gitlab.com/rubocop-lts/standard-rubocop-lts
 [rr19]: https://gitlab.com/rubocop-lts/rubocop-ruby1_9
