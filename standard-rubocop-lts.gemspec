@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.authors = ["Peter Boling"]
   spec.email = ["peter.boling@gmail.com"]
 
-  spec.summary = "TODO: Write a short summary, because RubyGems requires one."
-  spec.description = "TODO: Write a longer description or delete this line."
-  spec.homepage = "TODO: Put your gem's website or public repo URL here."
+  spec.summary = "Extended StandardRb Configs for Finely Aged Rubies"
+  spec.description = "Extended StandardRb Configs for Finely Aged Rubies; use with rubocop-lts"
+  spec.homepage = "https://rubocop-lts.gitlab.io/"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.7.0"
 
