@@ -49,5 +49,11 @@ Gem::Specification.new do |spec|
 
   # RubyGems adding this gem will need to explicitly add rubocop-packaging to their dependencies.
   # Since it only applies to rubygems we do not add it as a runtime dependency of this gem.
-  spec.add_development_dependency("rubocop-packaging", "~> 0.5")  # >= 2.6.0
+  spec.add_development_dependency("rubocop-gradual", "~> 0.3")                # >= 2.6.0
+  spec.add_development_dependency("rubocop-md", "~> 1.2")                     # >= 2.6.0
+  spec.add_development_dependency("rubocop-packaging", "~> 0.5")              # >= 2.6.0
+  spec.add_development_dependency("rubocop-rake", "~> 0.6")                   # >= 2.5.0
+  spec.add_development_dependency("rubocop-shopify", "~> 2.13")               # >= 2.7.0
+  spec.add_development_dependency("rubocop-thread_safety", "~> 0.5")          # >= 2.5.0
+  spec.add_development_dependency "standard-rubocop-lts", ["~> 1.0", "< 2"]   # >= 2.6.0
 end
