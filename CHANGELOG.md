@@ -13,8 +13,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.1] 2023-04-16
 ### Fixed
 - config/*.yml rubocop configs were not shipped with v1.0.0
+### Changed
+- Minimum Ruby Version is 2.7
 
-## [1.0.0] 2023-04-16
+## [1.0.0] 2023-04-16 (yanked)
 ### Added
 - Initial release
 
