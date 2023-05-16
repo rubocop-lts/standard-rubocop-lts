@@ -43,8 +43,6 @@ defaults = %i[test]
 begin
   require "rubocop/gradual/rake_task"
 
-  RuboCop::Gradual::RakeTask.new
-
   defaults << :rubocop_gradual
 rescue LoadError
   task :rubocop_gradual do
