@@ -12,7 +12,6 @@ inherit_gem:
   rubocop-performance: config/default.yml
   # Ruby version-specific overrides for specific additional gems.
   standard: config/ruby-2.2.yml
-  standard-custom: config/ruby-2.2.yml
   standard-performance: config/ruby-2.2.yml
 
 # Disabled in standard's base.yml.  Keeping here in case removed from base.

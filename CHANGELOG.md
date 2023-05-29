@@ -15,6 +15,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `version_gem` for library version introspection
 ### Changed
 - `Standard::Rubocop::Lts::VERSION` refactored to `Standard::Rubocop::Lts::Version::VERSION`
+### Fixed
+- Removed obsolete loading of `standard-custom`'s now defunct `config/ruby-2.2.yml`
+  - See: https://github.com/standardrb/standard-custom/issues/2
 ### Removed
 - Duplicated lines from `README.md`
 - Circular dependency in gemspec (on `standard-rubocop-lts`, which is this gem)
