@@ -5,8 +5,12 @@ inherit_from:
 
 require:
   - rubocop-md
+  - rubocop-packaging
   - rubocop-rake
   - rubocop-rspec
   - rubocop-thread_safety
   # RuboCop Gradual can be used in "Require mode", which is a way to replace rubocop with rubocop-gradual:
   - rubocop/gradual/patch
+
+inherit_gem:
+  rspec-block_is_expected: rubocop.yml
