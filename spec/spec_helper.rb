@@ -1,15 +1,38 @@
 # frozen_string_literal: true
 
-require "standard/rubocop/lts"
+DEBUG = ENV.fetch("DEBUG", nil) == "true"
 
-RSpec.configure do |config|
-  # Enable flags like --only-failures and --next-failure
-  config.example_status_persistence_file_path = ".rspec_status"
+# external gems
+require "version_gem/ruby"
+require "version_gem/rspec"
 
-  # Disable RSpec exposing methods globally on `Module` and `main`
-  config.disable_monkey_patching!
+# RSpec Configs
+require "config/rspec/rspec_core"
+require "config/rspec/rspec_block_is_expected"
 
-  config.expect_with :rspec do |c|
-    c.syntax = :expect
+engine = "ruby"
+major = 3
+minor = 2
+version = "#{major}.#{minor}"
+gte_min = VersionGem::Ruby.gte_minimum_version?(version, engine)
+actual_minor = VersionGem::Ruby.actual_minor_version?(major, minor, engine)
+
+debugging = gte_min && DEBUG
+RUN_COVERAGE = gte_min && (ENV.fetch("COVER_ALL", nil) || ENV.fetch("CI_CODECOV", nil) || ENV["CI"].nil?)
+ALL_FORMATTERS = actual_minor && (ENV.fetch("COVER_ALL", nil) || ENV.fetch("CI_CODECOV", nil) || ENV.fetch("CI", nil))
+
+if DEBUG
+  if debugging
+    require "byebug"
+  elsif VersionGem::Ruby.gte_minimum_version?(version, "jruby")
+    require "pry-debugger-jruby"
   end
 end
+
+# Load Code Coverage as the last thing before this gem
+if RUN_COVERAGE
+  require "simplecov" # Config file `.simplecov` is run immediately when simplecov loads
+end
+
+# This gem
+require "standard/rubocop/lts"
