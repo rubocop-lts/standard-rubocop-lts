@@ -179,6 +179,7 @@ inherit_gem:
   standard-performance: config/base.yml
   standard-custom: config/base.yml
   # Plus: Any ruby-version-specific configs provided by any of the standard gems
+  # Plus+: Many ruby-version-specific configs that standard does not have
 
 AllCops:
   NewCops: enable
