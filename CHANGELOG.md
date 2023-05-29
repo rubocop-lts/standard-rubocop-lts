@@ -14,6 +14,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - `version_gem` for library version introspection
 ### Changed
+- Set Style/SymbolArray to brackets for Ruby < 2.0 compat
+  - Previously only set for Ruby 1.8
+- Set Style/WordArray to brackets for Ruby < 2.0 compat
+  - Previously only set for Ruby 1.8
+- Disable Style/PercentLiteralDelimiters for Ruby < 2.0 compat
 - `Standard::Rubocop::Lts::VERSION` refactored to `Standard::Rubocop::Lts::Version::VERSION`
 ### Fixed
 - Removed obsolete loading of `standard-custom`'s now defunct `config/ruby-2.2.yml`

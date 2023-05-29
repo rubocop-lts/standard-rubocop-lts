@@ -8,9 +8,21 @@ inherit_from: ./ruby-2.0.yml
 inherit_gem:
   standard: config/ruby-1.9.yml
 
+# Standard's rules in base.yml do not work with Ruby < 2.0, so overriding.
+# See: https://github.com/standardrb/standard/pull/563
+# Percent delimiters are not supported until Ruby 2.0
+Style/PercentLiteralDelimiters:
+  Enabled: false
+
+Style/SymbolArray:
+  EnforcedStyle: brackets
+
+Style/WordArray:
+  EnforcedStyle: brackets
+
 ##############################################################################
 # Additional rules that allow preservation of ruby 1.8.7 / ree compatibility #
-#   These are not in standard, and are the primary reason this gem exists.   #
+#   These are not in standard, and are a secondary reason this gem exists.   #
 ##############################################################################
 
 # Disabled in standard's base.yml, which allows magic encoding comments to live on.
