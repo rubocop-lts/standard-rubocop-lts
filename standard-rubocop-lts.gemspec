@@ -1,10 +1,14 @@
 # frozen_string_literal: true
 
-require_relative "lib/standard/rubocop/lts/version"
+# Get the GEMFILE_VERSION without *require* "my_gem/version", for code coverage accuracy
+# See: https://github.com/simplecov-ruby/simplecov/issues/557#issuecomment-825171399
+load "lib/standard/rubocop/lts/version.rb"
+gem_version = Standard::Rubocop::Lts::Version::VERSION
+Standard::Rubocop::Lts::Version.send(:remove_const, :VERSION)
 
 Gem::Specification.new do |spec|
   spec.name = "standard-rubocop-lts"
-  spec.version = Standard::Rubocop::Lts::VERSION
+  spec.version = gem_version
   spec.authors = ["Peter Boling"]
   spec.email = ["peter.boling@gmail.com"]
 
@@ -42,6 +46,7 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
+  spec.add_dependency "version_gem", [">= 1.1.2", "< 3"]         # >= 2.2.0
   spec.add_dependency "standard", ["~> 1.28", "< 2"]              # >= 2.6.0
   # standard-performance pulls in rubocop-performance
   spec.add_dependency "standard-performance", ["~> 1.0", "< 2"]   # >= 2.6.0
