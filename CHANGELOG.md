@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.2] 2023-05-29
 ### Removed
 - Duplicated lines from README.md
+- Circular dependency in gemspec (on standard-rubocop-lts, which is this gem)
 
 ## [1.0.1] 2023-04-16
 ### Fixed
