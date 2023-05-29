@@ -13,6 +13,7 @@ PATH
       standard (~> 1.28, < 2)
       standard-custom (~> 1.0, < 2)
       standard-performance (~> 1.0, < 2)
+      version_gem (>= 1.1.2, < 3)
 
 GEM
   remote: https://rubygems.org/
@@ -108,9 +109,11 @@ GEM
       lint_roller (~> 1.0)
       rubocop-performance (~> 1.16.0)
     unicode-display_width (2.4.2)
+    version_gem (1.1.2)
     yard (0.9.34)
 
 PLATFORMS
+  arm64-darwin-22
   x86_64-darwin-22
 
 DEPENDENCIES
