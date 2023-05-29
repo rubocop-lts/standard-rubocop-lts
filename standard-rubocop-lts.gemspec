@@ -50,8 +50,8 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "version_gem", [">= 1.1.2", "< 3"]         # >= 2.2.0
-  spec.add_dependency "standard", ["~> 1.28", "< 2"]              # >= 2.6.0
+  spec.add_dependency "version_gem", [">= 1.1.2", "< 3"]          # >= 2.2.0
+  spec.add_dependency "standard", [">= 1.28.4", "< 2"]            # >= 2.6.0
   # standard-performance pulls in rubocop-performance
   spec.add_dependency "standard-performance", ["~> 1.0", "< 2"]   # >= 2.6.0
   spec.add_dependency "standard-custom", ["~> 1.0", "< 2"]        # >= 2.6.0
@@ -64,4 +64,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency("rubocop-rake", "~> 0.6")                   # >= 2.5.0
   spec.add_development_dependency("rubocop-rspec", "~> 2.22")                 # >= 2.7.0
   spec.add_development_dependency("rubocop-thread_safety", "~> 0.5")          # >= 2.5.0
+  spec.add_development_dependency("rspec-block_is_expected", "~> 1.0")        # >= 0
 end
