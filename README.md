@@ -18,7 +18,8 @@
 
 ---
 
-NOTE: You might be interested in [`rubocop-lts`][rlts] which sits as a higher level than this gem, and can keep pace with whatever version of Ruby you happen to be on.
+NOTE: You might be interested in [`rubocop-lts`][rlts] which sits as a higher level than, and depends on, this gem.
+It will enable your Ruby style rules to keep pace with whatever version of Ruby your project happens to be on!
 
 | Gem Name                      | Version                             | Downloads                                                            | CI                                                                    | Activity                                                                                                                                              |
 |-------------------------------|-------------------------------------|----------------------------------------------------------------------|-----------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -78,7 +79,7 @@ NOTE: You might be interested in [`rubocop-lts`][rlts] which sits as a higher le
 [⛳️ini-g]: https://rubygems.org/gems/standard-rubocop-lts
 [⛳️ini-gh]: https://github.com/rubocop-lts/standard-rubocop-lts
 
-# Standard::Rubocop::Lts
+# 🦾 Standard::Rubocop::Lts
 
 Extended [standard (Standard Ruby)][standardrb] config shims for all your finely-aged rubies,
 back to Ruby version 1.8. Compatible with the `rubocop-lts` [gem family](#a-gem-family).
