@@ -158,6 +158,9 @@ inherit_gem:
   standard-rubocop-lts: config/ruby-{RUBY_MAJOR_VERSION}-{RUBY_MINOR_VERSION}.yml
 ```
 
+<details>
+  <summary>What will this do for me?</summary>
+
 Among other settings specific to your chosen minimum version of ruby, the above results in the following config:
 
 ```yaml
@@ -184,6 +187,7 @@ inherit_gem:
 AllCops:
   NewCops: enable
 ```
+</details>
 
 ## 💻 Development
 
