@@ -81,7 +81,7 @@ NOTE: You might be interested in [`rubocop-lts`][rlts] which sits as a higher le
 # Standard::Rubocop::Lts
 
 Extended [standard (Standard Ruby)][standardrb] config shims for all your finely-aged rubies,
-back to version 1.8. Compatible with the `rubocop-lts` [gem family](#a-gem-family).
+back to Ruby version 1.8. Compatible with the `rubocop-lts` [gem family](#a-gem-family).
 
 Use the rules standard gives you, and then add more, 
 to increase your code's compatibility across multiple versions of Ruby.
@@ -177,6 +177,7 @@ inherit_gem:
   standard: config/base.yml
   standard-performance: config/base.yml
   standard-custom: config/base.yml
+  # Plus: Any ruby-version-specific configs provided by any of the standard gems
 
 AllCops:
   NewCops: enable
@@ -205,89 +206,6 @@ See [CONTRIBUTING.md][contributing]
 
 Made with [contributors-img](https://contrib.rocks).
 
-## License
-
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## 📄 License
-
-The gem is available as open source under the terms of
-the [MIT License][license] [![License: MIT][license-img]][license-ref].
-See [LICENSE.txt][license] for the official [Copyright Notice][copyright-notice-explainer].
-
-<details>
-  <summary>Project Logos (standard-rubocop-lts)</summary>
-
-See [docs/images/logo/README.txt][project-logos]
-</details>
-
-<details>
-  <summary>Organization Logo (rubocop-lts)</summary>
-
-Author: [Yusuf Evli][org-logo-author]
-Source: [Unsplash][org-logo-source]
-License: [Unsplash License][org-logo-license]
-</details>
-
-[project-logos]: https://github.com/rubocop-lts/standard-rubocop-lts/blob/main/docs/images/logo/README.txt
-[org-logo-author]: https://unsplash.com/@yusufevli
-[org-logo-source]: https://unsplash.com/photos/yaSLNLtKRIU
-[org-logo-license]: https://unsplash.com/license
-
-### © Copyright
-
-* Copyright (c) 2022 - 2023 [Peter H. Boling][peterboling] of [Rails Bling][railsbling]
-
-## 🤝 Code of Conduct
-
-Everyone interacting in this project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/rubocop-lts/standard-rubocop-lts/blob/main/CODE_OF_CONDUCT.md).
-
-## 📌 Versioning
-
-This library aims to adhere to [Semantic Versioning 2.0.0][semver]. Violations of this scheme should be reported as
-bugs. Specifically, if a minor or patch version is released that breaks backward compatibility, a new version should be
-immediately released that restores compatibility. Breaking changes to the public API will only be introduced with new
-major versions.
-
-As a result of this policy, you can (and should) specify a dependency on this gem using
-the [Pessimistic Version Constraint][pvc] with two digits of precision.
-
-For example:
-
-```ruby
-spec.add_dependency "standard-rubocop-lts", "~> 1.0"
-```
-
-[aboutme]: https://about.me/peter.boling
-[actions]: https://github.com/rubocop-lts/standard-rubocop-lts/actions
-[angelme]: https://angel.co/peter-boling
-[blogpage]: http://www.railsbling.com/tags/standard-rubocop-lts/
-[codecov_coverage]: https://codecov.io/gh/rubocop-lts/standard-rubocop-lts
-[code_triage]: https://www.codetriage.com/rubocop-lts/standard-rubocop-lts
-[chat]: https://gitter.im/rubocop-lts/standard-rubocop-lts?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
-[climate_coverage]: https://codeclimate.com/github/rubocop-lts/standard-rubocop-lts/test_coverage
-[climate_maintainability]: https://codeclimate.com/github/rubocop-lts/standard-rubocop-lts/maintainability
-[copyright-notice-explainer]: https://opensource.stackexchange.com/questions/5778/why-do-licenses-such-as-the-mit-license-specify-a-single-year
-[conduct]: https://github.com/rubocop-lts/standard-rubocop-lts/blob/main/CODE_OF_CONDUCT.md
-[contributing]: https://github.com/rubocop-lts/standard-rubocop-lts/blob/main/CONTRIBUTING.md
-[devto]: https://dev.to/galtzo
-[documentation]: https://rubydoc.info/github/rubocop-lts/standard-rubocop-lts/main
-[followme]: https://img.shields.io/twitter/follow/galtzo.svg?style=social&label=Follow
-[gh_discussions]: https://github.com/rubocop-lts/standard-rubocop-lts/discussions
-[gh_sponsors]: https://github.com/sponsors/pboling
-[issues]: https://github.com/rubocop-lts/standard-rubocop-lts/issues
-[liberapay_donate]: https://liberapay.com/pboling/donate
-[license]: LICENSE.txt
-[license-ref]: https://opensource.org/licenses/MIT
-[license-img]: https://img.shields.io/badge/License-MIT-green.svg
-[peterboling]: http://www.peterboling.com
-[pvc]: http://guides.rubygems.org/patterns/#pessimistic-version-constraint
-[railsbling]: http://www.railsbling.com
-[rubygems]: https://rubygems.org/gems/standard-rubocop-lts
-[security]: https://github.com/rubocop-lts/standard-rubocop-lts/blob/main/SECURITY.md
-[semver]: http://semver.org/
-[source]: https://github.com/rubocop-lts/standard-rubocop-lts/
-[tweetme]: http://twitter.com/galtzo
 ## 📄 License
 
 The gem is available as open source under the terms of
