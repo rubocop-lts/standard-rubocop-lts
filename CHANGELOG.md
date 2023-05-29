@@ -10,6 +10,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
+## [1.0.3] 2023-05-29
+### Added
+- Gem releases are now signed!
+
 ## [1.0.2] 2023-05-29
 ### Added
 - `version_gem` for library version introspection
@@ -26,6 +30,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 - Duplicated lines from `README.md`
 - Circular dependency in gemspec (on `standard-rubocop-lts`, which is this gem)
+
+## [1.0.2] 2023-05-29
+### Changed
+- Update to standard 1.28.4
 
 ## [1.0.1] 2023-04-16
 ### Fixed

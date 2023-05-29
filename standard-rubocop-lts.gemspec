@@ -12,6 +12,10 @@ Gem::Specification.new do |spec|
   spec.authors = ["Peter Boling"]
   spec.email = ["peter.boling@gmail.com"]
 
+  # See CONTRIBUTING.md
+  spec.cert_chain = ["certs/pboling.pem"]
+  spec.signing_key = File.expand_path("~/.ssh/gem-private_key.pem") if $PROGRAM_NAME.end_with?("gem")
+
   spec.summary = "Extended Standard Ruby Configs for Finely Aged Rubies"
   spec.description = "Extended Standard Ruby Configs for Finely Aged Rubies; Compatible with rubocop-lts"
   spec.homepage = "https://rubocop-lts.gitlab.io/"
