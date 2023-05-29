@@ -13,6 +13,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.3] 2023-05-29
 ### Added
 - Gem releases are now signed!
+### Fixed
+- URIs in gemspec (now point to GitLab)
 
 ## [1.0.2] 2023-05-29
 ### Added
