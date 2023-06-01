@@ -10,11 +10,16 @@ require:
   - standard-performance
   - standard-custom
 
+# Rules are overridden in a LIFO stack.
+# If rubocop-performance is loaded first, and standard-performance after it,
+#   then rubocop-performance's rules will take precedence.
+# This is the opposite of what you might expect.
+# Below: standard's rule disablement overrides rubocop-performance's config/default.yml
 inherit_gem:
-  rubocop-performance: config/default.yml
   standard: config/base.yml
   standard-performance: config/base.yml
   standard-custom: config/base.yml
+  rubocop-performance: config/default.yml
 
 AllCops:
   NewCops: enable
