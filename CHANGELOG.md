@@ -10,6 +10,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
+## [1.0.6] 2023-06-03
+### Fixed
+- ship internal configs with gem
+
 ## [1.0.5] 2023-06-03
 ### Fixed
 - require deps for configs 1.9 - 3.3

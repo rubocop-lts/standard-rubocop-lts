@@ -37,7 +37,7 @@ Gem::Specification.new do |spec|
     # Splats (alphabetical)
     "lib/**/*.rb",
     "sig/**/*.rbs",
-    "config/*.yml",
+    "config/**/*.yml",
     # Files (alphabetical)
     "CHANGELOG.md",
     "CODE_OF_CONDUCT.md",
