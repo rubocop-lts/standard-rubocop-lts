@@ -31,3 +31,7 @@ Layout/LineLength:
 
 Style/HashSyntax:
   EnforcedStyle: ruby19_no_mixed_keys
+
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: consistent_comma
+  Enabled: true

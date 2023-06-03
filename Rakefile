@@ -23,7 +23,7 @@ begin
   YARD::Rake::YardocTask.new do |t|
     t.files = [
       # Splats (alphabetical)
-      "lib/**/*.rb"
+      "lib/**/*.rb",
     ]
   end
   defaults << :yard
