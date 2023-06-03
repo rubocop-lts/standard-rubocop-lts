@@ -64,7 +64,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release
 
-[Unreleased]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/v1.0.5...HEAD
+[Unreleased]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/v1.0.6...HEAD
+[1.0.6]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/v1.0.5...v1.0.6
 [1.0.5]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/v1.0.4...v1.0.5
 [1.0.4]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/v1.0.3...v1.0.4
 [1.0.3]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/v1.0.2...v1.0.3
