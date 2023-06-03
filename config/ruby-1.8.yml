@@ -1,13 +1,13 @@
-inherit_from:
-  - ./base.yml
-  - ./internal/ruby-1.8.yml
-
 # We want Exclude and Include directives from different
 #   config files to get merged, not overwritten
 inherit_mode:
   merge:
     - Exclude
     - Include
+
+inherit_from:
+  - ./base.yml
+  - ./internal/ruby-1.8.yml
 
 require:
   - standard

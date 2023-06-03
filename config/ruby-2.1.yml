@@ -1,6 +1,19 @@
+# We want Exclude and Include directives from different
+#   config files to get merged, not overwritten
+inherit_mode:
+  merge:
+    - Exclude
+    - Include
+
 inherit_from:
   - ./base.yml
   - ./internal/ruby-2.1.yml
+
+require:
+  - standard
+  - standard-performance
+  - standard-custom
+  - rubocop-performance
 
 # Load basic rules for this version of Ruby from standard.
 # Rules are overridden in a LIFO stack.
