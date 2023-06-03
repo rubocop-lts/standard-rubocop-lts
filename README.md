@@ -161,29 +161,32 @@ inherit_gem:
 <details>
   <summary>What will this do for me?</summary>
 
-Among other settings specific to your chosen minimum version of ruby, the above results in the following config:
+Among other settings specific to your chosen minimum version of ruby,
+the above _effectively_ results in the following config (& more):
 
 ```yaml
-# We want Exclude directives from different
+# We want Exclude and Include directives from different
 #   config files to get merged, not overwritten
 inherit_mode:
   merge:
     - Exclude
+    - Include
 
 require:
-  - rubocop-performance
   - standard
   - standard-performance
   - standard-custom
+  - rubocop-performance
 
+# Load basic rules for this version of Ruby from standard.
 # Rules are overridden in a LIFO stack.
 # If rubocop-performance is loaded first, and standard-performance after it,
 #   then rubocop-performance's rules will take precedence.
 # This is the opposite of what you might expect.
-# Below: standard's rule disablement overrides rubocop-performance's config/default.yml
+# Below: standard's rules override rubocop-performance's (mostly disabling rules)
 inherit_gem:
-  standard: config/base.yml
-  standard-performance: config/base.yml
+  standard: config/ruby-1.8.yml
+  standard-performance: config/ruby-1.8.yml
   standard-custom: config/base.yml
   rubocop-performance: config/default.yml
 
