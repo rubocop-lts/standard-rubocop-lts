@@ -6,7 +6,8 @@
 # On Local, all output formats with Ruby 3.0+:
 #   COVER_ALL=true bundle exec rspec spec
 #
-# On CI, all output formats, the ENV variables CI is always set,
+# On CI, all output formats, but coverage only runs for the coverage workflow.
+#   The ENV variable CI is always set,
 #   and COVER_ALL, and CI_CODECOV, are set in the coverage.yml workflow only,
 #   so coverage only runs in that workflow, and outputs all formats.
 #
@@ -19,16 +20,24 @@ if RUN_COVERAGE
 
     # Filters (skip these paths for coverage tracking)
     add_filter [
-      %r{^/test/},
-      %r{^/spec/},
-      %r{^/features/},
+      %r{^/bin/},
+      %r{^/certs/},
+      %r{^/checksums/},
       %r{^/config/},
-      %r{^/vendor/},
-      "railtie.rb"
+      %r{^/docs/},
+      %r{^/features/},
+      %r{^/gemfiles/},
+      %r{^/pkg/},
+      %r{^/results/},
+      %r{^/sig/},
+      %r{^/spec/},
+      %r{^/src/},
+      %r{^/test/},
+      %r{^/vendor/}
     ]
 
     # Setup Coverage Dir
-    SimpleCov.coverage_dir "results/coverage"
+    SimpleCov.coverage_dir "coverage"
 
     if ALL_FORMATTERS
       require "simplecov-rcov"
