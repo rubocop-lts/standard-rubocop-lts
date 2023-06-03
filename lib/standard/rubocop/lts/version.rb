@@ -3,8 +3,11 @@
 module Standard
   module Rubocop
     module Lts
+      # Version is introspectable via version_gem
       module Version
-        VERSION = "1.0.3"
+        # Bump VERSION manually for each new release!
+        # See: CONTRIBUTING.md
+        VERSION = "1.0.4"
       end
     end
   end

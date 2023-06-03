@@ -1,0 +1,38 @@
+inherit_from: ./ruby-2.0.yml
+
+# NOTE: The lowest TargetRubyVersion that can be declared is 2.0
+#   AllCops:
+#     TargetRubyVersion: 1.9
+
+# Standard's rules in base.yml do not work with Ruby < 2.0, so overriding.
+# See: https://github.com/standardrb/standard/pull/563
+# Percent delimiters are not supported until Ruby 2.0
+Style/PercentLiteralDelimiters:
+  Enabled: false
+
+Style/SymbolArray:
+  EnforcedStyle: brackets
+
+Style/WordArray:
+  EnforcedStyle: brackets
+
+##############################################################################
+# Additional rules that allow preservation of ruby 1.8.7 / ree compatibility #
+#   These are not in standard, and are a secondary reason this gem exists.   #
+##############################################################################
+
+# Disabled in standard's base.yml, which allows magic encoding comments to live on.
+# Reproducing here, in case Standard Ruby drops the config.
+#
+Style/Encoding:
+  Enabled: false
+# The encoding comments can be removed once a project drops Ruby 1.9 support.
+# Whole file UTF-8 Encoding is default in Ruby 2+, so the Encoding comment is usually not needed there.
+# See:
+#   * https://www.rubydoc.info/gems/rubocop/0.49.0/RuboCop/Cop/Style/Encoding
+#   * https://rubydoc.info/gems/rubocop/RuboCop/Cop/Style/Encoding
+# Unfortunately in latest RuboCop there is only a "never" style enforced (i.e. encodings are always bad).
+# TODO: Consider bringing back this rule as a new Cop (extracted from old RuboCop)
+#Style/Encoding:
+#  Enabled: true
+#  EnforcedStyle: always

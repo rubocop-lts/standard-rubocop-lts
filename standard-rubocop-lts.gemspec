@@ -52,18 +52,29 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "version_gem", [">= 1.1.2", "< 3"]          # >= 2.2.0
-  spec.add_dependency "standard", [">= 1.28.4", "< 2"]            # >= 2.6.0
+  spec.add_dependency "standard", [">= 1.29", "< 2"]            # >= 2.6.0
   # standard-performance pulls in rubocop-performance
-  spec.add_dependency "standard-performance", ["~> 1.0", "< 2"]   # >= 2.6.0
+  spec.add_dependency "standard-performance", ["~> 1.1", "< 2"]   # >= 2.6.0
   spec.add_dependency "standard-custom", ["~> 1.0", "< 2"]        # >= 2.6.0
 
-  # RubyGems adding this gem will need to explicitly add rubocop-packaging to their dependencies.
-  # Since it only applies to rubygems we do not add it as a runtime dependency of this gem.
+  # Tests
+  spec.add_development_dependency("rspec", "~> 3.10")
+  spec.add_development_dependency("rspec-block_is_expected", "~> 1.0")
+
+  # Development Tasks
+  spec.add_development_dependency("rake", "~> 13.0")
+
+  # Dev Console
+  spec.add_development_dependency("pry")
+
+  # Linting
+  # NOTE: The gems below, along with this gem, i.e. standard-rubocop-lts, are packaged
+  #       for distribution with single-line configuration by the rubocop-lts gem!
   spec.add_development_dependency("rubocop-gradual", "~> 0.3")                # >= 2.6.0
   spec.add_development_dependency("rubocop-md", "~> 1.2")                     # >= 2.6.0
   spec.add_development_dependency("rubocop-packaging", "~> 0.5")              # >= 2.6.0
   spec.add_development_dependency("rubocop-rake", "~> 0.6")                   # >= 2.5.0
   spec.add_development_dependency("rubocop-rspec", "~> 2.22")                 # >= 2.7.0
+  spec.add_development_dependency("rubocop-shopify", "~> 2.13")               # >= 2.7.0
   spec.add_development_dependency("rubocop-thread_safety", "~> 0.5")          # >= 2.5.0
-  spec.add_development_dependency("rspec-block_is_expected", "~> 1.0")        # >= 0
 end

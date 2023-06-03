@@ -10,11 +10,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
-## [1.0.4] 2023-06-01
+## [1.0.4] 2023-06-03
 ### Fixed
 - rubocop-shopify > standard gem family of rules
-  - v1.0.0 intended for rubocop-shopify to override standard's rules
+  - v1.0.0 intended for rubocop-shopify to override standard's rules, now it actually does
   - override mechanism in rubocop.yml config is counter-intuitive :(
+- Stop doubly loading style libs and configs with more careful config structure
+### Changed
+- disable several rubocop-performance cops that are bad cops
 
 ## [1.0.3] 2023-05-29
 ### Added

@@ -84,7 +84,7 @@ It will enable your Ruby style rules to keep pace with whatever version of Ruby 
 Extended [standard (Standard Ruby)][standardrb] config shims for all your finely-aged rubies,
 back to Ruby version 1.8. Compatible with the `rubocop-lts` [gem family](#a-gem-family).
 
-Use the rules standard gives you, and then add more, 
+Use the rules standard gives you, and then add more,
 to increase your code's compatibility across multiple versions of Ruby.
 
 Only reach as far back as you need to go!
@@ -176,16 +176,44 @@ require:
   - standard-performance
   - standard-custom
 
+# Rules are overridden in a LIFO stack.
+# If rubocop-performance is loaded first, and standard-performance after it,
+#   then rubocop-performance's rules will take precedence.
+# This is the opposite of what you might expect.
+# Below: standard's rule disablement overrides rubocop-performance's config/default.yml
 inherit_gem:
-  rubocop-performance: config/default.yml
   standard: config/base.yml
   standard-performance: config/base.yml
   standard-custom: config/base.yml
-  # Plus: Any ruby-version-specific configs provided by any of the standard gems
-  # Plus+: Many ruby-version-specific configs that standard does not have
+  rubocop-performance: config/default.yml
 
 AllCops:
   NewCops: enable
+
+# See:
+#   https://github.com/rubocop/rubocop-performance/issues/240
+#   https://github.com/rubocop/rubocop-performance/pull/241
+Performance/Casecmp:
+  Enabled: false
+
+# See: https://github.com/rubocop/rubocop-performance/issues/329#issuecomment-1375527811
+Performance/BlockGivenWithExplicitBlock:
+  Enabled: false
+
+# See: https://github.com/rubocop/rubocop-performance/issues/329#issuecomment-1451511402
+Performance/ArraySemiInfiniteRangeSlice:
+  Enabled: false
+
+# See: https://github.com/rubocop/rubocop-performance/issues/329#issuecomment-1451511402
+Performance/BigDecimalWithNumericArgument:
+  Enabled: false
+
+# See: https://github.com/rubocop/rubocop-performance/issues/329#issuecomment-1451511402
+Performance/IoReadlines:
+  Enabled: false
+
+# Plus: Ruby-version-specific configs provided by "standard" family of gems
+# Plus+: Ruby-version-specific configs that standard does not have
 ```
 </details>
 

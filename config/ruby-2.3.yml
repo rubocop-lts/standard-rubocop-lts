@@ -1,5 +1,15 @@
-inherit_from: ./ruby-2.4.yml
+inherit_from:
+  - ./base.yml
+  - ./internal/ruby-2.3.yml
 
 # Load basic rules for this version of Ruby from standard.
+# Rules are overridden in a LIFO stack.
+# If rubocop-performance is loaded first, and standard-performance after it,
+#   then rubocop-performance's rules will take precedence.
+# This is the opposite of what you might expect.
+# Below: standard's rules override rubocop-performance's (mostly disabling rules)
 inherit_gem:
   standard: config/ruby-2.3.yml
+  standard-performance: config/base.yml
+  standard-custom: config/base.yml
+  rubocop-performance: config/default.yml

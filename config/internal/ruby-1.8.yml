@@ -1,0 +1,22 @@
+inherit_from: ./ruby-1.9.yml
+
+# NOTE: The lowest TargetRubyVersion that can be declared is 2.0
+#   AllCops:
+#     TargetRubyVersion: 1.8
+
+##############################################################################
+# Additional rules that allow preservation of ruby 1.8.7 / ree compatibility #
+#   These are not in standard, and are the primary reason this gem exists.   #
+##############################################################################
+
+# Ruby 1.8.7 needs the . on chain of method calls at the end of a line
+# This cop is disabled for Ruby 1.8 in Standard, which is doesn't help
+#   RuboCop/Standard users ensure their codebase remains compatible with Ruby 1.8
+# As such we override here!
+# See: https://github.com/standardrb/standard/issues/561
+Layout/DotPosition:
+  EnforcedStyle: trailing
+
+# Disabled in standard's base.yml.  Keeping here in case it is removed from base.
+Style/Documentation:
+  Enabled: false

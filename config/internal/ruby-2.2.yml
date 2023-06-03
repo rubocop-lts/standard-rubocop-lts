@@ -1,0 +1,6 @@
+inherit_from: ./ruby-2.3.yml
+
+# Disabled in standard's base.yml.  Keeping here in case removed from base.
+#  As of Ruby 3, string literals are frozen in all files.
+Style/FrozenStringLiteralComment:
+  Enabled: false

@@ -1,26 +1,28 @@
-inherit_from: ./ruby-1.9.yml
+inherit_from:
+  - ./base.yml
+  - ./internal/ruby-1.8.yml
 
-# NOTE: The lowest TargetRubyVersion that can be declared is 2.0
-#   AllCops:
-#     TargetRubyVersion: 1.8
+# We want Exclude and Include directives from different
+#   config files to get merged, not overwritten
+inherit_mode:
+  merge:
+    - Exclude
+    - Include
+
+require:
+  - standard
+  - standard-performance
+  - standard-custom
+  - rubocop-performance
 
 # Load basic rules for this version of Ruby from standard.
+# Rules are overridden in a LIFO stack.
+# If rubocop-performance is loaded first, and standard-performance after it,
+#   then rubocop-performance's rules will take precedence.
+# This is the opposite of what you might expect.
+# Below: standard's rules override rubocop-performance's (mostly disabling rules)
 inherit_gem:
   standard: config/ruby-1.8.yml
-
-##############################################################################
-# Additional rules that allow preservation of ruby 1.8.7 / ree compatibility #
-#   These are not in standard, and are the primary reason this gem exists.   #
-##############################################################################
-
-# Ruby 1.8.7 needs the . on chain of method calls at the end of a line
-# This cop is disabled for Ruby 1.8 in Standard, which is doesn't help
-#   RuboCop/Standard users ensure their codebase remains compatible with Ruby 1.8
-# As such we override here!
-# See: https://github.com/standardrb/standard/issues/561
-Layout/DotPosition:
-  EnforcedStyle: trailing
-
-# Disabled in standard's base.yml.  Keeping here in case it is removed from base.
-Style/Documentation:
-  Enabled: false
+  standard-performance: config/ruby-1.8.yml
+  standard-custom: config/base.yml
+  rubocop-performance: config/default.yml
