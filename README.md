@@ -220,6 +220,17 @@ Performance/IoReadlines:
 ```
 </details>
 
+### What about TargetRubyVersion?
+
+**Instead of using this gem, `standard-rubocop-lts`, use `rubocop-lts`, which depends on this gem.
+```ruby
+# NOTE: Picking the right version of this rubocop-lts automatically aligns:
+#       - gemspec's required_ruby_version
+#       - RuboCop's TargetRubyVersion
+# e.g. v18 for Ruby >= 2.7.0
+gem "rubocop-lts", "~> 18.2.1", require: false
+```
+
 ## 💻 Development
 
 After checking out the repo, run `bin/setup` to install dependencies.
