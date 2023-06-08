@@ -10,6 +10,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
+## [1.0.7] 2023-06-08
+### Changed
+- follow best practices for gemspec
+  - put all dev dependencies in Gemfile
+  - See: https://github.com/rubygems/rubygems/discussions/5065
+
 ## [1.0.6] 2023-06-03
 ### Fixed
 - ship internal configs with gem
