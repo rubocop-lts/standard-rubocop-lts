@@ -15,6 +15,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - follow best practices for gemspec
   - put all dev dependencies in Gemfile
   - See: https://github.com/rubygems/rubygems/discussions/5065
+- enable some `Gemspec` cops that standard turns off
+- improve documentation
 
 ## [1.0.6] 2023-06-03
 ### Fixed

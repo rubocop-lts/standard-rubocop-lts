@@ -1,12 +1,25 @@
-# See:
-#   https://github.com/rubocop/rubocop-performance/issues/240
-#   https://github.com/rubocop/rubocop-performance/pull/241
-Performance/Casecmp:
-  Enabled: false
+# Alphabetizing lists enforces minimal churn in git history
+Bundler/OrderedGems:
+  Enabled: true
 
-# See: https://github.com/rubocop/rubocop-performance/issues/329#issuecomment-1375527811
-Performance/BlockGivenWithExplicitBlock:
-  Enabled: false
+Gemspec/DependencyVersion:
+  Enabled: true
+  EnforcedStyle: required
+
+# See: See: https://github.com/rubygems/rubygems/discussions/5065
+Gemspec/DevelopmentDependencies:
+  Enabled: true
+  EnforcedStyle: Gemfile
+
+# Alphabetizing lists enforces minimal churn in git history
+Gemspec/OrderedDependencies:
+  Enabled: true
+
+Gemspec/RequiredRubyVersion:
+  Enabled: true
+
+Gemspec/RubyVersionGlobalsUsage:
+  Enabled: true
 
 # See: https://github.com/rubocop/rubocop-performance/issues/329#issuecomment-1451511402
 Performance/ArraySemiInfiniteRangeSlice:
@@ -14,6 +27,16 @@ Performance/ArraySemiInfiniteRangeSlice:
 
 # See: https://github.com/rubocop/rubocop-performance/issues/329#issuecomment-1451511402
 Performance/BigDecimalWithNumericArgument:
+  Enabled: false
+
+# See: https://github.com/rubocop/rubocop-performance/issues/329#issuecomment-1375527811
+Performance/BlockGivenWithExplicitBlock:
+  Enabled: false
+
+# See:
+#   https://github.com/rubocop/rubocop-performance/issues/240
+#   https://github.com/rubocop/rubocop-performance/pull/241
+Performance/Casecmp:
   Enabled: false
 
 # See: https://github.com/rubocop/rubocop-performance/issues/329#issuecomment-1451511402

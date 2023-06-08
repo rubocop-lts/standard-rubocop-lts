@@ -51,13 +51,15 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "version_gem", [">= 1.1.2", "< 3"]          # >= 2.2.0
-  spec.add_dependency "standard", [">= 1.29", "< 2"]            # >= 2.6.0
+  spec.add_dependency "standard", ">= 1.29", "< 2"              # >= 2.6.0
+  spec.add_dependency "standard-custom", ">= 1.0.1", "< 2"      # >= 2.6.0
+  spec.add_dependency "version_gem", ">= 1.1.3", "< 4"          # >= 2.2.0
   # standard-performance pulls in rubocop-performance
-  spec.add_dependency "standard-performance", ["~> 1.1", "< 2"]   # >= 2.6.0
-  spec.add_dependency "standard-custom", ["~> 1.0", "< 2"]        # >= 2.6.0
+  spec.add_dependency "standard-performance", "~> 1.1", "< 2"   # >= 2.6.0
 
   # Internal & External Development dependencies
   # Specify in Gemfile *only*.
-  # See: https://github.com/rubygems/rubygems/discussions/5065
+  # See:
+  #   - https://github.com/rubygems/rubygems/discussions/5065
+  #   - https://msp-greg.github.io/rubocop/RuboCop/Cop/Gemspec/DevelopmentDependencies.html
 end

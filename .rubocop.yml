@@ -20,6 +20,7 @@ AllCops:
   # When the Ruby community, via RuboCop, adopts a new standard
   #   (with additional filtering by standard.rb and rubocop-shopify) it is good enough for us!
   NewCops: enable
+  TargetRubyVersion: 2.7
 
 # Metrics cops are disabled in Standard by default
 Metrics:
