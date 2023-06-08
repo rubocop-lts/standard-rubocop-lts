@@ -9,7 +9,7 @@ GIT
 PATH
   remote: .
   specs:
-    standard-rubocop-lts (1.0.6)
+    standard-rubocop-lts (1.0.7)
       standard (>= 1.29, < 2)
       standard-custom (>= 1.0.1, < 2)
       standard-performance (~> 1.1, < 2)
@@ -87,7 +87,7 @@ GEM
       pry-macro
       pry-pretty-numeric
       pry-rescue
-    racc (1.6.2)
+    racc (1.7.0)
     rainbow (3.1.1)
     rake (13.0.6)
     redcarpet (3.6.0)
