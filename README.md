@@ -180,7 +180,7 @@ require:
 
 # Load basic rules for this version of Ruby from standard.
 # Rules are overridden in a LIFO stack.
-# If rubocop-performance is loaded first, and standard-performance after it,
+# If rubocop-performance is listed first, and standard-performance after it,
 #   then rubocop-performance's rules will take precedence.
 # This is the opposite of what you might expect.
 # Below: standard's rules override rubocop-performance's (mostly disabling rules)
