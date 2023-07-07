@@ -2,8 +2,12 @@
 
 # external libs
 require "version_gem"
+require "rubocop"
+require "standard-custom"
 
 require_relative "lts/version"
+# Load any Cops that aren't explicitly loaded by standard's plugins (e.g. standard-custom).
+require_relative "lts/cops"
 
 # Namespace for this library
 module Standard

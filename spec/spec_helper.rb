@@ -35,4 +35,4 @@ if RUN_COVERAGE
 end
 
 # This gem
-require "standard/rubocop/lts"
+require "standard-rubocop-lts"

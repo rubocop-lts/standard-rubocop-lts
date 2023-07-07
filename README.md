@@ -173,6 +173,7 @@ inherit_mode:
     - Include
 
 require:
+  - standard-rubocop-lts
   - standard
   - standard-performance
   - standard-custom

@@ -10,6 +10,7 @@ inherit_from:
   - ./internal/ruby-2.2.yml
 
 require:
+  - standard-rubocop-lts
   - standard
   - standard-performance
   - standard-custom

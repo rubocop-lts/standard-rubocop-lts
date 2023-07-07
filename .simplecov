@@ -34,6 +34,8 @@ if RUN_COVERAGE
       %r{^/src/},
       %r{^/test/},
       %r{^/vendor/},
+      # Don't check coverage of loading external Cops
+      %r{^/lib/standard/rubocop/lts/cops},
     ]
 
     # Setup Coverage Dir

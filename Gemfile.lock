@@ -9,10 +9,10 @@ GIT
 PATH
   remote: .
   specs:
-    standard-rubocop-lts (1.0.7)
-      standard (>= 1.29, < 2)
+    standard-rubocop-lts (1.0.8)
+      standard (>= 1.30.1, < 2)
       standard-custom (>= 1.0.1, < 2)
-      standard-performance (~> 1.1, < 2)
+      standard-performance (>= 1.1.1, < 2)
       version_gem (>= 1.1.3, < 4)
 
 GEM
@@ -34,18 +34,19 @@ GEM
     interception (0.5)
     json (2.6.3)
     language_server-protocol (3.17.0.3)
-    lint_roller (1.0.0)
+    lint_roller (1.1.0)
     method_source (1.0.0)
     mime-types (1.25.1)
-    nokogiri (1.15.2-arm64-darwin)
+    nokogiri (1.15.3-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.15.2-x86_64-darwin)
+    nokogiri (1.15.3-x86_64-darwin)
       racc (~> 1.4)
-    nokogiri (1.15.2-x86_64-linux)
+    nokogiri (1.15.3-x86_64-linux)
       racc (~> 1.4)
     parallel (1.23.0)
-    parser (3.2.2.1)
+    parser (3.2.2.3)
       ast (~> 2.4.1)
+      racc
     posix-spawn (0.3.15)
     pry (0.14.2)
       coderay (~> 1.1)
@@ -87,11 +88,11 @@ GEM
       pry-macro
       pry-pretty-numeric
       pry-rescue
-    racc (1.7.0)
+    racc (1.7.1)
     rainbow (3.1.1)
     rake (13.0.6)
     redcarpet (3.6.0)
-    regexp_parser (2.8.0)
+    regexp_parser (2.8.1)
     rexml (3.2.5)
     rspec (3.12.0)
       rspec-core (~> 3.12.0)
@@ -106,11 +107,11 @@ GEM
     rspec-mocks (3.12.5)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.12.0)
-    rspec-support (3.12.0)
-    rubocop (1.52.0)
+    rspec-support (3.12.1)
+    rubocop (1.52.1)
       json (~> 2.3)
       parallel (~> 1.10)
-      parser (>= 3.2.0.0)
+      parser (>= 3.2.2.3)
       rainbow (>= 2.2.2, < 4.0)
       regexp_parser (>= 1.8, < 3.0)
       rexml (>= 3.2.5, < 4.0)
@@ -142,8 +143,8 @@ GEM
       rubocop (~> 1.33)
       rubocop-capybara (~> 2.17)
       rubocop-factory_bot (~> 2.22)
-    rubocop-shopify (2.13.0)
-      rubocop (~> 1.50)
+    rubocop-shopify (2.14.0)
+      rubocop (~> 1.51)
     rubocop-thread_safety (0.5.1)
       rubocop (>= 0.90.0)
     ruby-progressbar (1.13.0)
@@ -160,7 +161,7 @@ GEM
       simplecov
     simplecov-lcov (0.8.0)
     simplecov_json_formatter (0.1.4)
-    standard (1.29.0)
+    standard (1.30.1)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.0)
       rubocop (~> 1.52.0)
@@ -168,8 +169,8 @@ GEM
       standard-performance (~> 1.1.0)
     standard-custom (1.0.1)
       lint_roller (~> 1.0)
-    standard-performance (1.1.0)
-      lint_roller (~> 1.0)
+    standard-performance (1.1.1)
+      lint_roller (~> 1.1)
       rubocop-performance (~> 1.18.0)
     unicode-display_width (2.4.2)
     version_gem (1.1.3)
@@ -209,4 +210,4 @@ DEPENDENCIES
   yard-junk (~> 0.0)
 
 BUNDLED WITH
-   2.4.13
+   2.4.14
