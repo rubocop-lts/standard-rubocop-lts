@@ -27,8 +27,8 @@ jobs:
   test:
     name: Specs with Coverage - Ruby ${{ matrix.ruby }} ${{ matrix.name_extra || '' }}
     if: "!contains(github.event.commits[0].message, '[ci skip]') && !contains(github.event.commits[0].message, '[skip ci]')"
-    env: # $BUNDLE_GEMFILE must be set at the job level, so it is set for all steps
-      BUNDLE_GEMFILE: ${{ github.workspace }}/gemfiles/${{ matrix.gemfile }}.gemfile
+    env: # KETTLE_SOUP must be set at the job level, so it is set for all steps
+      KETTLE_SOUP: coverage,testing
     strategy:
       fail-fast: false
       matrix:
@@ -68,7 +68,7 @@ jobs:
 
       - name: Run RSpec tests
         run: |
-          bundle exec rspec
+          bin/rspec
 
       - name: CodeClimate Post-build Notification
         run: cc-test-reporter after-build

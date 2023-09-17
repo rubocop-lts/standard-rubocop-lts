@@ -8,34 +8,16 @@ git_source(:gitlab) { |repo_name| "https://gitlab.com/#{repo_name}" }
 # Include dependencies from <gem name>.gemspec
 gemspec
 
-# rubocop:disable Layout/LeadingCommentSpace
-#noinspection RbsMissingTypeSignature
-RUBY_VER = Gem::Version.new(RUBY_VERSION)
-#noinspection RbsMissingTypeSignature
-IS_CI = ENV.fetch("CI", "false") == "true"
-#noinspection RbsMissingTypeSignature
-DEBUG_IDE = ENV.fetch("DEBUG_IDE", "false") == "true"
-#noinspection RbsMissingTypeSignature
-LOCAL_SUPPORTED = !IS_CI && Gem::Version.new("2.7") <= RUBY_VER && RUBY_ENGINE == "ruby"
-# rubocop:enable Layout/LeadingCommentSpace
-
-if LOCAL_SUPPORTED || IS_CI
-  # Coverage
-  eval_gemfile "./gemfiles/contexts/coverage.gemfile"
-
-  # Linting
-  eval_gemfile "./gemfiles/contexts/style.gemfile"
-
-  # Testing
-  eval_gemfile "./gemfiles/contexts/testing.gemfile"
-
-  # Documentation
-  eval_gemfile "./gemfiles/contexts/docs.gemfile"
-end
-
-# Debugging code should never run in CI
-unless IS_CI
-  eval_gemfile "./gemfiles/contexts/debug.gemfile"
-end
-
-eval_gemfile "./gemfiles/contexts/core.gemfile"
+# Locally, depends on `export KETTLE_SOUP=core,coverage,debug,docs,repl,style,testing`
+#   in the shell which is accomplished locally via .envrc
+# On CI, each pipeline will set only the necessary contexts, e.g.:
+#   - for current testing
+#     `export KETTLE_SOUP=core,testing`
+#   - for heads testing
+#     `export KETTLE_SOUP=core,testing`
+#   - for code coverage
+#     `export KETTLE_SOUP=coverage,testing
+#   - for style
+#     `export KETTLE_SOUP=core,style`
+# For debugging in an IDE, set KETTLE_DEBUG_IDE=true
+plugin "kettle-soup", path: "/Users/pboling/src/kettle-rb/kettle-soup"
