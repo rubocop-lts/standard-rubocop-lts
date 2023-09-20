@@ -8,4 +8,4 @@ gem "simplecov-json", "~> 0.2", require: false # For CodeClimate
 gem "simplecov-lcov", "~> 0.8", require: false
 # SimpleCov extension gems can be slow to update.
 # Avoid deprecations by using fixed forks.
-gem "simplecov-rcov", github: "pboling/simplecov-rcov", branch: "patch-1", require: false
+gem "simplecov-rcov", "~> 0.3", ">= 0.3.3", require: false

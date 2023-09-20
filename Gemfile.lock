@@ -1,18 +1,10 @@
-GIT
-  remote: https://github.com/pboling/simplecov-rcov
-  revision: 7a54f35d04e2bdb1052be698f00d6c7cc35ea529
-  branch: patch-1
-  specs:
-    simplecov-rcov (0.3.1)
-      simplecov (>= 0.4.1)
-
 PATH
   remote: .
   specs:
     standard-rubocop-lts (1.0.8)
-      standard (>= 1.30.1, < 2)
+      standard (>= 1.31.1, < 2)
       standard-custom (>= 1.0.1, < 2)
-      standard-performance (>= 1.1.1, < 2)
+      standard-performance (>= 1.2, < 2)
       version_gem (>= 1.1.3, < 4)
 
 GEM
@@ -20,6 +12,7 @@ GEM
   specs:
     ast (2.4.2)
     backports (3.24.1)
+    base64 (0.1.1)
     byebug (11.1.3)
     coderay (1.1.3)
     diff-lcs (1.5.0)
@@ -37,11 +30,11 @@ GEM
     lint_roller (1.1.0)
     method_source (1.0.0)
     mime-types (1.25.1)
-    nokogiri (1.15.3-arm64-darwin)
+    nokogiri (1.15.4-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.15.3-x86_64-darwin)
+    nokogiri (1.15.4-x86_64-darwin)
       racc (~> 1.4)
-    nokogiri (1.15.3-x86_64-linux)
+    nokogiri (1.15.4-x86_64-linux)
       racc (~> 1.4)
     parallel (1.23.0)
     parser (3.2.2.3)
@@ -93,7 +86,7 @@ GEM
     rake (13.0.6)
     redcarpet (3.6.0)
     regexp_parser (2.8.1)
-    rexml (3.2.5)
+    rexml (3.2.6)
     rspec (3.12.0)
       rspec-core (~> 3.12.0)
       rspec-expectations (~> 3.12.0)
@@ -104,25 +97,27 @@ GEM
     rspec-expectations (3.12.3)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.12.0)
-    rspec-mocks (3.12.5)
+    rspec-mocks (3.12.6)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.12.0)
     rspec-support (3.12.1)
-    rubocop (1.52.1)
+    rubocop (1.56.3)
+      base64 (~> 0.1.1)
       json (~> 2.3)
+      language_server-protocol (>= 3.17.0)
       parallel (~> 1.10)
       parser (>= 3.2.2.3)
       rainbow (>= 2.2.2, < 4.0)
       regexp_parser (>= 1.8, < 3.0)
       rexml (>= 3.2.5, < 4.0)
-      rubocop-ast (>= 1.28.0, < 2.0)
+      rubocop-ast (>= 1.28.1, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 2.4.0, < 3.0)
     rubocop-ast (1.29.0)
       parser (>= 3.2.1.0)
-    rubocop-capybara (2.18.0)
+    rubocop-capybara (2.19.0)
       rubocop (~> 1.41)
-    rubocop-factory_bot (2.23.1)
+    rubocop-factory_bot (2.24.0)
       rubocop (~> 1.33)
     rubocop-gradual (0.3.1)
       diff-lcs (>= 1.2.0, < 2.0)
@@ -134,12 +129,12 @@ GEM
       rubocop (>= 1.0)
     rubocop-packaging (0.5.2)
       rubocop (>= 1.33, < 2.0)
-    rubocop-performance (1.18.0)
+    rubocop-performance (1.19.1)
       rubocop (>= 1.7.0, < 2.0)
       rubocop-ast (>= 0.4.0)
     rubocop-rake (0.6.0)
       rubocop (~> 1.0)
-    rubocop-rspec (2.22.0)
+    rubocop-rspec (2.24.0)
       rubocop (~> 1.33)
       rubocop-capybara (~> 2.17)
       rubocop-factory_bot (~> 2.22)
@@ -160,18 +155,21 @@ GEM
       json
       simplecov
     simplecov-lcov (0.8.0)
+    simplecov-rcov (0.3.3)
+      simplecov (>= 0.4.1)
     simplecov_json_formatter (0.1.4)
-    standard (1.30.1)
+    standard (1.31.1)
       language_server-protocol (~> 3.17.0.2)
       lint_roller (~> 1.0)
-      rubocop (~> 1.52.0)
+      rubocop (~> 1.56.2)
       standard-custom (~> 1.0.0)
-      standard-performance (~> 1.1.0)
-    standard-custom (1.0.1)
+      standard-performance (~> 1.2)
+    standard-custom (1.0.2)
       lint_roller (~> 1.0)
-    standard-performance (1.1.1)
+      rubocop (~> 1.50)
+    standard-performance (1.2.0)
       lint_roller (~> 1.1)
-      rubocop-performance (~> 1.18.0)
+      rubocop-performance (~> 1.19.0)
     unicode-display_width (2.4.2)
     version_gem (1.1.3)
     yard (0.9.34)
@@ -204,10 +202,10 @@ DEPENDENCIES
   simplecov-cobertura
   simplecov-json (~> 0.2)
   simplecov-lcov (~> 0.8)
-  simplecov-rcov!
+  simplecov-rcov (~> 0.3, >= 0.3.3)
   standard-rubocop-lts!
   yard (~> 0.9, >= 0.9.34)
   yard-junk (~> 0.0)
 
 BUNDLED WITH
-   2.4.14
+   2.4.19
