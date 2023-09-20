@@ -10,6 +10,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
+## [1.0.9] 2023-09-20
+### Fixed
+- Gemspec/DevelopmentDependencies changed to gemspec
+  - See: https://github.com/rubygems/rubygems/discussions/5065#discussioncomment-7031586
+### Changed
+- standard v1.31.1
+- standard-performance v1.2
+- simplecov-rcov dev dependency back to mainline release 0.3.3
+
 ## [1.0.8] 2023-07-07
 ### Fixed
 - compatibility with changes from standard v1.30.1

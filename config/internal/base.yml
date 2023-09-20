@@ -6,10 +6,10 @@ Gemspec/DependencyVersion:
   Enabled: true
   EnforcedStyle: required
 
-# See: See: https://github.com/rubygems/rubygems/discussions/5065
+# See: https://github.com/rubygems/rubygems/discussions/5065#discussioncomment-7031586
 Gemspec/DevelopmentDependencies:
   Enabled: true
-  EnforcedStyle: Gemfile
+  EnforcedStyle: gemspec
 
 # Alphabetizing lists enforces minimal churn in git history
 Gemspec/OrderedDependencies:
