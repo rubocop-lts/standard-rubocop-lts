@@ -18,6 +18,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Disable `Rake/MethodDefinitionInTask` Cop
   - Cop is 66% incorrect, and hasn't been fixed in 2+ years.
   - See: https://github.com/rubocop/rubocop-rake/issues/42
+### Fixed
+- AllCops/TargetRubyVersion is now set according to:
+  - `rubocop-lts` version, or
+  - `rubocop-ruby*_*` version
 
 ## [1.0.9] 2023-09-20
 ### Changed
