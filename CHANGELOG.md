@@ -11,19 +11,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 ## [1.0.10] 2023-11-09
+### Added
+- Moved development dependencies back to gemspec
+  - See: https://github.com/rubygems/rubygems/discussions/5065#discussioncomment-7031586
 ### Changed
 - Disable `Rake/MethodDefinitionInTask` Cop
   - Cop is 66% incorrect, and hasn't been fixed in 2+ years.
   - See: https://github.com/rubocop/rubocop-rake/issues/42
 
 ## [1.0.9] 2023-09-20
-### Fixed
-- Gemspec/DevelopmentDependencies changed to gemspec
-  - See: https://github.com/rubygems/rubygems/discussions/5065#discussioncomment-7031586
 ### Changed
 - standard v1.31.1
 - standard-performance v1.2
 - simplecov-rcov dev dependency back to mainline release 0.3.3
+### Fixed
+- `Gemspec/DevelopmentDependencies` Cop changed to "gemspec"
+  - See: https://github.com/rubygems/rubygems/discussions/5065#discussioncomment-7031586
 
 ## [1.0.8] 2023-07-07
 ### Fixed

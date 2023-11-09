@@ -23,7 +23,6 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = ">= 2.7.0"
 
   spec.metadata["homepage_uri"] = "https://rubocop-lts.gitlab.io/"
-  spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "#{spec.homepage}/-/tree/v#{spec.version}"
   spec.metadata["changelog_uri"] = "#{spec.homepage}/-/blob/v#{spec.version}/CHANGELOG.md"
   spec.metadata["bug_tracker_uri"] = "#{spec.homepage}/-/issues"
@@ -57,9 +56,38 @@ Gem::Specification.new do |spec|
   # standard-performance pulls in rubocop-performance
   spec.add_dependency "standard-performance", ">= 1.2", "< 2"   # >= 2.6.0
 
-  # Internal & External Development dependencies
-  # Specify in Gemfile *only*.
+  # Internal/Private/Platform-specific development dependencies are specified in Gemfile *only*.
+  # External/Public development dependencies are specified in gemspec *only*.
   # See:
-  #   - https://github.com/rubygems/rubygems/discussions/5065
+  #   - https://github.com/rubygems/rubygems/discussions/5065#discussioncomment-7031586
   #   - https://msp-greg.github.io/rubocop/RuboCop/Cop/Gemspec/DevelopmentDependencies.html
+
+  # Utilities
+  spec.add_development_dependency("rake", "~> 13.0")
+
+  # Code Coverage
+  # CodeCov + GitHub setup is not via gems: https://github.com/marketplace/actions/codecov
+  spec.add_development_dependency("kettle-soup-cover", "~> 1.0", ">= 1.0.2")
+
+  # Documentation
+  spec.add_development_dependency("kramdown", "~> 2.4")
+  spec.add_development_dependency("yard", "~> 0.9", ">= 0.9.34")
+  spec.add_development_dependency("yard-junk", "~> 0.0")
+
+  # Linting
+  # NOTE: The gems below, along with this gem, i.e. standard-rubocop-lts, are packaged
+  #       for distribution with single-line configuration by the rubocop-lts meta gem!
+  spec.add_development_dependency("rubocop-gradual", "~> 0.3")         # >= 2.6.0
+  spec.add_development_dependency("rubocop-md", "~> 1.2")              # >= 2.6.0
+  spec.add_development_dependency("rubocop-packaging", "~> 0.5", ">= 0.5.2") # >= 2.6.0
+  spec.add_development_dependency("rubocop-rake", "~> 0.6")            # >= 2.5.0
+  spec.add_development_dependency("rubocop-rspec", "~> 2.24")          # >= 2.7.0
+  spec.add_development_dependency("rubocop-shopify", "~> 2.13")        # >= 2.7.0
+  spec.add_development_dependency("rubocop-thread_safety", "~> 0.5")   # >= 2.5.0
+
+  # Testing
+  spec.add_development_dependency("rspec", "~> 3.12")
+  spec.add_development_dependency("rspec-block_is_expected", "~> 1.0", ">= 1.0.5")
+  spec.add_development_dependency("rspec_junit_formatter", "~> 0.6")
+  spec.add_development_dependency("rspec-stubbed_env", "~> 1.0", ">= 1.0.1")
 end
