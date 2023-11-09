@@ -1,4 +1,4 @@
-# Alphabetizing lists enforces minimal churn in git history
+# Alphabetizing lists enforces minimal churn in git history post-correction
 Bundler/OrderedGems:
   Enabled: true
 
@@ -41,4 +41,9 @@ Performance/Casecmp:
 
 # See: https://github.com/rubocop/rubocop-performance/issues/329#issuecomment-1451511402
 Performance/IoReadlines:
+  Enabled: false
+
+# This cop is 66% incorrect, and hasn't been fixed in 2+ years.
+# See: https://github.com/rubocop/rubocop-rake/issues/42
+Rake/MethodDefinitionInTask:
   Enabled: false

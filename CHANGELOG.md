@@ -10,6 +10,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
+## [1.0.10] 2023-11-09
+### Changed
+- Disable `Rake/MethodDefinitionInTask` Cop
+  - Cop is 66% incorrect, and hasn't been fixed in 2+ years.
+  - See: https://github.com/rubocop/rubocop-rake/issues/42
+
 ## [1.0.9] 2023-09-20
 ### Fixed
 - Gemspec/DevelopmentDependencies changed to gemspec
