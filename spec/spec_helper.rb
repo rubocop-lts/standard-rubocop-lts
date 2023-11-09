@@ -1,8 +1,9 @@
 # frozen_string_literal: true
 
-DEBUG = ENV.fetch("DEBUG", nil) == "true"
-
 # external gems
+# This does not require "simplecov",
+#   because that has a side-effect of running `.simplecov`
+require "kettle-soup-cover"
 require "version_gem/ruby"
 require "version_gem/rspec"
 
@@ -10,29 +11,7 @@ require "version_gem/rspec"
 require "config/rspec/rspec_core"
 require "config/rspec/rspec_block_is_expected"
 
-engine = "ruby"
-major = 3
-minor = 2
-version = "#{major}.#{minor}"
-gte_min = VersionGem::Ruby.gte_minimum_version?(version, engine)
-actual_minor = VersionGem::Ruby.actual_minor_version?(major, minor, engine)
-
-debugging = gte_min && DEBUG
-RUN_COVERAGE = gte_min && (ENV.fetch("COVER_ALL", nil) || ENV.fetch("CI_CODECOV", nil) || ENV["CI"].nil?)
-ALL_FORMATTERS = actual_minor && (ENV.fetch("COVER_ALL", nil) || ENV.fetch("CI_CODECOV", nil) || ENV.fetch("CI", nil))
-
-if DEBUG
-  if debugging
-    require "byebug"
-  elsif VersionGem::Ruby.gte_minimum_version?(version, "jruby")
-    require "pry-debugger-jruby"
-  end
-end
-
-# Load Code Coverage as the last thing before this gem
-if RUN_COVERAGE
-  require "simplecov" # Config file `.simplecov` is run immediately when simplecov loads
-end
+require "simplecov" if Kettle::Soup::Cover::DO_COV
 
 # This gem
 require "standard-rubocop-lts"

@@ -4,6 +4,9 @@ require "bundler/gem_tasks"
 
 defaults = []
 
+require "kettle-soup-cover"
+Kettle::Soup::Cover.install_tasks
+
 begin
   require "rspec/core/rake_task"
   RSpec::Core::RakeTask.new(:spec)
