@@ -50,11 +50,11 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "standard", ">= 1.31.1", "< 2"            # >= 2.6.0
-  spec.add_dependency "standard-custom", ">= 1.0.1", "< 2"      # >= 2.6.0
+  spec.add_dependency "standard", ">= 1.32.0", "< 2"            # >= 2.6.0
+  spec.add_dependency "standard-custom", ">= 1.0.2", "< 2"      # >= 2.6.0
   spec.add_dependency "version_gem", ">= 1.1.3", "< 4"          # >= 2.2.0
   # standard-performance pulls in rubocop-performance
-  spec.add_dependency "standard-performance", ">= 1.2", "< 2"   # >= 2.6.0
+  spec.add_dependency "standard-performance", ">= 1.2.1", "< 2" # >= 2.6.0
 
   # Internal/Private/Platform-specific development dependencies are specified in Gemfile *only*.
   # External/Public development dependencies are specified in gemspec *only*.
@@ -77,13 +77,14 @@ Gem::Specification.new do |spec|
   # Linting
   # NOTE: The gems below, along with this gem, i.e. standard-rubocop-lts, are packaged
   #       for distribution with single-line configuration by the rubocop-lts meta gem!
-  spec.add_development_dependency("rubocop-gradual", "~> 0.3")         # >= 2.6.0
-  spec.add_development_dependency("rubocop-md", "~> 1.2")              # >= 2.6.0
-  spec.add_development_dependency("rubocop-packaging", "~> 0.5", ">= 0.5.2") # >= 2.6.0
-  spec.add_development_dependency("rubocop-rake", "~> 0.6")            # >= 2.5.0
-  spec.add_development_dependency("rubocop-rspec", "~> 2.24")          # >= 2.7.0
-  spec.add_development_dependency("rubocop-shopify", "~> 2.13")        # >= 2.7.0
-  spec.add_development_dependency("rubocop-thread_safety", "~> 0.5")   # >= 2.5.0
+  spec.add_development_dependency("rubocop-gradual", "~> 0.3", ">= 0.3.4")        # >= 2.6.0
+  spec.add_development_dependency("rubocop-md", "~> 1.2", ">= 1.2.1")             # >= 2.6.0
+  spec.add_development_dependency("rubocop-rake", "~> 0.6")                       # >= 2.5.0
+  spec.add_development_dependency("rubocop-shopify", "~> 2.14")                   # >= 2.7.0
+  spec.add_development_dependency("rubocop-thread_safety", "~> 0.5", ">= 0.5.1")  # >= 2.5.0
+  # Additional linting gems that are not packaged with rubocop-lts, but are integrated by it.
+  spec.add_development_dependency("rubocop-packaging", "~> 0.5", ">= 0.5.2")      # >= 2.6.0
+  spec.add_development_dependency("rubocop-rspec", "~> 2.25")                     # >= 2.7.0
 
   # Testing
   spec.add_development_dependency("rspec", "~> 3.12")

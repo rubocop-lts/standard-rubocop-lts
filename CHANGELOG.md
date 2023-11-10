@@ -14,10 +14,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Moved development dependencies back to gemspec
   - See: https://github.com/rubygems/rubygems/discussions/5065#discussioncomment-7031586
+- kettle-soup-cover v1.0.2 for Code Coverage (dev dependency)
+- rspec-stubbed_env v1.0.1 for testing ENV variable-based logic (dev dependency)
 ### Changed
 - Disable `Rake/MethodDefinitionInTask` Cop
   - Cop is 66% incorrect, and hasn't been fixed in 2+ years.
   - See: https://github.com/rubocop/rubocop-rake/issues/42
+- standard v1.32.0
+- standard-performance v1.2.1
+- rubocop v1.57.2 (dev dependency)
+- rubocop-gradual v0.3.4 (dev dependency)
+- rubocop-md v1.2.1 (dev dependency)
+- rubocop-rspec v2.25.0 (dev dependency)
 ### Fixed
 - AllCops/TargetRubyVersion is now set according to:
   - `rubocop-lts` version, or
