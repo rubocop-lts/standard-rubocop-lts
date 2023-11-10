@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
-## [1.0.10] 2023-11-09
+## [1.0.10] 2023-11-10
 ### Added
 - Moved development dependencies back to gemspec
   - See: https://github.com/rubygems/rubygems/discussions/5065#discussioncomment-7031586
@@ -20,6 +20,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Disable `Rake/MethodDefinitionInTask` Cop
   - Cop is 66% incorrect, and hasn't been fixed in 2+ years.
   - See: https://github.com/rubocop/rubocop-rake/issues/42
+- `AllCops/NewCops` is not disabled
+  - Allows other libraries to make those decisions:
+    - rubocop-lts
+    - rubocop-ruby*_*
+    - rubocop-shopify
+    - standard
 - standard v1.32.0
 - standard-performance v1.2.1
 - rubocop v1.57.2 (dev dependency)

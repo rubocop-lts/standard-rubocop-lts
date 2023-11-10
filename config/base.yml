@@ -1,2 +1,10 @@
 AllCops:
-  NewCops: enable
+  # When the Ruby community, via RuboCop, adopts a new standard
+  #   (with additional filtering by standard.rb and rubocop-shopify) it is good enough for us!
+  # However, the new standard needs to be explicitly enabled by one of the filtering gems:
+  #   - standard
+  #   - rubocop-shopify
+  # NOTE: New cops can also be enabled higher up the dependency chain, such as in:
+  #   - rubocop-lts
+  #   - rubocop-ruby*_*
+  NewCops: disable
