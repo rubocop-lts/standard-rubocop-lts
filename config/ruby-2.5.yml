@@ -5,10 +5,6 @@ inherit_mode:
     - Exclude
     - Include
 
-inherit_from:
-  - ./base.yml
-  - ./internal/ruby-2.5.yml
-
 require:
   - standard-rubocop-lts
   - standard
@@ -27,3 +23,7 @@ inherit_gem:
   standard-performance: config/base.yml
   standard-custom: config/base.yml
   rubocop-performance: config/default.yml
+
+inherit_from:
+  - ./base.yml
+  - ./internal/ruby-2.5.yml

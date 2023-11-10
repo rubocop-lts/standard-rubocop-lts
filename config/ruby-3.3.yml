@@ -5,10 +5,6 @@ inherit_mode:
     - Exclude
     - Include
 
-inherit_from:
-  - ./base.yml
-  - ./internal/ruby-3.3.yml
-
 require:
   - standard-rubocop-lts
   - standard
@@ -16,10 +12,10 @@ require:
   - standard-custom
   - rubocop-performance
 
-# TODO: Load basic rules for this version of Ruby from standard, once Standard includes it!
-# See: https://github.com/standardrb/standard/pull/560
+# TODO: Load basic rules for Ruby 3.3 from Standard once they exist!
 #   inherit_gem:
 #     standard: config/ruby-3.3.yml
+
 # Rules are overridden in a LIFO stack.
 # If rubocop-performance is listed first, and standard-performance after it,
 #   then rubocop-performance's rules will take precedence.
@@ -30,3 +26,7 @@ inherit_gem:
   standard-performance: config/base.yml
   standard-custom: config/base.yml
   rubocop-performance: config/default.yml
+
+inherit_from:
+  - ./base.yml
+  - ./internal/ruby-3.3.yml
