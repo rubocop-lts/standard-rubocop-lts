@@ -24,7 +24,6 @@ inherit_gem:
   standard-custom: config/base.yml
   rubocop-performance: config/default.yml
 
-
 inherit_from:
   - ./base.yml
   - ./internal/ruby-2.1.yml
