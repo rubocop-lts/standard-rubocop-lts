@@ -50,9 +50,12 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
+  # Utilities
+  spec.add_dependency("version_gem", ">= 1.1.3", "< 3")               # Ruby >= 2.2.0
+
+  # Linting
   spec.add_dependency "standard", ">= 1.32.0", "< 2"            # >= 2.6.0
   spec.add_dependency "standard-custom", ">= 1.0.2", "< 2"      # >= 2.6.0
-  spec.add_dependency "version_gem", ">= 1.1.3", "< 4"          # >= 2.2.0
   # standard-performance pulls in rubocop-performance
   spec.add_dependency "standard-performance", ">= 1.2.1", "< 2" # >= 2.6.0
 
