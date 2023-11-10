@@ -16,6 +16,38 @@
     </a>
 </p>
 
+# 🦾 Standard::Rubocop::Lts
+
+Extended [standard (Standard Ruby)][standardrb] config shims for all your finely-aged rubies,
+back to Ruby version 1.8. Compatible with the `rubocop-lts` [gem family](#-a-gem-family).
+
+Use the rules standard gives you, and then add more,
+to increase your code's compatibility across multiple versions of Ruby.
+
+Only reach as far back as you need to go!
+
+[standardrb]: https://github.com/standardrb/standard
+
+---
+
+<div id="badges">
+
+[![Liberapay Patrons][⛳liberapay-img]][⛳liberapay]
+[![Sponsor Me on Github][🖇sponsor-img]][🖇sponsor]
+<span class="badge-buymeacoffee">
+<a href="https://ko-fi.com/O5O86SNP4" target='_blank' title="Donate to my FLOSS or refugee efforts at ko-fi.com"><img src="https://img.shields.io/badge/buy%20me%20coffee-donate-yellow.svg" alt="Buy me coffee donation button" /></a>
+</span>
+<span class="badge-patreon">
+<a href="https://patreon.com/galtzo" title="Donate to my FLOSS or refugee efforts using Patreon"><img src="https://img.shields.io/badge/patreon-donate-yellow.svg" alt="Patreon donate button" /></a>
+</span>
+
+</div>
+
+[⛳liberapay-img]: https://img.shields.io/liberapay/patrons/pboling.svg?logo=liberapay
+[⛳liberapay]: https://liberapay.com/pboling/donate
+[🖇sponsor-img]: https://img.shields.io/badge/Sponsor_Me!-pboling.svg?style=social&logo=github
+[🖇sponsor]: https://github.com/sponsors/pboling
+
 ---
 
 NOTE: You might be interested in [`rubocop-lts`][rlts] which sits as a higher level than, and depends on, this gem.
@@ -79,18 +111,6 @@ It will enable your Ruby style rules to keep pace with whatever version of Ruby 
 [⛳️ini-g]: https://rubygems.org/gems/standard-rubocop-lts
 [⛳️ini-gh]: https://github.com/rubocop-lts/standard-rubocop-lts
 
-# 🦾 Standard::Rubocop::Lts
-
-Extended [standard (Standard Ruby)][standardrb] config shims for all your finely-aged rubies,
-back to Ruby version 1.8. Compatible with the `rubocop-lts` [gem family](#a-gem-family).
-
-Use the rules standard gives you, and then add more,
-to increase your code's compatibility across multiple versions of Ruby.
-
-Only reach as far back as you need to go!
-
-[standardrb]: https://github.com/standardrb/standard
-
 ### 👪 A Gem Family
 
 The `rubocop-lts` family of gems has a version supporting any version of Ruby you need.
@@ -112,9 +132,9 @@ They can be used as development dependencies for libraries or applications.
 - [`rubocop-ruby3_1`][rr31]
 - [`rubocop-ruby3_2`][rr32]
 
-[rlts]: https://github.com/rubocop-lts/rubocop-lts#-how-to-untie-gorgons-knot
-[stdrlts]: https://github.com/rubocop-lts/standard-rubocop-lts
-[rr18]: https://gitlab.com/rubocop-lts/standard-rubocop-lts
+[rlts]: https://rubocop-lts.gitlab.io/#installation-
+[stdrlts]: https://gitlab.com/rubocop-lts/standard-rubocop-lts
+[rr18]: https://gitlab.com/rubocop-lts/rubocop-ruby1_8
 [rr19]: https://gitlab.com/rubocop-lts/rubocop-ruby1_9
 [rr20]: https://gitlab.com/rubocop-lts/rubocop-ruby2_0
 [rr21]: https://gitlab.com/rubocop-lts/rubocop-ruby2_1
@@ -138,6 +158,12 @@ though eventually analysis support for an old version of Ruby will be dropped.
 When that happens releases of the `rubocop-lts` gem for that version of Ruby will (mostly) cease.
 
 ## ✨ Installation
+
+In case you missed it above - you may be better off _not_ depending on this gem _directly_.
+See [`rubocop-lts`][rlts] which sits as a higher level than, and depends on, this gem.
+It will enable your Ruby style rules to keep pace with whatever version of Ruby your project happens to be on!
+
+If, OTOH, you want to use this gem directly, carry on!
 
 Install the gem and add to the application's Gemfile by executing:
 
@@ -225,7 +251,7 @@ Performance/IoReadlines:
 
 **Instead of using this gem, `standard-rubocop-lts`, use `rubocop-lts`, which depends on this gem.
 ```ruby
-# NOTE: Picking the right version of this rubocop-lts automatically aligns:
+# NOTE: Picking the right version of rubocop-lts automatically aligns:
 #       - gemspec's required_ruby_version
 #       - RuboCop's TargetRubyVersion
 # e.g. v18 for Ruby >= 2.7.0
