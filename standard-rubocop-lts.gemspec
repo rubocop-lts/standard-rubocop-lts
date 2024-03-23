@@ -58,6 +58,13 @@ Gem::Specification.new do |spec|
   spec.add_dependency "standard-custom", ">= 1.0.2", "< 2"      # >= 2.6.0
   # standard-performance pulls in rubocop-performance
   spec.add_dependency "standard-performance", ">= 1.3.1", "< 2" # >= 2.7.0
+  # Normally this would be a development dependency, but it does ship with rubocop configuration
+  #   and that configuration was added to every rubocop-ruby*_* gems's rubocop configs,
+  #   resulting in a shared-but-undeclared dependency.
+  # The simplest fix is to add it here, since they all depend on this gem.
+  # This is a temporary solution, which will be removed with the release of the rubocop-lts-rspec gem,
+  #   which will consolidate the RSpec configs for the RuboCop-LTS ecosystem.
+  spec.add_dependency("rspec-block_is_expected", "~> 1.0", ">= 1.0.5")
 
   # Internal/Private/Platform-specific development dependencies are specified in Gemfile *only*.
   # External/Public development dependencies are specified in gemspec *only*.
@@ -91,7 +98,6 @@ Gem::Specification.new do |spec|
 
   # Testing
   spec.add_development_dependency("rspec", "~> 3.13")
-  spec.add_development_dependency("rspec-block_is_expected", "~> 1.0", ">= 1.0.5")
   spec.add_development_dependency("rspec_junit_formatter", "~> 0.6")
   spec.add_development_dependency("rspec-stubbed_env", "~> 1.0", ">= 1.0.1")
 end

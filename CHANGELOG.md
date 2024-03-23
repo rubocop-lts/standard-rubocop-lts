@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
-## [1.0.10] 2023-11-10
+## [1.0.10] 2024-03-23
 ### Added
 - Moved development dependencies back to gemspec
   - See: https://github.com/rubygems/rubygems/discussions/5065#discussioncomment-7031586
@@ -26,12 +26,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - rubocop-ruby*_*
     - rubocop-shopify
     - standard
-- standard v1.32.0
-- standard-performance v1.2.1
-- rubocop v1.57.2 (dev dependency)
+- rspec-block_is_expected promoted to runtime dependency
+  - was an undeclared dependency of rubocop-ruby*_* gems,
+  - adding here was the simplest way to fix them all at once,
+  - but is a temporary fix; will be replaced by new gem rubocop-lts-rspec
+  - see gemspec for details
+- standard v1.35.1
+- standard-performance v1.3.1
+- version_gem v1.1.4
+- rspec 3.13.0 (dev dependency)
+- rubocop v1.62.1 (dev dependency)
 - rubocop-gradual v0.3.4 (dev dependency)
-- rubocop-md v1.2.1 (dev dependency)
-- rubocop-rspec v2.25.0 (dev dependency)
+- rubocop-md v1.2.2 (dev dependency)
+- rubocop-rspec 2.27.1 (dev dependency)
+- rubocop-shopify 2.15.1 (dev dependency)
 ### Fixed
 - AllCops/TargetRubyVersion is now set according to:
   - `rubocop-lts` version, or
@@ -112,7 +120,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release
 
-[Unreleased]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/v1.0.6...HEAD
+[Unreleased]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/v1.0.10...HEAD
+[1.0.10]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/v1.0.5...v1.0.10
+[1.0.9]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/v1.0.5...v1.0.9
+[1.0.8]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/v1.0.5...v1.0.8
+[1.0.7]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/v1.0.5...v1.0.7
 [1.0.6]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/v1.0.5...v1.0.6
 [1.0.5]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/v1.0.4...v1.0.5
 [1.0.4]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/v1.0.3...v1.0.4
