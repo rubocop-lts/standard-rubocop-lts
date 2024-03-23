@@ -31,10 +31,6 @@ jobs:
       fail-fast: false
       matrix:
         experimental: [false]
-        rubygems:
-          - latest
-        bundler:
-          - latest
         gemfile:
           - vanilla
         ruby:
@@ -48,13 +44,11 @@ jobs:
     continue-on-error: ${{ matrix.experimental || endsWith(matrix.ruby, 'head') }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Setup Ruby & Bundle
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ matrix.ruby }}
-          rubygems: ${{ matrix.rubygems }}
-          bundler: ${{ matrix.bundler }}
           bundler-cache: true
       - name: Run tests
         run: bundle exec rake test

@@ -33,10 +33,6 @@ jobs:
       fail-fast: false
       matrix:
         experimental: [false]
-        rubygems:
-          - latest
-        bundler:
-          - latest
         gemfile:
           - coverage
         ruby:
@@ -51,14 +47,12 @@ jobs:
           cc_test_reporter_id: ${{ secrets.CC_TEST_REPORTER_ID }}
 
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Ruby & Bundle
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ matrix.ruby }}
-          rubygems: ${{ matrix.rubygems }}
-          bundler: ${{ matrix.bundler }}
           bundler-cache: true
 
       - name: CodeClimate Pre-build Notification

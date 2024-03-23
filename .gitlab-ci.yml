@@ -14,7 +14,6 @@ workflow:
   image: ruby:${RUBY_VERSION}
   stage: test
   script:
-    - gem update --system
     - bundle config --local path vendor
     - bundle install --jobs 4 --retry 3
     - bundle exec rake test
