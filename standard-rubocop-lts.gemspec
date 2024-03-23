@@ -51,7 +51,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   # Utilities
-  spec.add_dependency("version_gem", ">= 1.1.3", "< 3")               # Ruby >= 2.2.0
+  spec.add_dependency("version_gem", ">= 1.1.4", "< 3")               # Ruby >= 2.2.0
 
   # Linting
   spec.add_dependency "standard", ">= 1.35.1", "< 2"            # >= 2.6.0

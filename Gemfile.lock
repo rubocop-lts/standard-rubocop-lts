@@ -5,7 +5,7 @@ PATH
       standard (>= 1.35.1, < 2)
       standard-custom (>= 1.0.2, < 2)
       standard-performance (>= 1.3.1, < 2)
-      version_gem (>= 1.1.3, < 3)
+      version_gem (>= 1.1.4, < 3)
 
 GEM
   remote: https://rubygems.org/
@@ -129,7 +129,7 @@ GEM
     terminal-table (3.0.2)
       unicode-display_width (>= 1.1.1, < 3)
     unicode-display_width (2.5.0)
-    version_gem (1.1.3)
+    version_gem (1.1.4)
     yard (0.9.36)
     yard-junk (0.0.9)
       backports (>= 3.18)
