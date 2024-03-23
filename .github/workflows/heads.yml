@@ -36,7 +36,13 @@ jobs:
         ruby:
           - "ruby-head"
           # NOTE: jruby-head is still @ Ruby 3.1 compat
-          - "jruby-head"
+          # NOTE: jruby-head fails with KeyError: key not found: :branch
+          #     fetch at org/jruby/RubyHash.java:1438
+          #      calculate_minimum_violations at /home/runner/work/standard-rubocop-lts/standard-rubocop-lts/vendor/bundle/jruby/3.1.0/gems/simplecov-0.22.0/lib/simplecov/exit_codes/minimum_overall_coverage_check.rb:41
+          #                              each at org/jruby/RubyHash.java:1610
+          #                               map at org/jruby/RubyEnumerable.java:818
+          #      calculate_minimum_violations at /home/runner/work/standard-rubocop-lts/standard-rubocop-lts/vendor/bundle/jruby/3.1.0/gems/simplecov-0.22.0/lib/simplecov/exit_codes/minimum_overall_coverage_check.rb:39
+          # - "jruby-head"
           # NOTE: truffleruby-head is still @ Ruby 3.1 compat
           - "truffleruby-head"
 
