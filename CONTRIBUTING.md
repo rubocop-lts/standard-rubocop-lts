@@ -38,7 +38,7 @@ See: [RubyGems Security Guide][🔒️rubygems-security-guide]
 Contributors Parade (GitHub Only) made with [contributors-img][🖐contrib-rocks].
 
 [🧪build]: https://github.com/rubocop-lts/standard-rubocop-lts/actions
-[🏘chat]: https://gitter.im/rubocop-lts/community
+[🏘chat]: https://app.gitter.im/#/room/#rubocop-lts_community:gitter.im
 [🤝conduct]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/blob/main/CODE_OF_CONDUCT.md
 [🖐contrib-rocks]: https://contrib.rocks
 [🖐contributors]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/graphs/main
