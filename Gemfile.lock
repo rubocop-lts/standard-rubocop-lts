@@ -93,7 +93,7 @@ GEM
       rubocop (~> 1.40)
       rubocop-capybara (~> 2.17)
       rubocop-factory_bot (~> 2.22)
-    rubocop-shopify (2.14.0)
+    rubocop-shopify (2.15.1)
       rubocop (~> 1.51)
     rubocop-thread_safety (0.5.1)
       rubocop (>= 0.90.0)
@@ -153,7 +153,7 @@ DEPENDENCIES
   rubocop-packaging (~> 0.5, >= 0.5.2)
   rubocop-rake (~> 0.6)
   rubocop-rspec (~> 2.25)
-  rubocop-shopify (~> 2.14)
+  rubocop-shopify (~> 2.15, >= 2.15.1)
   rubocop-thread_safety (~> 0.5, >= 0.5.1)
   standard-rubocop-lts!
   yard (~> 0.9, >= 0.9.36)

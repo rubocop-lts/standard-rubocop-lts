@@ -83,7 +83,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency("rubocop-gradual", "~> 0.3", ">= 0.3.4")        # Ruby >= 2.6.0
   spec.add_development_dependency("rubocop-md", "~> 1.2", ">= 1.2.2")             # Ruby >= 2.6.0
   spec.add_development_dependency("rubocop-rake", "~> 0.6")                       # Ruby >= 2.5.0
-  spec.add_development_dependency("rubocop-shopify", "~> 2.14")                   # Ruby >= 2.7.0
+  spec.add_development_dependency("rubocop-shopify", "~> 2.15", ">= 2.15.1")      # Ruby >= 2.7.0
   spec.add_development_dependency("rubocop-thread_safety", "~> 0.5", ">= 0.5.1")  # Ruby >= 2.5.0
   # Additional linting gems that are not packaged with rubocop-lts, but are integrated by it.
   spec.add_development_dependency("rubocop-packaging", "~> 0.5", ">= 0.5.2")      # Ruby >= 2.6.0
