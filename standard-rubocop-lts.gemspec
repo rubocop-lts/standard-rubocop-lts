@@ -87,7 +87,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency("rubocop-thread_safety", "~> 0.5", ">= 0.5.1")  # Ruby >= 2.5.0
   # Additional linting gems that are not packaged with rubocop-lts, but are integrated by it.
   spec.add_development_dependency("rubocop-packaging", "~> 0.5", ">= 0.5.2")      # Ruby >= 2.6.0
-  spec.add_development_dependency("rubocop-rspec", "~> 2.25")                     # Ruby >= 2.7.0
+  spec.add_development_dependency("rubocop-rspec", "~> 2.27", ">= 2.27.1")                     # Ruby >= 2.7.0
 
   # Testing
   spec.add_development_dependency("rspec", "~> 3.12")
