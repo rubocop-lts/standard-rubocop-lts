@@ -81,7 +81,7 @@ Gem::Specification.new do |spec|
   # NOTE: The gems below, along with this gem, i.e. standard-rubocop-lts, are packaged
   #       for distribution with single-line configuration by the rubocop-lts meta gem!
   spec.add_development_dependency("rubocop-gradual", "~> 0.3", ">= 0.3.4")        # Ruby >= 2.6.0
-  spec.add_development_dependency("rubocop-md", "~> 1.2", ">= 1.2.1")             # Ruby >= 2.6.0
+  spec.add_development_dependency("rubocop-md", "~> 1.2", ">= 1.2.2")             # Ruby >= 2.6.0
   spec.add_development_dependency("rubocop-rake", "~> 0.6")                       # Ruby >= 2.5.0
   spec.add_development_dependency("rubocop-shopify", "~> 2.14")                   # Ruby >= 2.7.0
   spec.add_development_dependency("rubocop-thread_safety", "~> 0.5", ">= 0.5.1")  # Ruby >= 2.5.0
