@@ -20,7 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Disable `Rake/MethodDefinitionInTask` Cop
   - Cop is 66% incorrect, and hasn't been fixed in 2+ years.
   - See: https://github.com/rubocop/rubocop-rake/issues/42
-- `AllCops/NewCops` is not disabled
+- `AllCops/NewCops` is now disabled
   - Allows other libraries to make those decisions:
     - rubocop-lts
     - rubocop-ruby*_*
