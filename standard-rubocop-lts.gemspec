@@ -74,7 +74,7 @@ Gem::Specification.new do |spec|
 
   # Documentation
   spec.add_development_dependency("kramdown", "~> 2.4")
-  spec.add_development_dependency("yard", "~> 0.9", ">= 0.9.34")
+  spec.add_development_dependency("yard", "~> 0.9", ">= 0.9.36")
   spec.add_development_dependency("yard-junk", "~> 0.0")
 
   # Linting
