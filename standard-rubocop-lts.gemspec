@@ -51,13 +51,13 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   # Utilities
-  spec.add_dependency("version_gem", ">= 1.1.6", "< 3")               # Ruby >= 2.2.0
+  spec.add_dependency("version_gem", ">= 1.1.6", "< 3")                           # Ruby >= 2.2.0
 
   # Linting
-  spec.add_dependency "standard", ">= 1.35.1", "< 2"            # >= 2.6.0
-  spec.add_dependency "standard-custom", ">= 1.0.2", "< 2"      # >= 2.6.0
+  spec.add_dependency "standard", ">= 1.35.1", "< 2"                              # Ruby >= 2.6.0
+  spec.add_dependency "standard-custom", ">= 1.0.2", "< 2"                        # Ruby >= 2.6.0
   # standard-performance pulls in rubocop-performance
-  spec.add_dependency "standard-performance", ">= 1.3.1", "< 2" # >= 2.7.0
+  spec.add_dependency "standard-performance", ">= 1.3.1", "< 2"                   # Ruby >= 2.7.0
   # Normally this would be a development dependency, but it does ship with rubocop configuration
   #   and that configuration was added to every rubocop-ruby*_* gems' rubocop configs,
   #   resulting in a shared-but-undeclared dependency.
@@ -72,8 +72,9 @@ Gem::Specification.new do |spec|
   #   - https://github.com/rubygems/rubygems/discussions/5065#discussioncomment-7031586
   #   - https://msp-greg.github.io/rubocop/RuboCop/Cop/Gemspec/DevelopmentDependencies.html
 
-  # Utilities
+  # Releases
   spec.add_development_dependency("rake", "~> 13.2", ">= 13.2.1")                 # Ruby >= 2.3.0
+  spec.add_development_dependency("stone_checksums", "~> 1.0")                    # Ruby >= 2.2.0
 
   # Code Coverage
   # CodeCov + GitHub setup is not via gems: https://github.com/marketplace/actions/codecov
