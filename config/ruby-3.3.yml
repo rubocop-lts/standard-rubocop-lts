@@ -5,12 +5,14 @@ inherit_mode:
     - Exclude
     - Include
 
+plugins:
+  - rubocop-performance
+  - standard-performance
+  - standard-custom
+
 require:
   - standard-rubocop-lts
   - standard
-  - standard-performance
-  - standard-custom
-  - rubocop-performance
 
 # TODO: Load basic rules for Ruby 3.3 from Standard once they exist!
 #   inherit_gem:

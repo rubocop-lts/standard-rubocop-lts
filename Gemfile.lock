@@ -155,6 +155,7 @@ DEPENDENCIES
   rspec (~> 3.13)
   rspec-stubbed_env (~> 1.0, >= 1.0.1)
   rspec_junit_formatter (~> 0.6)
+  rubocop (~> 1.72)
   rubocop-gradual (~> 0.3, >= 0.3.6)
   rubocop-md (~> 2.0, >= 2.0.0)
   rubocop-packaging (~> 0.6, >= 0.6.0)

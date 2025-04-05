@@ -1,9 +1,11 @@
-require:
+plugins:
   - rubocop-md
   - rubocop-packaging
   - rubocop-rake
   - rubocop-rspec
   - rubocop-thread_safety
+
+require:
   # RuboCop Gradual can be used in "Require mode", which is a way to replace rubocop with rubocop-gradual:
   - rubocop/gradual/patch
 
@@ -36,3 +38,8 @@ Style/HashSyntax:
 Style/TrailingCommaInArrayLiteral:
   EnforcedStyleForMultiline: consistent_comma
   Enabled: true
+
+ThreadSafety/ClassInstanceVariable:
+  Enabled: true
+  Exclude:
+    - bin/bundle
