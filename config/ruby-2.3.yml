@@ -1,4 +1,4 @@
-# We want Exclude and Include directives from different
+# We want the Exclude and Include directives from different
 #   config files to get merged, not overwritten
 inherit_mode:
   merge:
