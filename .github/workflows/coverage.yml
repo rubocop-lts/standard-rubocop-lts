@@ -1,9 +1,15 @@
 name: Code Coverage
 
+permissions:
+  contents: read
+
 env:
-  CI_CODECOV: true
-  COVER_ALL: true
-  COVERAGE: true
+  K_SOUP_COV_DEBUG: true
+  K_SOUP_COV_DO: true
+  K_SOUP_COV_HARD: true
+  K_SOUP_COV_MIN_BRANCH: 25
+  K_SOUP_COV_MIN_LINE: 55
+  K_SOUP_COV_VERBOSE: true
 
 on:
   push:
@@ -27,12 +33,16 @@ jobs:
   test:
     name: Specs with Coverage - Ruby ${{ matrix.ruby }} ${{ matrix.name_extra || '' }}
     if: "!contains(github.event.commits[0].message, '[ci skip]') && !contains(github.event.commits[0].message, '[skip ci]')"
-    env: # $BUNDLE_GEMFILE must be set at the job level, so it is set for all steps
+    env: # $BUNDLE_GEMFILE must be set on the job level, so it is set for all steps
       BUNDLE_GEMFILE: ${{ github.workspace }}/gemfiles/${{ matrix.gemfile }}.gemfile
     strategy:
       fail-fast: false
       matrix:
         experimental: [false]
+        rubygems:
+          - latest
+        bundler:
+          - latest
         gemfile:
           - coverage
         ruby:
@@ -40,7 +50,7 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
-      - uses: amancevice/setup-code-climate@v0
+      - uses: amancevice/setup-code-climate@v2
         name: CodeClimate Install
         if: ${{ github.event_name != 'pull_request' }}
         with:
@@ -53,6 +63,8 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ matrix.ruby }}
+          rubygems: ${{ matrix.rubygems }}
+          bundler: ${{ matrix.bundler }}
           bundler-cache: true
 
       - name: CodeClimate Pre-build Notification
@@ -92,8 +104,22 @@ jobs:
           path: code-coverage-results.md
         continue-on-error: ${{ matrix.experimental != 'false' }}
 
-      - name: Coveralls
+      - name: Upload coverage to Coveralls
         uses: coverallsapp/github-action@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
         continue-on-error: ${{ matrix.experimental != 'false' }}
+
+      - name: Upload coverage to QLTY
+        uses: qltysh/qlty-action/coverage@main
+        with:
+          coverage-token: ${{secrets.QLTY_COVERAGE_TOKEN}}
+          files: coverage/.resultset.json
+        continue-on-error: ${{ matrix.experimental != 'false' }}
+
+      - name: Upload coverage to CodeCov
+        uses: codecov/codecov-action@v5
+        with:
+          fail_ci_if_error: true # optional (default = false)
+          token: ${{ secrets.CODECOV_TOKEN }}
+          verbose: true # optional (default = false)

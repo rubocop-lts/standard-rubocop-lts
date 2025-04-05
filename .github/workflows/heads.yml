@@ -1,12 +1,15 @@
 name: Ruby HEAD Support
 
+permissions:
+  contents: read
+
+env:
+  K_SOUP_COV_DO: false
+
 on:
   push:
     branches:
       - 'main'
-      - '*-maintenance'
-      - '*-dev'
-      - '*-stable'
     tags:
       - '!*' # Do not execute on tags
   pull_request:
@@ -24,26 +27,24 @@ concurrency:
 jobs:
   test:
     name: Ruby ${{ matrix.ruby }} ${{matrix.gemfile}} ${{ matrix.name_extra || '' }}
-    env: # $BUNDLE_GEMFILE must be set at the job level, so it is set for all steps
+    env: # $BUNDLE_GEMFILE must be set on the job level, so it is set for all steps
       BUNDLE_GEMFILE: ${{ github.workspace }}/gemfiles/${{ matrix.gemfile }}.gemfile
     if: "!contains(github.event.commits[0].message, '[ci skip]') && !contains(github.event.commits[0].message, '[skip ci]')"
     strategy:
       fail-fast: false
       matrix:
-        experimental: [false]
+        experimental: [true]
+        rubygems:
+          - latest
+        bundler:
+          - latest
         gemfile:
           - vanilla
         ruby:
           - "ruby-head"
-          # NOTE: jruby-head is still @ Ruby 3.1 compat
-          # NOTE: jruby-head fails with KeyError: key not found: :branch
-          #     fetch at org/jruby/RubyHash.java:1438
-          #      calculate_minimum_violations at /home/runner/work/standard-rubocop-lts/standard-rubocop-lts/vendor/bundle/jruby/3.1.0/gems/simplecov-0.22.0/lib/simplecov/exit_codes/minimum_overall_coverage_check.rb:41
-          #                              each at org/jruby/RubyHash.java:1610
-          #                               map at org/jruby/RubyEnumerable.java:818
-          #      calculate_minimum_violations at /home/runner/work/standard-rubocop-lts/standard-rubocop-lts/vendor/bundle/jruby/3.1.0/gems/simplecov-0.22.0/lib/simplecov/exit_codes/minimum_overall_coverage_check.rb:39
-          # - "jruby-head"
-          # NOTE: truffleruby-head is still @ Ruby 3.1 compat
+          # NOTE: jruby-head is a couple minor releases behind MRI head
+          - "jruby-head"
+          # NOTE: truffleruby-head is a couple minor releases behind MRI head
           - "truffleruby-head"
 
     runs-on: ubuntu-latest
@@ -55,6 +56,8 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ matrix.ruby }}
+          rubygems: ${{ matrix.rubygems }}
+          bundler: ${{ matrix.bundler }}
           bundler-cache: true
       - name: Run tests
         run: bundle exec rake test

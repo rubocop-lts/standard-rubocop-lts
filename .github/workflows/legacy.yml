@@ -1,4 +1,4 @@
-name: Current Ruby Support
+name: MRI 3.0 (EOL)
 
 permissions:
   contents: read
@@ -21,7 +21,7 @@ on:
 # Cancels all previous workflow runs for the same branch that have not yet completed.
 concurrency:
   # The concurrency group contains the workflow name and the branch name.
-  group: ${{ github.workflow }}-${{ github.ref }}
+  group: "${{ github.workflow }}-${{ github.ref }}"
   cancel-in-progress: true
 
 jobs:
@@ -35,14 +35,13 @@ jobs:
       matrix:
         experimental: [false]
         rubygems:
-          - latest
+          - '3.5.23'
         bundler:
-          - latest
+          - '2.5.23'
         gemfile:
           - vanilla
-          - rails7
         ruby:
-          - "ruby" # Whatever is the current release of Ruby
+          - "ruby-3.0"
 
     runs-on: ubuntu-latest
     continue-on-error: ${{ matrix.experimental || endsWith(matrix.ruby, 'head') }}
