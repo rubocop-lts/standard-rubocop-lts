@@ -10,10 +10,14 @@ inherit_from: ./ruby-2.0.yml
 Style/PercentLiteralDelimiters:
   Enabled: false
 
+# Ruby < 2.0 only support bracketed arrays
 Style/SymbolArray:
+  Enabled: true
   EnforcedStyle: brackets
 
+# Ruby < 2.0 only support bracketed arrays
 Style/WordArray:
+  Enabled: true
   EnforcedStyle: brackets
 
 ##############################################################################

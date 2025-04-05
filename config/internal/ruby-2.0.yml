@@ -2,3 +2,9 @@ inherit_from: ./ruby-2.1.yml
 
 AllCops:
   TargetRubyVersion: 2.0
+
+# Disabled by Standard, which doesn't help compat, so overriding for Ruby < 2.1
+# See: https://github.com/standardrb/standard/blob/main/config/ruby-1.9.yml#L6C1-L6C21
+Style/HashConversion:
+  Enabled: true
+  AllowSplatArgument: false
