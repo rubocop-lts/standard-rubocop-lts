@@ -1,3 +1,15 @@
+GIT
+  remote: https://github.com/pboling/yard-junk.git
+  revision: 54ccebabbfa9a9cd44d0b991687ebbfd22c32b55
+  branch: next
+  specs:
+    yard-junk (0.0.10)
+      backports (>= 3.18)
+      benchmark
+      ostruct
+      rainbow
+      yard
+
 PATH
   remote: .
   specs:
@@ -14,6 +26,7 @@ GEM
     ansi (1.5.0)
     ast (2.4.3)
     backports (3.25.1)
+    benchmark (0.4.0)
     byebug (12.0.0)
     diff-lcs (1.6.1)
     diffy (3.4.3)
@@ -139,11 +152,6 @@ GEM
     unicode-emoji (4.0.4)
     version_gem (1.1.6)
     yard (0.9.37)
-    yard-junk (0.0.10)
-      backports (>= 3.18)
-      ostruct
-      rainbow
-      yard
 
 PLATFORMS
   arm64-darwin-22
@@ -168,7 +176,7 @@ DEPENDENCIES
   standard-rubocop-lts!
   stone_checksums (~> 1.0)
   yard (~> 0.9, >= 0.9.37)
-  yard-junk (~> 0.0, >= 0.0.10)
+  yard-junk (~> 0.0, >= 0.0.10)!
 
 BUNDLED WITH
    2.6.7
