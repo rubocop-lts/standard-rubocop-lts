@@ -54,7 +54,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency("version_gem", ">= 1.1.6", "< 3")                           # Ruby >= 2.2.0
 
   # Linting
-  spec.add_dependency "standard", ">= 1.35.1", "< 2"                              # Ruby >= 2.6.0
+  spec.add_dependency "standard", ">= 1.35.1", "< 2"                              # Ruby >= 2.6.0, v1.38+ is Ruby >= 3.0.0
   spec.add_dependency "standard-custom", ">= 1.0.2", "< 2"                        # Ruby >= 2.6.0
   # standard-performance pulls in rubocop-performance
   spec.add_dependency "standard-performance", ">= 1.3.1", "< 2"                   # Ruby >= 2.7.0
@@ -81,7 +81,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency("kettle-soup-cover", "~> 1.0", ">= 1.0.5")      # Ruby >= 2.7.0
 
   # Documentation
-  spec.add_development_dependency("kramdown", "~> 2.5", ">= 2.5.1")               # Ruby >= 2.5.0
   spec.add_development_dependency("yard", "~> 0.9", ">= 0.9.37")                  # Ruby >= 0
   spec.add_development_dependency("yard-junk", "~> 0.0", ">= 0.0.10")             # Ruby >= 2.7.0
 
@@ -90,7 +89,7 @@ Gem::Specification.new do |spec|
   #       for distribution with single-line configuration by the rubocop-lts meta gem!
   spec.add_development_dependency("rubocop", "~> 1.72")                           # Ruby >= 2.7.0
   spec.add_development_dependency("rubocop-gradual", "~> 0.3", ">= 0.3.6")        # Ruby >= 2.6.0
-  spec.add_development_dependency("rubocop-md", "~> 2.0", ">= 2.0.0")             # Ruby >= 2.7.0
+  spec.add_development_dependency("rubocop-md", ">= 1.2", "< 3")                  # Ruby >= 2.6.0
   spec.add_development_dependency("rubocop-rake", "~> 0.7", ">= 0.7.1")           # Ruby >= 2.7.0
   spec.add_development_dependency("rubocop-shopify", "~> 2.15", ">= 2.15.1")      # Ruby >= 2.7.0, v2.16 is Ruby >= 3.1
   spec.add_development_dependency("rubocop-thread_safety", "~> 0.7", ">= 0.7.2")  # Ruby >= 2.7.0
