@@ -58,6 +58,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "standard-custom", ">= 1.0.2", "< 2"                        # Ruby >= 2.6.0
   # standard-performance pulls in rubocop-performance
   spec.add_dependency "standard-performance", ">= 1.3.1", "< 2"                   # Ruby >= 2.7.0
+
   # Normally this would be a development dependency, but it does ship with rubocop configuration
   #   and that configuration was added to every rubocop-ruby*_* gems' rubocop configs,
   #   resulting in a shared-but-undeclared dependency.
@@ -85,14 +86,9 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency("yard-junk", "~> 0.0", ">= 0.0.10")             # Ruby >= 2.7.0
 
   # Linting
-  # NOTE: The gems below, along with this gem, i.e. standard-rubocop-lts, are packaged
-  #       for distribution with single-line configuration by the rubocop-lts meta gem!
-  spec.add_development_dependency("rubocop", "~> 1.72")                           # Ruby >= 2.7.0
-  spec.add_development_dependency("rubocop-gradual", "~> 0.3", ">= 0.3.6")        # Ruby >= 2.6.0
-  spec.add_development_dependency("rubocop-md", ">= 1.2", "< 3")                  # Ruby >= 2.6.0
-  spec.add_development_dependency("rubocop-rake", "~> 0.7", ">= 0.7.1")           # Ruby >= 2.7.0
-  spec.add_development_dependency("rubocop-shopify", "~> 2.15", ">= 2.15.1")      # Ruby >= 2.7.0, v2.16 is Ruby >= 3.1
-  spec.add_development_dependency("rubocop-thread_safety", "~> 0.7", ">= 0.7.2")  # Ruby >= 2.7.0
+  # We run rubocop on the latest version of Ruby,
+  #   but in support of the oldest supported version of Ruby
+  spec.add_development_dependency "rubocop-lts", "~> 24.0", ">= 24.0.2"           # Linting for Ruby >= 3.2
   # Additional linting gems that are not packaged with rubocop-lts, but are integrated by it.
   spec.add_development_dependency("rubocop-packaging", "~> 0.6", ">= 0.6.0")      # Ruby >= 2.7.0
   spec.add_development_dependency("rubocop-rspec", "~> 3.5", ">= 3.5.0")          # Ruby >= 2.7.0

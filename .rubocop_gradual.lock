@@ -1,0 +1,28 @@
+{
+  "README.md:386259722": [
+    [351, 1, 52, "Style/MethodCallWithArgsParentheses: Use parentheses for method calls with arguments.", 2780451066]
+  ],
+  "Rakefile:1603057894": [
+    [16, 3, 37, "Style/MethodCallWithArgsParentheses: Use parentheses for method calls with arguments.", 216999891],
+    [28, 3, 53, "Style/MethodCallWithArgsParentheses: Use parentheses for method calls with arguments.", 995716539],
+    [41, 3, 41, "Style/MethodCallWithArgsParentheses: Use parentheses for method calls with arguments.", 367842782],
+    [45, 3, 48, "Style/MethodCallWithArgsParentheses: Use parentheses for method calls with arguments.", 3782114773],
+    [77, 3, 33, "Style/MethodCallWithArgsParentheses: Use parentheses for method calls with arguments.", 940595940],
+    [95, 3, 33, "Style/MethodCallWithArgsParentheses: Use parentheses for method calls with arguments.", 2317387123],
+    [108, 3, 44, "Style/MethodCallWithArgsParentheses: Use parentheses for method calls with arguments.", 434531228],
+    [109, 3, 21, "Style/MethodCallWithArgsParentheses: Use parentheses for method calls with arguments.", 2558626387],
+    [110, 5, 107, "Style/MethodCallWithArgsParentheses: Use parentheses for method calls with arguments.", 1516159727]
+  ],
+  "bin/bundle:774238493": [
+    [78, 5, 74, "Style/InvertibleUnlessCondition: Prefer `if Gem.rubygems_version >= Gem::Version.new(\"2.7.0\")` over `unless Gem.rubygems_version < Gem::Version.new(\"2.7.0\")`.", 2453573257],
+    [93, 7, 34, "Style/MethodCallWithArgsParentheses: Use parentheses for method calls with arguments.", 991972134],
+    [104, 5, 194, "Style/MethodCallWithArgsParentheses: Use parentheses for method calls with arguments.", 1374511802],
+    [105, 5, 7, "Style/MethodCallWithArgsParentheses: Use parentheses for method calls with arguments.", 285434243]
+  ],
+  "standard-rubocop-lts.gemspec:3870427040": [
+    [57, 3, 50, "Style/MethodCallWithArgsParentheses: Use parentheses for method calls with arguments.", 3198565167],
+    [58, 3, 56, "Style/MethodCallWithArgsParentheses: Use parentheses for method calls with arguments.", 3497847268],
+    [60, 3, 61, "Style/MethodCallWithArgsParentheses: Use parentheses for method calls with arguments.", 1592499183],
+    [91, 3, 69, "Style/MethodCallWithArgsParentheses: Use parentheses for method calls with arguments.", 433704252]
+  ]
+}
