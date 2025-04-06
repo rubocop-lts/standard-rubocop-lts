@@ -20,7 +20,7 @@ Gem::Specification.new do |spec|
   spec.description = "Extended Standard Ruby Configs for Finely Aged Rubies; Compatible with rubocop-lts"
   spec.homepage = "https://gitlab.com/rubocop-lts/#{spec.name}"
   spec.license = "MIT"
-  spec.required_ruby_version = ">= 2.7.0"
+  spec.required_ruby_version = ">= 3.2.0"
 
   spec.metadata["homepage_uri"] = "https://rubocop-lts.gitlab.io/"
   spec.metadata["source_code_uri"] = "#{spec.homepage}/-/tree/v#{spec.version}"

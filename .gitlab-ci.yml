@@ -4,6 +4,7 @@ default:
 variables:
   BUNDLE_INSTALL_FLAGS: "--quiet --jobs=$(nproc) --retry=3"
   BUNDLE_FROZEN: "false" # No lockfile!
+  BUNDLE_GEMFILE: gemfiles/omnibus.gemfile
 
 workflow:
   rules:
@@ -14,27 +15,10 @@ workflow:
     # For tags, create a pipeline.
     - if: '$CI_COMMIT_TAG'
 
-.old_ruby_template: &old_ruby_template
-  image: ruby:${RUBY_VERSION}
-  stage: test
-  variables:
-    BUNDLE_GEMFILE: gemfiles/vanilla.gemfile
-  script:
-    - gem install rubygems-update -v 3.4.22 > /dev/null 2>&1
-    - update_rubygems > /dev/null 2>&1
-    - bundle config --local path vendor
-    - bundle
-    - bundle exec rake test
-  cache:
-    key: ${CI_JOB_IMAGE}
-    paths:
-      - vendor/ruby
-
 .current_ruby_template: &current_ruby_template
   image: ruby:${RUBY_VERSION}
   stage: test
   variables:
-    BUNDLE_GEMFILE: gemfiles/omnibus.gemfile
   script:
     - gem update --system > /dev/null 2>&1
     - bundle config --local path vendor
@@ -45,14 +29,8 @@ workflow:
     paths:
       - vendor/ruby
 
-old-ruby:
-  <<: *old_ruby_template
-  parallel:
-    matrix:
-      - RUBY_VERSION: ["2.7", "3.0"]
-
 current-ruby:
   <<: *current_ruby_template
   parallel:
     matrix:
-      - RUBY_VERSION: ["3.1", "3.2", "3.3", "3.4"]
+      - RUBY_VERSION: ["3.2", "3.3", "3.4"]
