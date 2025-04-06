@@ -3,7 +3,7 @@ default:
 
 variables:
   BUNDLE_INSTALL_FLAGS: "--quiet --jobs=$(nproc) --retry=3"
-  BUNDLE_FROZEN: "true"
+  BUNDLE_FROZEN: "false" # No lockfile!
   BUNDLE_GEMFILE: gemfiles/omnibus.gemfile
 
 workflow:
