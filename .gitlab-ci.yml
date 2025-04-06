@@ -1,5 +1,10 @@
 default:
-  image: ruby:3.2
+  image: ruby
+
+variables:
+  BUNDLE_INSTALL_FLAGS: "--quiet --jobs=$(nproc) --retry=3"
+  BUNDLE_FROZEN: "true"
+  BUNDLE_GEMFILE: gemfiles/omnibus.gemfile
 
 workflow:
   rules:
@@ -17,7 +22,7 @@ workflow:
     - gem install rubygems-update -v 3.4.22 > /dev/null 2>&1
     - update_rubygems > /dev/null 2>&1
     - bundle config --local path vendor
-    - bundle install --quiet --jobs 4 --retry 3
+    - bundle
     - bundle exec rake test
   cache:
     key: ${CI_JOB_IMAGE}
@@ -30,7 +35,7 @@ workflow:
   script:
     - gem update --system > /dev/null 2>&1
     - bundle config --local path vendor
-    - bundle install --quiet --jobs 4 --retry 3
+    - bundle
     - bundle exec rake test
   cache:
     key: ${CI_JOB_IMAGE}

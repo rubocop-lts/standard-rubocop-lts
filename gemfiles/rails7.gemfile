@@ -6,7 +6,7 @@ git_source(:gitlab) { |repo_name| "https://gitlab.com/#{repo_name}" }
 gem "rails", "~> 7.0"
 
 # Root Gemfile is only for local development.
-# On CI we only need the gemspecs' dependencies (including development dependencies).
+# On CI, we only need the gemspec dependencies (including development dependencies).
 # Exceptions, if any, will be found in gemfiles/*.gemfile
 
 gemspec path: "../"

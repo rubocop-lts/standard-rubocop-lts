@@ -1,0 +1,12 @@
+# This gemfile is used for GitLab CI.
+# This gemfile includes all dependencies necessary to run the naked `rake default` set of tasks
+
+eval_gemfile "modular/coverage.gemfile"
+eval_gemfile "modular/documentation.gemfile"
+eval_gemfile "modular/style.gemfile"
+
+# Root Gemfile is only for local development.
+# On CI, we only need the gemspec dependencies (including development dependencies).
+# Exceptions, if any, will be found in gemfiles/*.gemfile
+
+gemspec path: "../"
