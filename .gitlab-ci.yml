@@ -4,7 +4,6 @@ default:
 variables:
   BUNDLE_INSTALL_FLAGS: "--quiet --jobs=$(nproc) --retry=3"
   BUNDLE_FROZEN: "false" # No lockfile!
-  BUNDLE_GEMFILE: gemfiles/omnibus.gemfile
 
 workflow:
   rules:
@@ -18,6 +17,8 @@ workflow:
 .old_ruby_template: &old_ruby_template
   image: ruby:${RUBY_VERSION}
   stage: test
+  variables:
+    BUNDLE_GEMFILE: gemfiles/vanilla.gemfile
   script:
     - gem install rubygems-update -v 3.4.22 > /dev/null 2>&1
     - update_rubygems > /dev/null 2>&1
@@ -32,6 +33,8 @@ workflow:
 .current_ruby_template: &current_ruby_template
   image: ruby:${RUBY_VERSION}
   stage: test
+  variables:
+    BUNDLE_GEMFILE: gemfiles/omnibus.gemfile
   script:
     - gem update --system > /dev/null 2>&1
     - bundle config --local path vendor

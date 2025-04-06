@@ -1,4 +1,4 @@
-# This gemfile is used for GitLab CI.
+# This gemfile is used for GitLab CI, current ruby pipeline.
 # This gemfile includes all dependencies necessary to run the naked `rake default` set of tasks
 
 source "https://rubygems.org"
