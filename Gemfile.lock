@@ -13,7 +13,7 @@ GIT
 PATH
   remote: .
   specs:
-    standard-rubocop-lts (1.0.10)
+    standard-rubocop-lts (2.0.0)
       rspec-block_is_expected (~> 1.0, >= 1.0.5)
       standard (>= 1.35.1, < 2)
       standard-custom (>= 1.0.2, < 2)
@@ -232,7 +232,6 @@ GEM
     zeitwerk (2.7.2)
 
 PLATFORMS
-  arm64-darwin-22
   arm64-darwin-24
 
 DEPENDENCIES

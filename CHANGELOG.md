@@ -10,6 +10,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
+## [2.0.0] 2025-04-07
+- COVERAGE: 100.00% -- 18/18 lines in 4 files
+- BRANCH COVERAGE: 100.00% -- 0/0 branches in 4 files
+- 100.00% documented
+### Added
+- `stone_checksums` v1.0.0 for release checksums
+- Rules to prevent churn in bin/bundle
+### Changed
+- RuboCop 1.72+ (new plugin system)
+- Contributor Covenant v2.1
+### Fixed
+- (Better) Linting Support for Ruby 1.8, 1.9, 2.0
+### Removed
+- Runtime Support for Ruby 2.7, 3.0, 3.1
+  - Minimum runtime is Ruby 3.2
+
 ## [1.0.10] 2024-03-23
 ### Added
 - Moved development dependencies back to gemspec
@@ -121,6 +137,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Initial release
 
 [Unreleased]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/v1.0.10...HEAD
+[1.0.11]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/v1.0.10...v1.0.11
 [1.0.10]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/v1.0.9...v1.0.10
 [1.0.9]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/v1.0.8...v1.0.9
 [1.0.8]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/v1.0.7...v1.0.8
