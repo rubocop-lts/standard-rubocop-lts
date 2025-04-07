@@ -1,0 +1,33 @@
+inherit_gem:
+  rubocop-lts: rubocop-lts.yml
+
+# NOTE: Would make sense to track spec.required_ruby_version in the gemspec,
+#       However, it is more valuable to dog-food every config this gem provides by loading config/ruby-1.8.yml
+inherit_from:
+  - config/ruby-1.8.yml
+
+AllCops:
+  # We use the rubocop-lts gem version (v24) for Ruby 3.2,
+  #   but since we are dog-fooding the internal configs TargetRubyVersion gets set to 2.0.
+  # Hence, we must override it here back to the correct Ruby 3.2
+  TargetRubyVersion: 3.2
+
+# Metrics cops are disabled in Standard by default
+Metrics:
+  Enabled: true
+
+# Ruby specific customizations
+Layout/LineLength:
+  Max: 120
+
+Style/HashSyntax:
+  EnforcedStyle: ruby19_no_mixed_keys
+
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: consistent_comma
+  Enabled: true
+
+ThreadSafety/ClassInstanceVariable:
+  Enabled: true
+  Exclude:
+    - bin/bundle

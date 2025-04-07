@@ -104,6 +104,13 @@ begin
   RuboCop::Gradual::RakeTask.new
 
   defaults << "rubocop_gradual"
+
+  namespace :rubocop_gradual do
+    desc "dogfood internal rubocop configs"
+    task :dogfood do
+      `bin/rubocop-gradual -c .rubocop-dogfood.yml`
+    end
+  end
 rescue LoadError
   desc "(stub) rubocop_gradual is unavailable"
   task :rubocop_gradual do

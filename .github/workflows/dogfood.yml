@@ -1,4 +1,4 @@
-name: Code Style
+name: Dogfood
 
 permissions:
   contents: read
@@ -46,4 +46,4 @@ jobs:
           bundler: ${{ matrix.bundler }}
           bundler-cache: true
       - name: Run RuboCop
-        run: bundle exec rake rubocop_gradual
+        run: bundle exec rake rubocop_gradual:dogfood

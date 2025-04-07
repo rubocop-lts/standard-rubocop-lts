@@ -18,12 +18,12 @@ workflow:
 .current_ruby_template: &current_ruby_template
   image: ruby:${RUBY_VERSION}
   stage: test
-  variables:
   script:
     - gem update --system > /dev/null 2>&1
     - bundle config --local path vendor
     - bundle
     - bundle exec rake test
+    - bundle exec rake rubocop:dogfood
   cache:
     key: ${CI_JOB_IMAGE}
     paths:
