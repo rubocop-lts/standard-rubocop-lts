@@ -13,7 +13,7 @@ begin
   #       This task is for local development, as it opens results in browser
   defaults << "coverage" unless Kettle::Soup::Cover::IS_CI
 rescue LoadError
-  desc "(stub) coverage is unavailable"
+  desc("(stub) coverage is unavailable")
   task("coverage") do
     warn("NOTE: kettle-soup-cover isn't installed, or is disabled for #{RUBY_VERSION} in the current environment")
   end
@@ -25,7 +25,7 @@ begin
 
   GemChecksums.install_tasks
 rescue LoadError
-  desc "(stub) build:generate_checksums is unavailable"
+  desc("(stub) build:generate_checksums is unavailable")
   task("build:generate_checksums") do
     warn("NOTE: stone_checksums isn't installed, or is disabled for #{RUBY_VERSION} in the current environment")
   end
@@ -38,11 +38,11 @@ begin
   Bundler::Audit::Task.new
   defaults.push("bundle:audit:update", "bundle:audit")
 rescue LoadError
-  desc "(stub) bundle:audit is unavailable"
+  desc("(stub) bundle:audit is unavailable")
   task("bundle:audit") do
     warn("NOTE: bundler-audit isn't installed, or is disabled for #{RUBY_VERSION} in the current environment")
   end
-  desc "(stub) bundle:audit:update is unavailable"
+  desc("(stub) bundle:audit:update is unavailable")
   task("bundle:audit:update") do
     warn("NOTE: bundler-audit isn't installed, or is disabled for #{RUBY_VERSION} in the current environment")
   end
@@ -74,7 +74,7 @@ begin
   end
   defaults << "reek"
 rescue LoadError
-  desc "(stub) reek is unavailable"
+  desc("(stub) reek is unavailable")
   task(:reek) do
     warn("NOTE: reek isn't installed, or is disabled for #{RUBY_VERSION} in the current environment")
   end
@@ -92,7 +92,7 @@ begin
   end
   defaults << "yard"
 rescue LoadError
-  desc "(stub) yard is unavailable"
+  desc("(stub) yard is unavailable")
   task(:yard) do
     warn("NOTE: yard isn't installed, or is disabled for #{RUBY_VERSION} in the current environment")
   end
@@ -105,16 +105,16 @@ begin
 
   defaults << "rubocop_gradual"
 
-  namespace :rubocop_gradual do
-    desc "dogfood internal rubocop configs"
-    task :dogfood do
-      `bin/rubocop-gradual -c .rubocop-dogfood.yml`
+  namespace(:rubocop_gradual) do
+    desc("dogfood internal rubocop configs")
+    task(:dogfood) do
+      %x(bin/rubocop-gradual -c .rubocop-dogfood.yml)
     end
   end
 rescue LoadError
-  desc "(stub) rubocop_gradual is unavailable"
-  task :rubocop_gradual do
-    warn "NOTE: rubocop-gradual isn't installed, or is disabled for #{RUBY_VERSION} in the current environment"
+  desc("(stub) rubocop_gradual is unavailable")
+  task(:rubocop_gradual) do
+    warn("NOTE: rubocop-gradual isn't installed, or is disabled for #{RUBY_VERSION} in the current environment")
   end
 end
 

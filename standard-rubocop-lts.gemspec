@@ -54,10 +54,10 @@ Gem::Specification.new do |spec|
   spec.add_dependency("version_gem", ">= 1.1.6", "< 3")                           # Ruby >= 2.2.0
 
   # Linting
-  spec.add_dependency "standard", ">= 1.35.1", "< 2"                              # Ruby >= 2.6.0, v1.38+ is Ruby >= 3.0.0
-  spec.add_dependency "standard-custom", ">= 1.0.2", "< 2"                        # Ruby >= 2.6.0
+  spec.add_dependency("standard", ">= 1.35.1", "< 2")                             # Ruby >= 2.6.0, v1.38+ is Ruby >= 3.0.0
+  spec.add_dependency("standard-custom", ">= 1.0.2", "< 2")                       # Ruby >= 2.6.0
   # standard-performance pulls in rubocop-performance
-  spec.add_dependency "standard-performance", ">= 1.3.1", "< 2"                   # Ruby >= 2.7.0
+  spec.add_dependency("standard-performance", ">= 1.3.1", "< 2")                  # Ruby >= 2.7.0
 
   # Normally this would be a development dependency, but it does ship with rubocop configuration
   #   and that configuration was added to every rubocop-ruby*_* gems' rubocop configs,
@@ -88,7 +88,7 @@ Gem::Specification.new do |spec|
   # Linting
   # We run rubocop on the latest version of Ruby,
   #   but in support of the oldest supported version of Ruby
-  spec.add_development_dependency "rubocop-lts", "~> 24.0", ">= 24.0.2"           # Linting for Ruby >= 3.2
+  spec.add_development_dependency("rubocop-lts", "~> 24.0", ">= 24.0.2")          # Linting for Ruby >= 3.2
   # Additional linting gems that are not packaged with rubocop-lts, but are integrated by it.
   spec.add_development_dependency("rubocop-packaging", "~> 0.6", ">= 0.6.0")      # Ruby >= 2.7.0
   spec.add_development_dependency("rubocop-rspec", "~> 3.5", ">= 3.5.0")          # Ruby >= 2.7.0
