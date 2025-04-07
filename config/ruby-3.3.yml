@@ -32,3 +32,4 @@ inherit_gem:
 inherit_from:
   - ./base.yml
   - ./internal/ruby-3.3.yml
+  - ./internal/bin-bundle.yml

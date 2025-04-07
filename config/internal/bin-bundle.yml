@@ -1,0 +1,17 @@
+# The standard generated bin/bundle script from `bundle binstubs --all`
+#   does not comply with our style guide, but it is frequently regenerated
+#   so rather than repeatedly churning the file, we let it be.
+ThreadSafety/ClassInstanceVariable:
+  Enabled: true
+  Exclude:
+    - bin/bundle
+
+Style/InvertibleUnlessCondition:
+  Enabled: true
+  Exclude:
+    - bin/bundle
+
+Style/MethodCallWithArgsParentheses:
+  Enabled: true
+  Exclude:
+    - bin/bundle
