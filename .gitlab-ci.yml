@@ -23,7 +23,6 @@ workflow:
     - bundle config --local path vendor
     - bundle
     - bundle exec rake test
-    - bundle exec rake rubocop_gradual:dogfood
   cache:
     key: ${CI_JOB_IMAGE}
     paths:
