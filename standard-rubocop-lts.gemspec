@@ -34,21 +34,34 @@ Gem::Specification.new do |spec|
   # Specify which files should be added to the gem when it is released.
   spec.files = Dir[
     # Splats (alphabetical)
+    "config/**/*.yml",
     "lib/**/*.rb",
     "sig/**/*.rbs",
-    "config/**/*.yml",
+    # Files (alphabetical)
+    "rubocop.yml",
+  ]
+  # Automatically included with gem package, no need to list again in files.
+  spec.extra_rdoc_files = Dir[
     # Files (alphabetical)
     "CHANGELOG.md",
     "CODE_OF_CONDUCT.md",
     "CONTRIBUTING.md",
     "LICENSE.txt",
     "README.md",
-    "rubocop.yml",
-    "SECURITY.md"
+    "SECURITY.md",
   ]
-  spec.bindir = "exe"
-  spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
+  spec.rdoc_options += [
+    "--title",
+    "#{spec.name} - #{spec.summary}",
+    "--main",
+    "README.md",
+    "--line-numbers",
+    "--inline-source",
+    "--quiet",
+  ]
   spec.require_paths = ["lib"]
+  spec.bindir = "exe"
+  spec.executables = []
 
   # Utilities
   spec.add_dependency("version_gem", ">= 1.1.6", "< 3")                           # Ruby >= 2.2.0
