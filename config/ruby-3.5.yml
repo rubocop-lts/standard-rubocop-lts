@@ -1,0 +1,32 @@
+# We want the Exclude and Include directives from different
+#   config files to get merged, not overwritten
+inherit_mode:
+  merge:
+    - Exclude
+    - Include
+
+plugins:
+  - rubocop-performance
+  - standard-performance
+  - standard-custom
+
+require:
+  - standard-rubocop-lts
+  - standard
+
+# Rules are overridden in a LIFO stack.
+# If rubocop-performance is listed first, and standard-performance after it,
+#   then rubocop-performance's rules will take precedence.
+# This is the opposite of what you might expect.
+# Below: standard's rules override rubocop-performance's (mostly disabling rules)
+inherit_gem:
+  # TODO: Switch to config/ruby-3.5.yml once standard adds it
+  standard: config/base.yml
+  standard-performance: config/base.yml
+  standard-custom: config/base.yml
+  rubocop-performance: config/default.yml
+
+inherit_from:
+  - ./base.yml
+  - ./internal/ruby-3.5.yml
+  - ./internal/bin-bundle.yml

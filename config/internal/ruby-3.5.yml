@@ -1,0 +1,6 @@
+inherit_from: ./base.yml
+
+AllCops:
+  TargetRubyVersion: 3.4
+# TODO: December 25, 2025
+#  TargetRubyVersion: 3.5
