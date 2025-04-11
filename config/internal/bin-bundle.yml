@@ -15,3 +15,23 @@ Style/MethodCallWithArgsParentheses:
   Enabled: true
   Exclude:
     - bin/bundle
+
+Metrics/CyclomaticComplexity:
+  Enabled: true
+  Exclude:
+    - bin/bundle
+
+Metrics/MethodLength:
+  Enabled: true
+  Exclude:
+    - bin/bundle
+
+Metrics/PerceivedComplexity:
+  Enabled: true
+  Exclude:
+    - bin/bundle
+
+Layout/LineLength:
+  Enabled: true
+  Exclude:
+    - bin/bundle
