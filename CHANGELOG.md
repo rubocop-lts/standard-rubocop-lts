@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
-## [2.0.0] 2025-04-07
+## [2.0.0] 2025-04-16
 - COVERAGE: 100.00% -- 18/18 lines in 4 files
 - BRANCH COVERAGE: 100.00% -- 0/0 branches in 4 files
 - 100.00% documented
@@ -20,6 +20,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - RuboCop 1.72+ (new plugin system)
 - Contributor Covenant v2.1
+- Upgrade to version_gem v1.1.7
 ### Fixed
 - (Better) Linting Support for Ruby 1.8, 1.9, 2.0
 ### Removed

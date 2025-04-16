@@ -65,7 +65,7 @@ Gem::Specification.new do |spec|
   spec.executables = []
 
   # Utilities
-  spec.add_dependency("version_gem", ">= 1.1.6", "< 3")                       # Ruby >= 2.2.0
+  spec.add_dependency("version_gem", ">= 1.1.7", "< 3")                       # Ruby >= 2.2.0
 
   # Linting
   spec.add_dependency("standard", ">= 1.35.1", "< 2")                         # Ruby >= 2.6.0, v1.38+ is Ruby >= 3.0.0
