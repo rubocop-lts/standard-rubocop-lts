@@ -67,19 +67,9 @@ jobs:
           bundler: ${{ matrix.bundler }}
           bundler-cache: true
 
-      - name: CodeClimate Pre-build Notification
-        run: cc-test-reporter before-build
-        if: ${{ github.event_name != 'pull_request' }}
-        continue-on-error: ${{ matrix.experimental != 'false' }}
-
       - name: Run RSpec tests
         run: |
           bundle exec rspec
-
-      - name: CodeClimate Post-build Notification
-        run: cc-test-reporter after-build
-        if: ${{ github.event_name != 'pull_request' }}
-        continue-on-error: ${{ matrix.experimental != 'false' }}
 
       - name: Code Coverage Summary Report
         uses: irongut/CodeCoverageSummary@v1.3.0
