@@ -39,7 +39,7 @@
 [![Liberapay Patrons][⛳liberapay-img]][⛳liberapay]
 [![Sponsor Me on Github][🖇sponsor-img]][🖇sponsor]
 [![Buy me a coffee][🖇buyme-small-img]][🖇buyme]
-[![Polar Shield][🖇polar-img]][🖇polar]
+[![Donate on Polar][🖇polar-img]][🖇polar]
 [![Donate to my FLOSS or refugee efforts at ko-fi.com][🖇kofi-img]][🖇kofi]
 [![Donate to my FLOSS or refugee efforts using Patreon][🖇patreon-img]][🖇patreon]
 
@@ -140,6 +140,7 @@ The `rubocop-lts` family of gems has a version supporting any version of Ruby yo
 They can be used as development dependencies for libraries or applications.
 
 - [`rubocop-lts`][rlts]
+- [`rubocop-lts-rspec`][rlts-rspec]
 - [`standard-rubocop-lts`][stdrlts]
 - [`rubocop-ruby1_8`][rr18]
 - [`rubocop-ruby1_9`][rr19]
@@ -158,6 +159,7 @@ They can be used as development dependencies for libraries or applications.
 - [`rubocop-ruby3_4`][rr34]
 
 [rlts]: https://rubocop-lts.gitlab.io/#installation-
+[rlts-rspec]: https://gitlab.com/rubocop-lts/rubocop-lts-rspec
 [stdrlts]: https://gitlab.com/rubocop-lts/standard-rubocop-lts
 [rr18]: https://gitlab.com/rubocop-lts/rubocop-ruby1_8
 [rr19]: https://gitlab.com/rubocop-lts/rubocop-ruby1_9
@@ -440,15 +442,11 @@ or one of the others at the head of this README.
 
 [![Buy me a latte][🖇buyme-img]][🖇buyme]
 
-```ruby
-spec.add_dependency("standard-rubocop-lts", "~> 2.0")
-```
-
 [✇bundle-group-pattern]: https://gist.github.com/pboling/4564780
 [⛳️gem-namespace]: https://github.com/rubocop-lts/standard-rubocop-lts/blob/main/lib/masq.rb
-[⛳️namespace-img]: https://img.shields.io/badge/namespace-Kettle%3A%3ASoup%3A%3ACover-brightgreen.svg?style=flat&logo=ruby&logoColor=white
+[⛳️namespace-img]: https://img.shields.io/badge/namespace-Standard%3A%3ARubocop%3A%3ALts-brightgreen.svg?style=flat&logo=ruby&logoColor=white
 [⛳️gem-name]: https://rubygems.org/gems/standard-rubocop-lts
-[⛳️name-img]: https://img.shields.io/badge/name-kettle--soup--cover-brightgreen.svg?style=flat&logo=rubygems&logoColor=red
+[⛳️name-img]: https://img.shields.io/badge/name-standard--rubocop--lts-brightgreen.svg?style=flat&logo=rubygems&logoColor=red
 [🚂bdfl-blog]: http://www.railsbling.com/tags/standard-rubocop-lts
 [🚂bdfl-blog-img]: https://img.shields.io/badge/blog-railsbling-0093D0.svg?style=for-the-badge&logo=rubyonrails&logoColor=orange
 [🚂bdfl-contact]: http://www.railsbling.com/contact
@@ -481,7 +479,7 @@ spec.add_dependency("standard-rubocop-lts", "~> 2.0")
 [📜src-gl-img]: https://img.shields.io/badge/GitLab-FBA326?style=for-the-badge&logo=Gitlab&logoColor=orange
 [📜src-gl]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/
 [📜src-gh-img]: https://img.shields.io/badge/GitHub-238636?style=for-the-badge&logo=Github&logoColor=green
-[📜src-gh]: https://github.com/rubocop-lts/standard-rubocop-lts
+[📜src-gh]: https://github.com/rubocop-lts/standard-rubocop-lts/
 [📜docs-cr-rd-img]: https://img.shields.io/badge/RubyDoc-Current_Release-943CD2?style=for-the-badge&logo=readthedocs&logoColor=white
 [📜docs-head-rd-img]: https://img.shields.io/badge/RubyDoc-HEAD-943CD2?style=for-the-badge&logo=readthedocs&logoColor=white
 [📜wiki]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/wikis/home
@@ -522,12 +520,15 @@ spec.add_dependency("standard-rubocop-lts", "~> 2.0")
 [⛳liberapay]: https://liberapay.com/pboling/donate
 [🖇sponsor-img]: https://img.shields.io/badge/Sponsor_Me!-pboling.svg?style=social&logo=github
 [🖇sponsor]: https://github.com/sponsors/pboling
-[🖇polar-img]: https://polar.sh/embed/seeks-funding-shield.svg?org=pboling
+[🖇polar-img]: https://img.shields.io/badge/polar-donate-yellow.svg
 [🖇polar]: https://polar.sh/pboling
-[🖇kofi-img]: https://img.shields.io/badge/buy_me_coffee-donate-yellow.svg
+[🖇kofi-img]: https://img.shields.io/badge/a_more_different_coffee-✓-yellow.svg
 [🖇kofi]: https://ko-fi.com/O5O86SNP4
 [🖇patreon-img]: https://img.shields.io/badge/patreon-donate-yellow.svg
 [🖇patreon]: https://patreon.com/galtzo
+[🖇buyme-img]: https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20latte&emoji=&slug=pboling&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff
+[🖇buyme]: https://www.buymeacoffee.com/pboling
+[🖇buyme-small-img]: https://img.shields.io/badge/buy_me_a_coffee-✓-yellow.svg?style=flat
 [💎ruby-2.7i]: https://img.shields.io/badge/Ruby-2.7-DF00CA?style=for-the-badge&logo=ruby&logoColor=white
 [💎ruby-3.0i]: https://img.shields.io/badge/Ruby-3.0-CC342D?style=for-the-badge&logo=ruby&logoColor=white
 [💎ruby-3.1i]: https://img.shields.io/badge/Ruby-3.1-CC342D?style=for-the-badge&logo=ruby&logoColor=white
@@ -554,7 +555,7 @@ spec.add_dependency("standard-rubocop-lts", "~> 2.0")
 [📗keep-changelog]: https://keepachangelog.com/en/1.0.0/
 [📗keep-changelog-img]: https://img.shields.io/badge/keep--a--changelog-1.0.0-FFDD67.svg?style=flat
 [🧮kloc]: https://www.youtube.com/watch?v=dQw4w9WgXcQ
-[🧮kloc-img]: https://img.shields.io/badge/KLOC-0.075-FFDD67.svg?style=for-the-badge&logo=YouTube&logoColor=blue
+[🧮kloc-img]: https://img.shields.io/badge/KLOC-0.018-FFDD67.svg?style=for-the-badge&logo=YouTube&logoColor=blue
 [🔐security]: SECURITY.md
 [🔐security-img]: https://img.shields.io/badge/security-policy-brightgreen.svg?style=flat
 [📄copyright-notice-explainer]: https://opensource.stackexchange.com/questions/5778/why-do-licenses-such-as-the-mit-license-specify-a-single-year
@@ -565,6 +566,3 @@ spec.add_dependency("standard-rubocop-lts", "~> 2.0")
 [📄ilo-declaration-img]: https://img.shields.io/badge/ILO_Fundamental_Principles-✓-brightgreen.svg?style=flat
 [🚎yard-current]: http://rubydoc.info/gems/standard-rubocop-lts
 [🚎yard-head]: https://rubydoc.info/github/rubocop-lts/standard-rubocop-lts/main
-[🖇buyme-img]: https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20latte&emoji=&slug=pboling&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff
-[🖇buyme]: https://www.buymeacoffee.com/pboling
-[🖇buyme-small-img]: https://img.shields.io/badge/Buy--Me--A--Coffee-✓-brightgreen.svg?style=flat
