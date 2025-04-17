@@ -87,19 +87,6 @@ It will enable your Ruby style rules to keep pace with whatever version of Ruby 
 | [`rubocop-lts`][⛳️lts-gh]          | [![Gem Version][⛳️lts-vi]][⛳️lts-g] | [![Total DL][🖇️lts-dti]][⛳️lts-g] [![DL Rank][🏘️lts-rti]][⛳️lts-g] | [![Current][🚎lts-cwfi]][🚎lts-cwf]                                   | [![Open Issues][📗lts-ioi]][📗lts-io] [![Closed Issues][🚀lts-ici]][🚀lts-ic] [![Open PRs][💄lts-poi]][💄lts-po] [![Closed PRs][👽lts-pci]][👽lts-pc] |
 | [`standard-rubocop-lts`][⛳️ini-gh] | [![Gem Version][⛳️ini-vi]][⛳️ini-g] | [![Total DL][🖇️ini-dti]][⛳️ini-g] [![DL Rank][🏘️ini-rti]][⛳️ini-g] | [![Current][🚎ini-cwfi]][🚎ini-cwf] [![Heads][🖐ini-hwfi]][🖐ini-hwf] | [![Open Issues][📗ini-ioi]][📗ini-io] [![Closed Issues][🚀ini-ici]][🚀ini-ic] [![Open PRs][💄ini-poi]][💄ini-po] [![Closed PRs][👽ini-pci]][👽ini-pc] |
 
-<!-- columnar badge #s for Project Health table:
-⛳️
-🖇
-🏘
-🚎
-🖐
-🧮
-📗
-🚀
-💄
-👽
--->
-
 [⛳️lts-vi]: http://img.shields.io/gem/v/rubocop-lts.svg
 [🖇️lts-dti]: https://img.shields.io/gem/dt/rubocop-lts.svg
 [🏘️lts-rti]: https://img.shields.io/gem/rt/rubocop-lts.svg
