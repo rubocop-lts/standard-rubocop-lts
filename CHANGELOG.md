@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
-## [2.0.0] 2025-04-16
+## [2.0.0] 2025-04-17
 - COVERAGE: 100.00% -- 18/18 lines in 4 files
 - BRANCH COVERAGE: 100.00% -- 0/0 branches in 4 files
 - 100.00% documented
