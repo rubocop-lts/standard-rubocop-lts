@@ -18,7 +18,10 @@ Gem::Specification.new do |spec|
   spec.signing_key = File.expand_path("~/.ssh/gem-private_key.pem") if $PROGRAM_NAME.end_with?("gem")
 
   spec.summary = "Extended Standard Ruby Configs for Finely Aged Rubies"
-  spec.description = "Extended Standard Ruby Configs for Finely Aged Rubies; Compatible with rubocop-lts"
+  spec.description = <<~DESC
+    Enables Ruby projects to more confidently support even the most finely-aged Rubies.
+    Part of the rubocop-lts family.
+  DESC
   spec.homepage = "https://gitlab.com/rubocop-lts/#{spec.name}"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.2.0"

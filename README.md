@@ -43,8 +43,10 @@
 [![Donate to my FLOSS or refugee efforts at ko-fi.com][🖇kofi-img]][🖇kofi]
 [![Donate to my FLOSS or refugee efforts using Patreon][🖇patreon-img]][🖇patreon]
 
-Extended [standard (Standard Ruby)][standardrb] config shims for all your finely-aged rubies,
-back to Ruby version 1.8. Compatible with the `rubocop-lts` [gem family](#-a-gem-family).
+Extended [standard (Standard Ruby)][standardrb] config shims for any and every version of Ruby,
+back to Ruby version 1.8.
+Enables Ruby projects to more confidently support even the most finely-aged Rubies.
+Part of the `rubocop-lts` [gem family](#-a-gem-family).
 
 Use the rules standard gives you, and then add more,
 to increase your code's compatibility across multiple versions of Ruby.
