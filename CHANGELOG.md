@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - `stone_checksums` v1.0.0 for release checksums
 - Rules to prevent churn in bin/bundle
+- Ability to package gem without signing (e.g. for linux distros)
 ### Changed
 - RuboCop 1.72+ (new plugin system)
 - Contributor Covenant v2.1
