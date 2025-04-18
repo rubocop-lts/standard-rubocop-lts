@@ -5,17 +5,23 @@ inherit_from: ./ruby-2.0.yml
 #     TargetRubyVersion: 1.9
 
 # Standard's rules in base.yml do not work with Ruby < 2.0, so overriding.
-# See: https://github.com/standardrb/standard/pull/563
+# See: https://github.com/standardrb/standard/pull/563#issuecomment-1567471055
 # Percent delimiters are not supported until Ruby 2.0
 Style/PercentLiteralDelimiters:
   Enabled: false
 
-# Ruby < 2.0 only support bracketed arrays
+# Percent delimiters are not supported until Ruby 2.0
+# Standard doesn't include this rule, because Ruby version compatibility
+#   isn't a primary concern for Standard.
+# However, it is a primary concern for rubocop-lts.
 Style/SymbolArray:
   Enabled: true
   EnforcedStyle: brackets
 
-# Ruby < 2.0 only support bracketed arrays
+# Percent delimiters are not supported until Ruby 2.0
+# Standard doesn't include this rule, because Ruby version compatibility
+#   isn't a primary concern for Standard.
+# However, it is a primary concern for rubocop-lts.
 Style/WordArray:
   Enabled: true
   EnforcedStyle: brackets
