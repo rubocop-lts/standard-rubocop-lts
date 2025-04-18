@@ -8,3 +8,5 @@ git_source(:gitlab) { |repo_name| "https://gitlab.com/#{repo_name}" }
 # Exceptions, if any, will be found in gemfiles/*.gemfile
 
 gemspec path: "../"
+
+eval_gemfile "modular/coverage.gemfile"
