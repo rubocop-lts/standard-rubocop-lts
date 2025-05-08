@@ -24,7 +24,7 @@ Gem::Specification.new do |spec|
     end
   end
 
-  spec.summary = "Extended Standard Ruby Configs for Finely Aged Rubies"
+  spec.summary = "Extended Standard Ruby Configs tuned for compatibility with specified version of Ruby"
   spec.description = <<~DESC
     Enables Ruby projects to more confidently support even the most finely-aged Rubies.
     Part of the rubocop-lts family.
