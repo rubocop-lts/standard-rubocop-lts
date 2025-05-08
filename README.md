@@ -170,19 +170,20 @@ as this gem is tied to [standard (Standard Ruby)][standardrb].
 A typical release cycle for a gem in the `rubocop-lts` family is roughly every six months,
 though eventually analysis support for an old version of Ruby will be dropped.
 When that happens releases of the `rubocop-lts` gem for that version of Ruby will (mostly) cease.
+For now though, in Q2 2025, RuboCop, via RuboCop-LTS, can still be used with code targeting Ruby v1.8.7, and newer.
 
-## Info you can shake a stick at
+## 💡 Info you can shake a stick at
 
 | Tokens to Remember       | [![Gem name][⛳️name-img]][⛳️gem-name] [![Gem namespace][⛳️namespace-img]][⛳️gem-namespace]                                                                                                                                                                                                                                                                                                                                                                          |
 |--------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Works with MRI Ruby 3.2+ | [![Ruby 3.2 Compat][💎ruby-3.2i]][🚎6-s-wf] [![Ruby 3.3 Compat][💎ruby-3.3i]][🚎6-s-wf] [![Ruby 3.4 Compat][💎ruby-c-i]][🚎11-c-wf] [![Ruby HEAD Compat][💎ruby-headi]][🚎3-hd-wf]                                                                                                                                                                                                                                                                                  |
 | Source                   | [![Source on GitLab.com][📜src-gl-img]][📜src-gl] [![Source on Github.com][📜src-gh-img]][📜src-gh] [![The best SHA: dQw4w9WgXcQ!][🧮kloc-img]][🧮kloc]                                                                                                                                                                                                                                                                                                             |
 | Documentation            | [![Current release on RubyDoc.info][📜docs-cr-rd-img]][🚎yard-current] [![HEAD on RubyDoc.info][📜docs-head-rd-img]][🚎yard-head] [![BDFL Blog][🚂bdfl-blog-img]][🚂bdfl-blog] [![Wiki][📜wiki-img]][📜wiki]                                                                                                                                                                                                                                                        |
-| Compliance               | [![License: MIT][📄license-img]][📄license-ref] [![📄ilo-declaration-img]][📄ilo-declaration] [![Security Policy][🔐security-img]][🔐security] [![CodeQL][🖐codeQL-img]][🖐codeQL] [![Contributor Covenant 2.1][🪇conduct-img]][🪇conduct] [![SemVer 2.0.0][📌semver-img]][📌semver] [![Keep-A-Changelog 1.0.0][📗keep-changelog-img]][📗keep-changelog]                                                                                                            |
+| Compliance               | [![License: MIT][📄license-img]][📄license-ref] [![📄ilo-declaration-img]][📄ilo-declaration] [![Security Policy][🔐security-img]][🔐security] [![CodeQL][🖐codeQL-img]][🖐codeQL] [![Contributor Covenant 2.1][🪇conduct-img]][🪇conduct] [![SemVer 2.0.0][📌semver-img]][📌semver] [![Keep-A-Changelog 1.0.0][📗keep-changelog-img]][📗keep-changelog] [![Gitmoji Commits][📌gitmoji-img]][📌gitmoji]                                                                                                           |
 | Expert 1:1 Support       | [![Get help from me on Upwork][👨🏼‍🏫expsup-upwork-img]][👨🏼‍🏫expsup-upwork] `or` [![Get help from me on Codementor][👨🏼‍🏫expsup-codementor-img]][👨🏼‍🏫expsup-codementor]                                                                                                                                                                                                                                                                                    |
 | Enterprise Support       | [![Get help from me on Tidelift][🏙️entsup-tidelift-img]][🏙️entsup-tidelift]<br/>💡Subscribe for support guarantees covering _all_ FLOSS dependencies!<br/>💡Tidelift is part of [Sonar][🏙️entsup-tidelift-sonar]!<br/>💡Tidelift pays maintainers to maintain the software you depend on!<br/>📊`@`Pointy Haired Boss: An [enterprise support][🏙️entsup-tidelift] subscription is "[never gonna let you down][🧮kloc]", and *supports* open source maintainers! |
 | Comrade BDFL 🎖️         | [![Follow Me on LinkedIn][💖🖇linkedin-img]][💖🖇linkedin] [![Follow Me on Ruby.Social][💖🐘ruby-mast-img]][💖🐘ruby-mast] [![Follow Me on Bluesky][💖🦋bluesky-img]][💖🦋bluesky] [![Contact BDFL][🚂bdfl-contact-img]][🚂bdfl-contact] [![My technical writing][💖💁🏼‍♂️devto-img]][💖💁🏼‍♂️devto]                                                                                                                                                              |
-| `...` 💖                 | [![Find Me on WellFound:][💖✌️wellfound-img]][💖✌️wellfound] [![Find Me on CrunchBase][💖💲crunchbase-img]][💖💲crunchbase] [![My LinkTree][💖🌳linktree-img]][💖🌳linktree] [![More About Me][💖💁🏼‍♂️aboutme-img]][💖💁🏼‍♂️aboutme]                                                                                                                                                                                                                             |
+| `...` 💖                 | [![Find Me on WellFound:][💖✌️wellfound-img]][💖✌️wellfound] [![Find Me on CrunchBase][💖💲crunchbase-img]][💖💲crunchbase] [![My LinkTree][💖🌳linktree-img]][💖🌳linktree] [![More About Me][💖💁🏼‍♂️aboutme-img]][💖💁🏼‍♂️aboutme]  [🧊][💖🧊berg] [🐙][💖🐙hub]  [🛖][💖🛖hut] [🧪][💖🧪lab]                                                                                                                                                                                                                            |
 
 ## ✨ Installation
 
@@ -199,6 +200,36 @@ Install the gem and add to the application's Gemfile by executing:
 If bundler is not being used to manage dependencies, install the gem by executing:
 
     $ gem install standard-rubocop-lts
+
+### 🔒 Secure Installation
+
+`omniauth-identity` is cryptographically signed, and has verifiable [SHA-256 and SHA-512][💎SHA_checksums] checksums by
+[stone_checksums][💎stone_checksums]. Be sure the gem you install hasn’t been tampered with
+by following the instructions below.
+
+Add my public key (if you haven’t already, expires 2045-04-29) as a trusted certificate:
+
+```shell
+gem cert --add <(curl -Ls https://raw.github.com/omniauth/omniauth-identity/main/certs/pboling.pem)
+```
+
+You only need to do that once.  Then proceed to install with:
+
+```shell
+gem install omniauth-identity -P MediumSecurity
+```
+
+The `MediumSecurity` trust profile will verify signed gems, but allow the installation of unsigned dependencies.
+
+This is necessary because not all of `omniauth-identity`’s dependencies are signed, so we cannot use `HighSecurity`.
+
+If you want to up your security game full-time:
+
+```shell
+bundle config set --global trust-policy MediumSecurity
+```
+
+NOTE: Be prepared to track down certs for signed gems and add them the same way you added mine.
 
 ## 🔧 Basic Usage
 
@@ -285,15 +316,6 @@ Performance/IoReadlines:
 gem "rubocop-lts", "~> 24.0", require: false
 ```
 
-## 💻 Development
-
-After checking out the repo, run `bin/setup` to install dependencies.
-Then, run `rake spec` to run the tests w/ coverage,
-or `bin/rake` to run tests w/ coverage, and linting.
-You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`.
-
 ### 🚀 Release Instructions
 
 See [CONTRIBUTING.md][🤝contributing].
@@ -305,8 +327,7 @@ See [SECURITY.md][🔐security].
 ## 🤝 Contributing
 
 If you need some ideas of where to help, you could work on adding more code coverage,
-or if it is already 💯 (see [below](#code-coverage)) check TODOs (see [below](#todos)),
-or check [issues][🤝issues], or [PRs][🤝pulls],
+or if it is already 💯 (see [below](#code-coverage)) then check [issues][🤝issues], or [PRs][🤝pulls],
 or use the gem and think about how it could be better.
 
 We [![Keep A Changelog][📗keep-changelog-img]][📗keep-changelog] so if you make changes, remember to update it.
@@ -358,7 +379,7 @@ It is obvious to many, but not all, and since the spec is silent, the bike shedd
 
 > dropping support for a platform is both obviously and objectively a breaking change
 
-- Jordan Harband (@ljharb) [in SemVer issue 716][📌semver-breaking]
+- Jordan Harband (@ljharb, maintainer of SemVer) [in SemVer issue 716][📌semver-breaking]
 
 To get a better understanding of how SemVer is intended to work over a project's lifetime,
 read this article from the creator of SemVer:
@@ -444,14 +465,18 @@ or one of the others at the head of this README.
 [💖💲crunchbase-img]: https://img.shields.io/badge/peter--boling-purple?style=flat&logo=crunchbase
 [💖🐘ruby-mast]: https://ruby.social/@galtzo
 [💖🐘ruby-mast-img]: https://img.shields.io/mastodon/follow/109447111526622197?domain=https%3A%2F%2Fruby.social&style=flat&logo=mastodon&label=Ruby%20%40galtzo
-[💖🦋bluesky]: https://galtzo.bsky.social
-[💖🦋bluesky-img]: https://img.shields.io/badge/@galtzo.bsky.social-0285FF?style=flat&logo=bluesky&logoColor=white
+[💖🦋bluesky]: https://bsky.app/profile/galtzo.com
+[💖🦋bluesky-img]: https://img.shields.io/badge/@galtzo.com-0285FF?style=flat&logo=bluesky&logoColor=white
 [💖🌳linktree]: https://linktr.ee/galtzo
 [💖🌳linktree-img]: https://img.shields.io/badge/galtzo-purple?style=flat&logo=linktree
 [💖💁🏼‍♂️devto]: https://dev.to/galtzo
 [💖💁🏼‍♂️devto-img]: https://img.shields.io/badge/dev.to-0A0A0A?style=flat&logo=devdotto&logoColor=white
 [💖💁🏼‍♂️aboutme]: https://about.me/peter.boling
 [💖💁🏼‍♂️aboutme-img]: https://img.shields.io/badge/about.me-0A0A0A?style=flat&logo=aboutme&logoColor=white
+[💖🧊berg]: https://codeberg.org/pboling
+[💖🐙hub]: https://github.org/pboling
+[💖🛖hut]: https://sr.ht/~galtzo/
+[💖🧪lab]: https://gitlab.com/pboling
 [👨🏼‍🏫expsup-upwork]: https://www.upwork.com/freelancers/~014942e9b056abdf86?mp_source=share
 [👨🏼‍🏫expsup-upwork-img]: https://img.shields.io/badge/UpWork-13544E?style=for-the-badge&logo=Upwork&logoColor=white
 [👨🏼‍🏫expsup-codementor]: https://www.codementor.io/peterboling?utm_source=github&utm_medium=button&utm_term=peterboling&utm_campaign=github
@@ -501,7 +526,7 @@ or one of the others at the head of this README.
 [🚎8-df-wfi]: https://github.com/rubocop-lts/standard-rubocop-lts/actions/workflows/dogfood.yml/badge.svg
 [🚎11-c-wf]: https://github.com/rubocop-lts/standard-rubocop-lts/actions/workflows/current.yml
 [🚎11-c-wfi]: https://github.com/rubocop-lts/standard-rubocop-lts/actions/workflows/current.yml/badge.svg
-[⛳liberapay-img]: https://img.shields.io/liberapay/patrons/pboling.svg?logo=liberapay
+[⛳liberapay-img]: https://img.shields.io/liberapay/goal/pboling.svg?logo=liberapay
 [⛳liberapay]: https://liberapay.com/pboling/donate
 [🖇sponsor-img]: https://img.shields.io/badge/Sponsor_Me!-pboling.svg?style=social&logo=github
 [🖇sponsor]: https://github.com/sponsors/pboling
@@ -539,6 +564,8 @@ or one of the others at the head of this README.
 [📌changelog]: CHANGELOG.md
 [📗keep-changelog]: https://keepachangelog.com/en/1.0.0/
 [📗keep-changelog-img]: https://img.shields.io/badge/keep--a--changelog-1.0.0-FFDD67.svg?style=flat
+[📌gitmoji]:https://gitmoji.dev
+[📌gitmoji-img]:https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square
 [🧮kloc]: https://www.youtube.com/watch?v=dQw4w9WgXcQ
 [🧮kloc-img]: https://img.shields.io/badge/KLOC-0.018-FFDD67.svg?style=for-the-badge&logo=YouTube&logoColor=blue
 [🔐security]: SECURITY.md
@@ -551,3 +578,5 @@ or one of the others at the head of this README.
 [📄ilo-declaration-img]: https://img.shields.io/badge/ILO_Fundamental_Principles-✓-brightgreen.svg?style=flat
 [🚎yard-current]: http://rubydoc.info/gems/standard-rubocop-lts
 [🚎yard-head]: https://rubydoc.info/github/rubocop-lts/standard-rubocop-lts/main
+[💎stone_checksums]: https://github.com/pboling/stone_checksums
+[💎SHA_checksums]: https://github.com/rubocop-lts/standard-rubocop-lts/tree/main/checksums
