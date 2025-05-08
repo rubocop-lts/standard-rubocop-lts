@@ -16,7 +16,7 @@
     </a>
 </p>
 
-# 🦾 Standard::Rubocop::Lts
+# 🦾 Standard::Rubocop::Lts [![Ruby Code Style](https://img.shields.io/badge/code_style-rubocop--lts-brightgreen.svg?style=for-the-badge&logo=ruby&logoColor=white)](https://github.com/rubocop-lts/rubocop-lts)
 
 [![Version][👽versioni]][👽version]
 [![License: MIT][📄license-img]][📄license-ref]
@@ -111,7 +111,9 @@ Only two of them sit at the top level, and this gem is **not** one of them.
 
 </details>
 
-Love linting? Add a badge to your project's `README.md`!
+### Love linting?
+
+Add a badge to your project's `README.md`!
 
 [![Ruby Code Style](https://img.shields.io/badge/code_style-rubocop--lts-brightgreen.svg?style=for-the-badge&logo=ruby&logoColor=white)](https://github.com/rubocop-lts/rubocop-lts)
 
