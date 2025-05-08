@@ -42,7 +42,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Allows other libraries to make those decisions:
     - rubocop-lts
     - rubocop-ruby*_*
-    - rubocop-shopify
     - standard
 - rspec-block_is_expected promoted to runtime dependency
   - was an undeclared dependency of rubocop-ruby*_* gems,
