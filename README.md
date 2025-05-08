@@ -82,12 +82,48 @@ please support my efforts by making a donation, or becoming a sponsor.
 The `rubocop-lts` family of gems has a version supporting any version of Ruby you need.
 They can be used as development dependencies for libraries or applications.
 
-Only two of them sit at the top level, and this gem is one of them.
+Only two of them sit at the top level, and this gem is **not** one of them.
 
 | Gem Name                        | Version                             | Downloads                                                            | Activity                            |
 |---------------------------------|-------------------------------------|----------------------------------------------------------------------|-------------------------------------|
 | [`rubocop-lts`][⛳️lts-gh]       | [![Gem Version][⛳️lts-vi]][⛳️lts-g] | [![Total DL][🖇️lts-dti]][⛳️lts-g] [![DL Rank][🏘️lts-rti]][⛳️lts-g] | [![Current][🚎lts-cwfi]][🚎lts-cwf] | [![Open Issues][📗lts-ioi]][📗lts-io] [![Closed Issues][🚀lts-ici]][🚀lts-ic] [![Open PRs][💄lts-poi]][💄lts-po] [![Closed PRs][👽lts-pci]][👽lts-pc] |
 | [`rubocop-lts-rspec`][⛳️ini-gh] | [![Gem Version][⛳️ini-vi]][⛳️ini-g] | [![Total DL][🖇️ini-dti]][⛳️ini-g] [![DL Rank][🏘️ini-rti]][⛳️ini-g] | [![Current][🚎ini-cwfi]][🚎ini-cwf] | [![Open Issues][📗ini-ioi]][📗ini-io] [![Closed Issues][🚀ini-ici]][🚀ini-ic] [![Open PRs][💄ini-poi]][💄ini-po] [![Closed PRs][👽ini-pci]][👽ini-pc] |
+
+<details>
+    <summary>Nested Dependencies</summary>
+
+- [`standard-rubocop-lts`][stdrlts]
+- [`rubocop-ruby1_8`][rr18]
+- [`rubocop-ruby1_9`][rr19]
+- [`rubocop-ruby2_0`][rr20]
+- [`rubocop-ruby2_1`][rr21]
+- [`rubocop-ruby2_2`][rr22]
+- [`rubocop-ruby2_3`][rr23]
+- [`rubocop-ruby2_4`][rr24]
+- [`rubocop-ruby2_5`][rr25]
+- [`rubocop-ruby2_6`][rr26]
+- [`rubocop-ruby2_7`][rr27]
+- [`rubocop-ruby3_0`][rr30]
+- [`rubocop-ruby3_1`][rr31]
+- [`rubocop-ruby3_2`][rr32]
+- [`rubocop-ruby3_3`][rr33]
+- [`rubocop-ruby3_4`][rr34]
+
+</details>
+
+Love linting? Add a badge to your project's `README.md`!
+
+[![Ruby Code Style](https://img.shields.io/badge/code_style-rubocop--lts-brightgreen.svg?style=for-the-badge&logo=ruby&logoColor=white)](https://github.com/rubocop-lts/rubocop-lts)
+
+```md
+[![Ruby Code Style](https://img.shields.io/badge/code_style-rubocop--lts-brightgreen.svg?style=for-the-badge&logo=ruby&logoColor=white)](https://github.com/rubocop-lts/rubocop-lts)
+```
+
+[![Ruby Code Style](https://img.shields.io/badge/code_style-rubocop--lts-brightgreen.svg?style=plastic&logo=ruby&logoColor=white)](https://github.com/rubocop-lts/rubocop-lts)
+
+```md
+[![Ruby Code Style](https://img.shields.io/badge/code_style-rubocop--lts-brightgreen.svg?style=plastic&logo=ruby&logoColor=white)](https://github.com/rubocop-lts/rubocop-lts)
+```
 
 [⛳️lts-vi]: http://img.shields.io/gem/v/rubocop-lts.svg
 [🖇️lts-dti]: https://img.shields.io/gem/dt/rubocop-lts.svg
@@ -120,28 +156,6 @@ Only two of them sit at the top level, and this gem is one of them.
 [👽ini-pci]: https://img.shields.io/github/issues-pr-closed/rubocop-lts/rubocop-lts-rspec
 [⛳️ini-g]: https://rubygems.org/gems/rubocop-lts-rspec
 [⛳️ini-gh]: https://github.com/rubocop-lts/rubocop-lts-rspec
-
-<details>
-    <summary>Nested Dependencies</summary>
-
-- [`standard-rubocop-lts`][stdrlts]
-- [`rubocop-ruby1_8`][rr18]
-- [`rubocop-ruby1_9`][rr19]
-- [`rubocop-ruby2_0`][rr20]
-- [`rubocop-ruby2_1`][rr21]
-- [`rubocop-ruby2_2`][rr22]
-- [`rubocop-ruby2_3`][rr23]
-- [`rubocop-ruby2_4`][rr24]
-- [`rubocop-ruby2_5`][rr25]
-- [`rubocop-ruby2_6`][rr26]
-- [`rubocop-ruby2_7`][rr27]
-- [`rubocop-ruby3_0`][rr30]
-- [`rubocop-ruby3_1`][rr31]
-- [`rubocop-ruby3_2`][rr32]
-- [`rubocop-ruby3_3`][rr33]
-- [`rubocop-ruby3_4`][rr34]
-
-</details>
 
 [rlts]: https://rubocop-lts.gitlab.io/#installation-
 [rlts-rspec]: https://gitlab.com/rubocop-lts/rubocop-lts-rspec
