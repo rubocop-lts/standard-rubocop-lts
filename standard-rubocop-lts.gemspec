@@ -75,7 +75,7 @@ Gem::Specification.new do |spec|
   spec.executables = []
 
   # Utilities
-  spec.add_dependency("version_gem", ">= 1.1.7", "< 3")                       # Ruby >= 2.2.0
+  spec.add_dependency("version_gem", ">= 1.1.8", "< 3")                       # Ruby >= 2.2.0
 
   # Linting
   spec.add_dependency("standard", ">= 1.35.1", "< 2")                         # Ruby >= 2.6.0, v1.38+ is Ruby >= 3.0.0
@@ -95,7 +95,7 @@ Gem::Specification.new do |spec|
 
   # Code Coverage
   # CodeCov + GitHub setup is not via gems: https://github.com/marketplace/actions/codecov
-  spec.add_development_dependency("kettle-soup-cover", "~> 1.0", ">= 1.0.5")  # Ruby >= 2.7.0
+  spec.add_development_dependency("kettle-soup-cover", "~> 1.0", ">= 1.0.6")  # Ruby >= 2.7.0
 
   # Documentation
   spec.add_development_dependency("yard", "~> 0.9", ">= 0.9.37")              # Ruby >= 0
@@ -113,5 +113,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency("rspec", "~> 3.13")                         # Ruby >= 0
   spec.add_development_dependency("rspec-block_is_expected", "~> 1.0", ">= 1.0.6")  # Ruby >= 1.8.7
   spec.add_development_dependency("rspec_junit_formatter", "~> 0.6")          # Ruby >= 2.3.0
-  spec.add_development_dependency("rspec-stubbed_env", "~> 1.0", ">= 1.0.1")  # Ruby >= 1.8.7
+  spec.add_development_dependency("rspec-stubbed_env", "~> 1.0", ">= 1.0.2")  # Ruby >= 1.8.7
 end
