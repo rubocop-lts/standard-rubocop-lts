@@ -4,6 +4,10 @@ require "bundler/gem_tasks"
 
 defaults = []
 
+# See: https://docs.gitlab.com/ci/variables/predefined_variables/
+is_gitlab = ENV.fetch("GITLAB_CI", "false").casecmp("true") == 0
+
+### DEVELOPMENT TASKS
 # Setup Kettle Soup Cover
 begin
   require "kettle-soup-cover"
@@ -16,18 +20,6 @@ rescue LoadError
   desc("(stub) coverage is unavailable")
   task("coverage") do
     warn("NOTE: kettle-soup-cover isn't installed, or is disabled for #{RUBY_VERSION} in the current environment")
-  end
-end
-
-# Setup stone_checksums
-begin
-  require "stone_checksums"
-
-  GemChecksums.install_tasks
-rescue LoadError
-  desc("(stub) build:generate_checksums is unavailable")
-  task("build:generate_checksums") do
-    warn("NOTE: stone_checksums isn't installed, or is disabled for #{RUBY_VERSION} in the current environment")
   end
 end
 
@@ -60,23 +52,26 @@ rescue LoadError
   end
 end
 
-desc "alias test task to spec"
+desc "run spec task with test task"
 task test: :spec
 
-# Setup Reek
 begin
-  require "reek/rake/task"
+  require "rubocop/gradual/rake_task"
 
-  Reek::Rake::Task.new do |t|
-    t.fail_on_error = true
-    t.verbose = false
-    t.source_files = "{lib,spec}/**/*.rb"
+  RuboCop::Gradual::RakeTask.new
+
+  defaults << "rubocop_gradual"
+
+  namespace(:rubocop_gradual) do
+    desc("dogfood internal rubocop configs")
+    task(:dogfood) do
+      %x(bin/rubocop-gradual -c .rubocop-dogfood.yml)
+    end
   end
-  defaults << "reek"
 rescue LoadError
-  desc("(stub) reek is unavailable")
-  task(:reek) do
-    warn("NOTE: reek isn't installed, or is disabled for #{RUBY_VERSION} in the current environment")
+  desc("(stub) rubocop_gradual is unavailable")
+  task(:rubocop_gradual) do
+    warn("NOTE: rubocop-gradual isn't installed, or is disabled for #{RUBY_VERSION} in the current environment")
   end
 end
 
@@ -98,23 +93,33 @@ rescue LoadError
   end
 end
 
+# Setup Reek
 begin
-  require "rubocop/gradual/rake_task"
+  require "reek/rake/task"
 
-  RuboCop::Gradual::RakeTask.new
-
-  defaults << "rubocop_gradual"
-
-  namespace(:rubocop_gradual) do
-    desc("dogfood internal rubocop configs")
-    task(:dogfood) do
-      %x(bin/rubocop-gradual -c .rubocop-dogfood.yml)
-    end
+  Reek::Rake::Task.new do |t|
+    t.fail_on_error = true
+    t.verbose = false
+    t.source_files = "{spec,spec_ignored,spec_orms,lib}/**/*.rb"
   end
+  defaults << "reek" unless is_gitlab
 rescue LoadError
-  desc("(stub) rubocop_gradual is unavailable")
-  task(:rubocop_gradual) do
-    warn("NOTE: rubocop-gradual isn't installed, or is disabled for #{RUBY_VERSION} in the current environment")
+  desc("(stub) reek is unavailable")
+  task(:reek) do
+    warn("NOTE: reek isn't installed, or is disabled for #{RUBY_VERSION} in the current environment")
+  end
+end
+
+### RELEASE TASKS
+# Setup stone_checksums
+begin
+  require "stone_checksums"
+
+  GemChecksums.install_tasks
+rescue LoadError
+  desc("(stub) build:generate_checksums is unavailable")
+  task("build:generate_checksums") do
+    warn("NOTE: stone_checksums isn't installed, or is disabled for #{RUBY_VERSION} in the current environment")
   end
 end
 
