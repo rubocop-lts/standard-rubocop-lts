@@ -85,9 +85,10 @@ GEM
       prettyprint
     prettyprint (0.2.0)
     prism (1.4.0)
-    pry (0.15.2)
+    pry (0.16.0)
       coderay (~> 1.1)
       method_source (~> 1.0)
+      reline (>= 0.6.0)
     psych (5.2.6)
       date
       stringio
@@ -233,7 +234,7 @@ DEPENDENCIES
   debug (>= 1.0.0)
   github-markup (~> 5.0, >= 5.0.1)
   kettle-soup-cover (~> 1.0, >= 1.0.6)
-  pry (~> 0.14)
+  pry (~> 0.16)
   rake (~> 13.2, >= 13.2.1)
   rdoc (~> 6.11)
   redcarpet (~> 3.6)
