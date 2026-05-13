@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 ### Fixed
 ### Removed
+- rubocop-shopify as a transitive dependency (removed from all rubocop-rubyN_N gems)
 
 ## [2.0.0] 2025-04-17
 - COVERAGE: 100.00% -- 18/18 lines in 4 files
