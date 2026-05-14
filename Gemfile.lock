@@ -96,7 +96,7 @@ GEM
     racc (1.8.1)
     rainbow (3.1.1)
     rake (13.4.2)
-    rdoc (6.17.0)
+    rdoc (7.2.0)
       erb
       psych (>= 4.0.0)
       tsort
@@ -240,7 +240,7 @@ DEPENDENCIES
   kettle-soup-cover (~> 1.0, >= 1.0.6)
   pry (~> 0.14)
   rake (~> 13.2, >= 13.2.1)
-  rdoc (~> 6.11)
+  rdoc (~> 7.2)
   redcarpet (~> 3.6)
   reek (~> 6.4)
   rspec (~> 3.13)
