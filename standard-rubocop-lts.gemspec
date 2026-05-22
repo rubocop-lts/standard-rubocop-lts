@@ -75,7 +75,7 @@ Gem::Specification.new do |spec|
   spec.executables = []
 
   # Utilities
-  spec.add_dependency("version_gem", ">= 1.1.8", "< 3")                       # Ruby >= 2.2.0
+  spec.add_dependency("version_gem", ">= 1.1.9", "< 3")                       # Ruby >= 2.2.0
 
   # Linting
   spec.add_dependency("standard", ">= 1.35.1", "< 2")                         # Ruby >= 2.6.0, v1.38+ is Ruby >= 3.0.0
@@ -91,7 +91,7 @@ Gem::Specification.new do |spec|
 
   # Releases
   spec.add_development_dependency("rake", "~> 13.2", ">= 13.2.1")             # Ruby >= 2.3.0
-  spec.add_development_dependency("stone_checksums", "~> 1.0")                # Ruby >= 2.2.0
+  spec.add_development_dependency("stone_checksums", "~> 1.0", "~> 1.0.3")                # Ruby >= 2.2.0
 
   # Code Coverage
   # CodeCov + GitHub setup is not via gems: https://github.com/marketplace/actions/codecov
@@ -112,5 +112,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency("rspec", "~> 3.13")                         # Ruby >= 0
   spec.add_development_dependency("rspec-block_is_expected", "~> 1.0", ">= 1.0.6")  # Ruby >= 1.8.7
   spec.add_development_dependency("rspec_junit_formatter", "~> 0.6")          # Ruby >= 2.3.0
-  spec.add_development_dependency("rspec-stubbed_env", "~> 1.0", ">= 1.0.2")  # Ruby >= 1.8.7
+  spec.add_development_dependency("rspec-stubbed_env", "~> 1.1", ">= 1.1.1")  # Ruby >= 1.8.7
 end
