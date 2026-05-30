@@ -7,7 +7,7 @@ module Standard
       module Version
         # Bump VERSION manually for each new release!
         # See: CONTRIBUTING.md
-        VERSION = "2.0.1"
+        VERSION = "2.0.2"
       end
     end
   end
