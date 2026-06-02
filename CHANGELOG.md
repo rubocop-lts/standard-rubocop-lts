@@ -13,7 +13,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [2.0.4] 2026-06-01
 ### Added
 ### Changed
-- Updated dependency floors to the latest compatible releases.
+- Updated dependency floors:
+  - `standard` to `~> 1.54`, `>= 1.54.0`.
+  - `standard-performance` to `~> 1.9`, `>= 1.9.0`.
+  - `version_gem` to `~> 1.1`, `>= 1.1.9`.
+  - Release, lint, and test dependencies to their latest compatible floors.
 - Raised the minimum supported Ruby version to 3.2.
 ### Fixed
 ### Removed
