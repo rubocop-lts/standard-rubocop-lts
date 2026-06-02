@@ -18,10 +18,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `standard-performance` to `~> 1.9`, `>= 1.9.0`.
   - `version_gem` to `~> 1.1`, `>= 1.1.9`.
   - Release, lint, and test dependencies to their latest compatible floors.
-- Raised the minimum supported Ruby version to 3.2.
+- Corrected gem metadata to declare the Ruby 3.2 runtime floor that has been implicit since the last major release.
 ### Fixed
 ### Removed
-- Removed support for running this gem on Ruby < 3.2.
 
 ## [2.0.3] 2026-06-01
 ### Added
