@@ -10,6 +10,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 ### Removed
 
+## [2.0.4] 2026-06-01
+### Added
+### Changed
+- Updated dependency floors to the latest compatible releases.
+- Raised the minimum supported Ruby version to 3.2.
+### Fixed
+### Removed
+- Removed support for running this gem on Ruby < 3.2.
+
 ## [2.0.3] 2026-06-01
 ### Added
 ### Changed
@@ -152,7 +161,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial release
 
-[Unreleased]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/v2.0.3...HEAD
+[Unreleased]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/v2.0.4...HEAD
 [1.0.11]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/v1.0.10...v1.0.11
 [1.0.10]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/v1.0.9...v1.0.10
 [1.0.9]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/v1.0.8...v1.0.9
@@ -167,3 +176,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 [1.0.0]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/0c0f82c0eeda184afb5c2c7a3d6b43c10f2d4c1c...v1.0.0
 [2.0.3]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/v2.0.2...v2.0.3
 [2.0.2]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/v2.0.0...v2.0.2
+[2.0.4]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/v2.0.3...v2.0.4
