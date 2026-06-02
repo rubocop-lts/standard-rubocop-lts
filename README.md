@@ -1,4 +1,4 @@
-<a href="https://github.com/kettle-rb"><img alt="rubocop-lts Logo by Aboling0, CC BY-SA 4.0" src="https://logos.galtzo.com/assets/images/rubocop-lts/avatar-192px.svg" width="14%" align="right"/></a>
+<a href="https://rubocop-lts.gitlab.io/"><img alt="rubocop-lts Logo by Aboling0, CC BY-SA 4.0" src="https://logos.galtzo.com/assets/images/rubocop-lts/avatar-192px.svg" width="20%" align="right"/></a>
 
 # 🦾 Standard::Rubocop::Lts [![Ruby Code Style](https://img.shields.io/badge/code_style-rubocop--lts-brightgreen.svg?style=for-the-badge&logo=ruby&logoColor=white)](https://github.com/rubocop-lts/rubocop-lts)
 
