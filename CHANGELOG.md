@@ -28,62 +28,100 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
-- Disabled autocorrection for `Style/RedundantParentheses`, preventing invalid Ruby from grouped `and` / `or` method arguments.
-
 ### Security
 
+## [2.0.5] - 2026-06-07
+
+- TAG: [v2.0.5][2.0.5t]
+- COVERAGE: 100.00% -- 19/19 lines in 4 files
+- BRANCH COVERAGE: 0.00% -- 0/0 branches in 4 files
+- 71.43% documented
+
+### Fixed
+
+- Disabled autocorrection for `Style/RedundantParentheses`, preventing invalid Ruby from grouped `and` / `or` method arguments.
+
 ## [2.0.4] 2026-06-01
+
 ### Added
+
 ### Changed
+
 - Updated dependency floors:
   - `standard` to `~> 1.54`, `>= 1.54.0`.
   - `standard-performance` to `~> 1.9`, `>= 1.9.0`.
   - `version_gem` to `~> 1.1`, `>= 1.1.9`.
   - Release, lint, and test dependencies to their latest compatible floors.
 - Corrected gem metadata to declare the Ruby 3.2 runtime floor that has been implicit since the last major release.
+
 ### Fixed
+
 ### Removed
 
 ## [2.0.3] 2026-06-01
+
 ### Added
+
 ### Changed
+
 - Required `kettle-soup-cover` v1.1.3 for release specs.
+
 ### Fixed
+
 ### Removed
 
 ## [2.0.2] 2026-05-30
+
 ### Added
+
 ### Changed
+
 - Updated release and documentation dependencies.
+
 ### Fixed
+
 ### Removed
+
 - rubocop-shopify as a transitive dependency (removed from all rubocop-rubyN_N gems)
 
 ## [2.0.0] 2025-04-17
+
 - COVERAGE: 100.00% -- 18/18 lines in 4 files
 - BRANCH COVERAGE: 100.00% -- 0/0 branches in 4 files
 - 100.00% documented
+
 ### Added
+
 - `stone_checksums` v1.0.0 for release checksums
 - Rules to prevent churn in bin/bundle
 - Ability to package gem without signing (e.g. for linux distros)
+
 ### Changed
+
 - RuboCop 1.72+ (new plugin system)
 - Contributor Covenant v2.1
 - Upgrade to version_gem v1.1.7
+
 ### Fixed
+
 - (Better) Linting Support for Ruby 1.8, 1.9, 2.0
+
 ### Removed
+
 - Runtime Support for Ruby 2.7, 3.0, 3.1
   - Minimum runtime is Ruby 3.2
 
 ## [1.0.10] 2024-03-23
+
 ### Added
+
 - Moved development dependencies back to gemspec
   - See: https://github.com/rubygems/rubygems/discussions/5065#discussioncomment-7031586
 - kettle-soup-cover v1.0.2 for Code Coverage (dev dependency)
 - rspec-stubbed_env v1.0.1 for testing ENV variable-based logic (dev dependency)
+
 ### Changed
+
 - Disable `Rake/MethodDefinitionInTask` Cop
   - Cop is 66% incorrect, and hasn't been fixed in 2+ years.
   - See: https://github.com/rubocop/rubocop-rake/issues/42
@@ -106,26 +144,36 @@ Please file a bug if you notice a violation of semantic versioning.
 - rubocop-md v1.2.2 (dev dependency)
 - rubocop-rspec 2.27.1 (dev dependency)
 - rubocop-shopify 2.15.1 (dev dependency)
+
 ### Fixed
+
 - AllCops/TargetRubyVersion is now set according to:
   - `rubocop-lts` version, or
   - `rubocop-ruby*_*` version
 
 ## [1.0.9] 2023-09-20
+
 ### Changed
+
 - standard v1.31.1
 - standard-performance v1.2
 - simplecov-rcov dev dependency back to mainline release 0.3.3
+
 ### Fixed
+
 - `Gemspec/DevelopmentDependencies` Cop changed to "gemspec"
   - See: https://github.com/rubygems/rubygems/discussions/5065#discussioncomment-7031586
 
 ## [1.0.8] 2023-07-07
+
 ### Fixed
+
 - compatibility with changes from standard v1.30.1
 
 ## [1.0.7] 2023-06-08
+
 ### Changed
+
 - follow best practices for gemspec
   - put all dev dependencies in Gemfile
   - See: https://github.com/rubygems/rubygems/discussions/5065
@@ -133,60 +181,93 @@ Please file a bug if you notice a violation of semantic versioning.
 - improve documentation
 
 ## [1.0.6] 2023-06-03
+
 ### Fixed
+
 - ship internal configs with gem
 
 ## [1.0.5] 2023-06-03
+
 ### Fixed
+
 - require deps for configs 1.9 - 3.3
 
 ## [1.0.4] 2023-06-03
+
 ### Fixed
+
 - rubocop-shopify > standard gem family of rules
   - v1.0.0 intended for rubocop-shopify to override standard's rules, now it actually does
   - override mechanism in rubocop.yml config is counter-intuitive :(
 - Stop doubly loading style libs and configs with more careful config structure
+
 ### Changed
+
 - disable several rubocop-performance cops that are bad cops
 
 ## [1.0.3] 2023-05-29
+
 ### Added
+
 - Gem releases are now signed!
+
 ### Fixed
+
 - URIs in gemspec (now point to GitLab)
 
 ## [1.0.2] 2023-05-29
+
 ### Added
+
 - `version_gem` for library version introspection
+
 ### Changed
+
 - Set Style/SymbolArray to brackets for Ruby < 2.0 compat
   - Previously only set for Ruby 1.8
 - Set Style/WordArray to brackets for Ruby < 2.0 compat
   - Previously only set for Ruby 1.8
 - Disable Style/PercentLiteralDelimiters for Ruby < 2.0 compat
 - `Standard::Rubocop::Lts::VERSION` refactored to `Standard::Rubocop::Lts::Version::VERSION`
+
 ### Fixed
+
 - Removed obsolete loading of `standard-custom`'s now defunct `config/ruby-2.2.yml`
   - See: https://github.com/standardrb/standard-custom/issues/2
+
 ### Removed
+
 - Duplicated lines from `README.md`
 - Circular dependency in gemspec (on `standard-rubocop-lts`, which is this gem)
 
 ## [1.0.2] 2023-05-29
+
 ### Changed
+
 - Update to standard 1.28.4
 
 ## [1.0.1] 2023-04-16
+
 ### Fixed
+
 - config/*.yml rubocop configs were not shipped with v1.0.0
+
 ### Changed
+
 - Minimum Ruby Version is 2.7
 
 ## [1.0.0] 2023-04-16 [YANKED]
+
 ### Added
+
 - Initial release
 
-[Unreleased]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/v2.0.4...HEAD
+[Unreleased]: https://github.com/rubocop-lts/standard-rubocop-lts/compare/v2.0.5...HEAD
+[2.0.5]: https://github.com/rubocop-lts/standard-rubocop-lts/compare/v2.0.4...v2.0.5
+[2.0.5t]: https://github.com/rubocop-lts/standard-rubocop-lts/releases/tag/v2.0.5
+[2.0.4]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/v2.0.3...v2.0.4
+[2.0.3]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/v2.0.2...v2.0.3
+[2.0.2]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/v2.0.0...v2.0.2
 [1.0.11]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/v1.0.10...v1.0.11
 [1.0.10]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/v1.0.9...v1.0.10
 [1.0.9]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/v1.0.8...v1.0.9
@@ -198,7 +279,4 @@ Please file a bug if you notice a violation of semantic versioning.
 [1.0.3]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/v1.0.2...v1.0.3
 [1.0.2]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/v1.0.1...v1.0.2
 [1.0.1]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/v1.0.0...v1.0.1
-[1.0.0]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/0c0f82c0eeda184afb5c2c7a3d6b43c10f2d4c1c...v1.0.0
-[2.0.3]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/v2.0.2...v2.0.3
-[2.0.2]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/v2.0.0...v2.0.2
-[2.0.4]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/v2.0.3...v2.0.4
+[1.0.0]: https://github.com/rubocop-lts/standard-rubocop-lts/compare/0c0f82c0eeda184afb5c2c7a3d6b43c10f2d4c1c...v1.0.0
