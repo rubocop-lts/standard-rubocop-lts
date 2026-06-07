@@ -267,6 +267,9 @@ license_eye:
     - name: simplecov-rcov
       version: 0.3.7
       license: MIT
+    - name: standard
+      version: 1.54.0
+      license: MIT
 
 # Machine / automation accounts to exclude from generated copyright output.
 #
