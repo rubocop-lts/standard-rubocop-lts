@@ -7,3 +7,8 @@ AllCops:
   #   - rubocop-lts
   #   - rubocop-ruby*_*
   NewCops: disable
+
+# This autocorrect can create invalid Ruby from grouped method arguments that use
+# `and`/`or`, e.g. `assert((a and b), message)`.
+Style/RedundantParentheses:
+  AutoCorrect: false
