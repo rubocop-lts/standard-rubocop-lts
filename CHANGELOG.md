@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 ### Changed
 ### Fixed
+- Disabled autocorrection for `Style/RedundantParentheses` in the Ruby 1.8 profile, preventing invalid Ruby from legacy grouped `and` / `or` method arguments.
 ### Removed
 
 ## [2.0.4] 2026-06-01

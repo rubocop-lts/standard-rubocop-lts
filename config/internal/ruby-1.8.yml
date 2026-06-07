@@ -17,6 +17,11 @@ inherit_from: ./ruby-1.9.yml
 Layout/DotPosition:
   EnforcedStyle: trailing
 
+# This autocorrect can create invalid Ruby from old conditionals that use
+# `and`/`or` as grouped method arguments, e.g. `assert((a and b), message)`.
+Style/RedundantParentheses:
+  AutoCorrect: false
+
 # Disabled in standard's base.yml.  Keeping here in case it is removed from base.
 Style/Documentation:
   Enabled: false
