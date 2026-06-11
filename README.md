@@ -555,7 +555,7 @@ Thanks for RTFM. ☺️
 [📌gitmoji]: https://gitmoji.dev
 [📌gitmoji-img]: https://img.shields.io/badge/gitmoji_commits-%20%F0%9F%98%9C%20%F0%9F%98%8D-34495e.svg?style=flat-square
 [🧮kloc]: https://www.youtube.com/watch?v=dQw4w9WgXcQ
-[🧮kloc-img]: https://img.shields.io/badge/KLOC-0.019-FFDD67.svg?style=for-the-badge&logo=YouTube&logoColor=blue
+[🧮kloc-img]: https://img.shields.io/badge/KLOC-5.053-FFDD67.svg?style=for-the-badge&logo=YouTube&logoColor=blue
 [🔐security]: https://github.com/rubocop-lts/standard-rubocop-lts/blob/main/SECURITY.md
 [🔐security-img]: https://img.shields.io/badge/security-policy-259D6C.svg?style=flat
 [📄copyright-notice-explainer]: https://opensource.stackexchange.com/questions/5778/why-do-licenses-such-as-the-mit-license-specify-a-single-year
@@ -583,7 +583,7 @@ Thanks for RTFM. ☺️
 | Package | standard-rubocop-lts |
 | Description | Enables Ruby projects to more confidently support even the most finely-aged Rubies.<br>Part of the rubocop-lts family. |
 | Homepage | https://github.com/rubocop-lts/standard-rubocop-lts |
-| Source | https://github.com/rubocop-lts/standard-rubocop-lts/tree/v2.0.4 |
+| Source | https://github.com/rubocop-lts/standard-rubocop-lts/tree/v2.0.6 |
 | License | `MIT` |
 | Funding | https://github.com/sponsors/pboling, https://issuehunt.io/u/pboling, https://ko-fi.com/pboling, https://liberapay.com/pboling/donate, https://opencollective.com/rubocop-lts, https://patreon.com/galtzo, https://polar.sh/pboling, https://thanks.dev/u/gh/pboling, https://tidelift.com/funding/github/rubygems/standard-rubocop-lts, https://www.buymeacoffee.com/pboling |
 <!-- kettle-jem:metadata:end -->
