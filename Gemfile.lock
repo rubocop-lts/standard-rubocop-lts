@@ -387,7 +387,7 @@ DEPENDENCIES
   rspec-stubbed_env (~> 1.0, >= 1.0.4)
   rspec_junit_formatter (~> 0.6, >= 0.6.0)
   rubocop-gradual (~> 0.4, >= 0.4.0)
-  rubocop-lts (~> 24.2, ~> 24.1, >= 24.2.0, >= 24.1.0)
+  rubocop-lts (~> 24.1, >= 24.1.0)
   rubocop-lts-rspec (~> 1.0, >= 1.0.3)
   rubocop-minitest (~> 0.38, >= 0.38.1)
   rubocop-on-rbs (~> 2.0, >= 2.0.0)
