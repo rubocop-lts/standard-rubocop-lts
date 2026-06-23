@@ -1,5 +1,5 @@
 {
-  "standard-rubocop-lts.gemspec:1600829014": [
+  "standard-rubocop-lts.gemspec:4031062455": [
     [101, 3, 1, "Gemspec/DuplicatedAssignment: `files=` method calls already given on line 60 of the gemspec.", 177622]
   ]
 }
