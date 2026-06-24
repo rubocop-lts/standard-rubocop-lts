@@ -268,7 +268,7 @@ license_eye:
       version: 0.3.7
       license: MIT
     - name: standard
-      version: 1.54.0
+      version: 1.55.0
       license: MIT
 
 # Machine / automation accounts to exclude from generated copyright output.

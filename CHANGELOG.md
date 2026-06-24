@@ -32,6 +32,10 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
+- Folded the Dogfood RuboCop rules into the primary RuboCop config so normal
+  autocorrect owns generated-file style, and fixed license-check CI drift after
+  dependency updates.
+- Added the Appraisal RuboCop formatter plugin to the templating bundle.
 - Restored `docs/CNAME` so the generated documentation site keeps its custom domain.
 - Corrected misspelled contact metadata to use `galtzo.com`.
 

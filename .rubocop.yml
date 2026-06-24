@@ -16,6 +16,7 @@ Style/TrailingCommaInArrayLiteral:
   EnforcedStyleForMultiline: consistent_comma
   Enabled: true
 inherit_from:
+  - config/ruby-1.8.yml
   - .rubocop_rspec.yml
 plugins:
   - rubocop-on-rbs
@@ -27,6 +28,9 @@ inherit_mode:
   merge:
     - Exclude
 AllCops:
+  # We use the rubocop-lts gem version (v24) for Ruby 3.2, but loading the
+  # oldest internal config above would otherwise lower TargetRubyVersion.
+  TargetRubyVersion: 3.2
   Exclude:
     - certs/**/*
     - checksums/**/*
