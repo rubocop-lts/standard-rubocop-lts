@@ -30,7 +30,6 @@ inherit_mode:
 AllCops:
   # We use the rubocop-lts gem version (v24) for Ruby 3.2, but loading the
   # oldest internal config above would otherwise lower TargetRubyVersion.
-  TargetRubyVersion: 3.2
   Exclude:
     - certs/**/*
     - checksums/**/*
