@@ -20,15 +20,30 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Added
 
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [2.0.7] - 2026-06-25
+
+- TAG: [v2.0.7][2.0.7t]
+- COVERAGE: 100.00% -- 19/19 lines in 4 files
+- BRANCH COVERAGE: 0.00% -- 0/0 branches in 4 files
+- 71.43% documented
+
+### Added
+
 - Added support for JRuby 10.1 and TruffleRuby 34.0.
 
 ### Changed
 
 - Retemplated project metadata and CI/development automation with `kettle-jem` v7.0.0.
-
-### Deprecated
-
-### Removed
 
 ### Fixed
 
@@ -38,8 +53,6 @@ Please file a bug if you notice a violation of semantic versioning.
 - Added the Appraisal RuboCop formatter plugin to the templating bundle.
 - Restored `docs/CNAME` so the generated documentation site keeps its custom domain.
 - Corrected misspelled contact metadata to use `galtzo.com`.
-
-### Security
 
 ## [2.0.5] - 2026-06-07
 
@@ -273,7 +286,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - Initial release
 
-[Unreleased]: https://github.com/rubocop-lts/standard-rubocop-lts/compare/v2.0.5...HEAD
+[Unreleased]: https://github.com/rubocop-lts/standard-rubocop-lts/compare/v2.0.7...HEAD
+[2.0.7]: https://github.com/rubocop-lts/standard-rubocop-lts/compare/v2.0.5...v2.0.7
+[2.0.7t]: https://github.com/rubocop-lts/standard-rubocop-lts/releases/tag/v2.0.7
 [2.0.5]: https://github.com/rubocop-lts/standard-rubocop-lts/compare/v2.0.4...v2.0.5
 [2.0.5t]: https://github.com/rubocop-lts/standard-rubocop-lts/releases/tag/v2.0.5
 [2.0.4]: https://gitlab.com/rubocop-lts/standard-rubocop-lts/-/compare/v2.0.3...v2.0.4
