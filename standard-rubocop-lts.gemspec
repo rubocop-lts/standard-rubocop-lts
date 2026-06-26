@@ -6,9 +6,20 @@
 # kettle-jem will then preserve content between those markers across template runs.
 # kettle-jem:unfreeze
 
+gem_version =
+  if Gem.ruby_version >= Gem::Version.new("3.1")
+    # Loading Version into an anonymous module allows version.rb to get code coverage from SimpleCov!
+    # See: https://github.com/simplecov-ruby/simplecov/issues/557#issuecomment-2630782358
+    # See: https://github.com/panorama-ed/memo_wise/pull/397
+    Module.new.tap { |mod| Kernel.load("#{__dir__}/lib/standard/rubocop/lts/version.rb", mod) }::Standard::Rubocop::Lts::Version::VERSION
+  else
+    require_relative "lib/standard/rubocop/lts/version"
+    Standard::Rubocop::Lts::Version::VERSION
+  end
+
 Gem::Specification.new do |spec|
   spec.name = "standard-rubocop-lts"
-  spec.version = Module.new.tap { |mod| Kernel.load("#{__dir__}/lib/standard/rubocop/lts/version.rb", mod) }::Standard::Rubocop::Lts::Version::VERSION
+  spec.version = gem_version
   spec.authors = ["Peter H. Boling"]
   spec.email = ["floss@galtzo.com"]
 
@@ -104,10 +115,10 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   # Utilities
+  spec.add_dependency("version_gem", "~> 1.1", ">= 1.1.13")              # ruby >= 2.2.0
   spec.add_dependency("standard", "~> 1.54", ">= 1.54.0") # Ruby >= 3.0.0
   spec.add_dependency("standard-custom", "~> 1.0", ">= 1.0.2") # Ruby >= 2.6.0
   spec.add_dependency("standard-performance", "~> 1.9", ">= 1.9.0") # Ruby >= 3.0.0
-  spec.add_dependency("version_gem", "~> 1.1", ">= 1.1.13")              # ruby >= 2.2.0
 
   # NOTE: It is preferable to list development dependencies in the gemspec due to increased
   #       visibility and discoverability.
@@ -122,45 +133,22 @@ Gem::Specification.new do |spec|
   #       Development dependencies that require strictly newer Ruby versions should be in a "gemfile",
   #       and preferably a modular one (see gemfiles/modular/*.gemfile).
 
-  # Dev, Test, & Release Tasks
-  spec.add_development_dependency("kettle-dev", "~> 2.2", ">= 2.2.18")     # ruby >= 3.2.0
+  spec.add_development_dependency("kettle-dev", "~> 2.2", ">= 2.2.19")     # ruby >= 3.2.0
 
-  # Security
   spec.add_development_dependency("bundler-audit", "~> 0.9.3")                      # ruby >= 2.0.0
 
-  # Tasks
-  spec.add_development_dependency("rake", "~> 13.4", ">= 13.4.2") # Ruby >= 2.3
+  spec.add_development_dependency("rake", "~> 13.0")                                # ruby >= 2.2.0
 
-  # Debugging
   spec.add_development_dependency("require_bench", "~> 1.0", ">= 1.0.4")            # ruby >= 2.2.0
 
-  # Testing
   spec.add_development_dependency("appraisal2", "~> 3.1", ">= 3.1.3")               # ruby >= 1.8.7, for testing against multiple versions of dependencies
   spec.add_development_dependency("kettle-test", "~> 2.0", ">= 2.0.7")             # ruby >= 3.2.0
   spec.add_development_dependency("turbo_tests2", "~> 3.1", ">= 3.1.5")            # ruby >= 2.4.0, default kettle-test runner
 
-  # Releasing
   spec.add_development_dependency("ruby-progressbar", "~> 1.13")                    # ruby >= 0
   spec.add_development_dependency("stone_checksums", "~> 1.0", ">= 1.0.3")          # ruby >= 2.2.0
 
-  # Git integration (optional)
-  # The 'git' gem is optional; standard-rubocop-lts falls back to shelling out to `git` if it is not present.
-  # The current release of the git gem depends on activesupport, which makes it too heavy to depend on directly
-  # spec.add_dependency("git", ">= 1.19.1")                               # ruby >= 2.3
-
-  # Development tasks
-  # The cake is a lie. erb v2.2, the oldest release, was never compatible with Ruby 2.3.
-  # This means we have no choice but to use the erb that shipped with Ruby 2.3
-  # /opt/hostedtoolcache/Ruby/2.3.8/x64/lib/ruby/gems/2.3.0/gems/erb-2.2.2/lib/erb.rb:670:in `prepare_trim_mode': undefined method `match?' for "-":String (NoMethodError)
-  # spec.add_development_dependency("erb", ">= 2.2")                                  # ruby >= 2.3.0, not SemVer, old rubies get dropped in a patch.
   spec.add_development_dependency("gitmoji-regex", "~> 2.0", ">= 2.0.3")            # ruby >= 2.4
-
-  # HTTP recording for deterministic specs
-  # In Ruby 3.5 (HEAD) the CGI library has been pared down, so we also need to depend on gem "cgi" for ruby@head
-  # This is done in the "head" appraisal.
-  # See: https://github.com/vcr/vcr/issues/1057
-  # spec.add_development_dependency("vcr", ">= 4")                        # 6.0 claims to support ruby >= 2.3, but fails on ruby 2.4
-  # spec.add_development_dependency("webmock", ">= 3")                    # Last version to support ruby >= 2.3
   spec.add_development_dependency("rspec", "~> 3.13", ">= 3.13.2") # Ruby >= 0
   spec.add_development_dependency("rspec-block_is_expected", "~> 1.0", ">= 1.0.6") # Ruby >= 1.8.7
   spec.add_development_dependency("rspec_junit_formatter", "~> 0.6", ">= 0.6.0") # Ruby >= 2.3.0
