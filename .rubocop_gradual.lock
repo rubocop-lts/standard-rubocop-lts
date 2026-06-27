@@ -1,5 +1,5 @@
 {
-  "standard-rubocop-lts.gemspec:1337610039": [
+  "standard-rubocop-lts.gemspec:3373660509": [
     [16, 22, 2, "Lint/Syntax: unexpected token tLSHFT\n(Using Ruby 2.0 parser; configure using `TargetRubyVersion` parameter, under `AllCops`)", 5859461],
     [17, 81, 6, "Lint/Syntax: unexpected token tCONSTANT\n(Using Ruby 2.0 parser; configure using `TargetRubyVersion` parameter, under `AllCops`)", 3274900383],
     [18, 29, 6, "Lint/Syntax: unexpected token tIDENTIFIER\n(Using Ruby 2.0 parser; configure using `TargetRubyVersion` parameter, under `AllCops`)", 1346751027],
