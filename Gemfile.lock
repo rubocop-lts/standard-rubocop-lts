@@ -8,7 +8,7 @@ GIT
 PATH
   remote: .
   specs:
-    standard-rubocop-lts (2.0.7)
+    standard-rubocop-lts (2.0.8)
       standard (~> 1.54, >= 1.54.0)
       standard-custom (~> 1.0, >= 1.0.2)
       standard-performance (~> 1.9, >= 1.9.0)
@@ -17,7 +17,7 @@ PATH
 PATH
   remote: /home/pboling/src/my/rubocop-lts/rubocop-lts-rspec
   specs:
-    rubocop-lts-rspec (1.0.5)
+    rubocop-lts-rspec (1.0.6)
       rubocop (~> 1.84, >= 1.84.2)
       rubocop-env (~> 0.1, >= 0.1.0)
       rubocop-factory_bot (~> 2.28, >= 2.28.0)
@@ -30,7 +30,7 @@ PATH
 PATH
   remote: /home/pboling/src/my/rubocop-lts/rubocop-ruby3_2
   specs:
-    rubocop-ruby3_2 (3.0.5)
+    rubocop-ruby3_2 (3.0.6)
       rubocop-gradual (~> 0.3, >= 0.3.6)
       rubocop-md (~> 2.0, >= 2.0.4)
       rubocop-rake (~> 0.7, >= 0.7.1)
