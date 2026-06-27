@@ -28,10 +28,19 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
+### Security
+
+## [2.0.8] - 2026-06-27
+
+- TAG: [v2.0.8][2.0.8t]
+- COVERAGE: 100.00% -- 19/19 lines in 4 files
+- BRANCH COVERAGE: 0.00% -- 0/0 branches in 4 files
+- 71.43% documented
+
+### Fixed
+
 - Restored the gemspec `spec.files` declaration so packaged gems include the
   intended public files and configuration payload.
-
-### Security
 
 ## [2.0.7] - 2026-06-25
 
@@ -289,7 +298,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - Initial release
 
-[Unreleased]: https://github.com/rubocop-lts/standard-rubocop-lts/compare/v2.0.7...HEAD
+[Unreleased]: https://github.com/rubocop-lts/standard-rubocop-lts/compare/v2.0.8...HEAD
+[2.0.8]: https://github.com/rubocop-lts/standard-rubocop-lts/compare/v2.0.7...v2.0.8
+[2.0.8t]: https://github.com/rubocop-lts/standard-rubocop-lts/releases/tag/v2.0.8
 [2.0.7]: https://github.com/rubocop-lts/standard-rubocop-lts/compare/v2.0.5...v2.0.7
 [2.0.7t]: https://github.com/rubocop-lts/standard-rubocop-lts/releases/tag/v2.0.7
 [2.0.5]: https://github.com/rubocop-lts/standard-rubocop-lts/compare/v2.0.4...v2.0.5
