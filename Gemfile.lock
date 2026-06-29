@@ -8,7 +8,7 @@ GIT
 PATH
   remote: .
   specs:
-    standard-rubocop-lts (2.0.8)
+    standard-rubocop-lts (2.0.9)
       standard (~> 1.54, >= 1.54.0)
       standard-custom (~> 1.0, >= 1.0.2)
       standard-performance (~> 1.9, >= 1.9.0)
