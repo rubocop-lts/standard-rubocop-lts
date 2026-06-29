@@ -59,7 +59,7 @@ Gem::Specification.new do |spec|
   # Specify which files are part of the released package.
   spec.files = Dir[
     # Splats (alphabetical)
-    "config/*.yml",
+    "config/**/*.yml",
     "lib/**/*.rb",
     "sig/**/*.rbs"
   ] + [
@@ -108,23 +108,6 @@ Gem::Specification.new do |spec|
   # Listed files are the relative paths from bindir above.
   spec.executables = []
 
-  # kettle-jem:freeze
-  # This gem's published payload is primarily RuboCop configuration.
-  spec.files = Dir[
-    # Splats (alphabetical)
-    "config/*.yml",
-    "lib/**/*.rb",
-    "sig/**/*.rbs",
-    # Files (alphabetical)
-    "CHANGELOG.md",
-    "CODE_OF_CONDUCT.md",
-    "CONTRIBUTING.md",
-    "LICENSE.md",
-    "README.md",
-    "SECURITY.md"
-  ]
-  # kettle-jem:unfreeze
-
   spec.require_paths = ["lib"]
 
   # Utilities
@@ -147,7 +130,7 @@ Gem::Specification.new do |spec|
   #       and preferably a modular one (see gemfiles/modular/*.gemfile).
 
   # Dev, Test, & Release Tasks
-  spec.add_development_dependency("kettle-dev", "~> 2.2", ">= 2.2.20")     # ruby >= 3.2.0
+  spec.add_development_dependency("kettle-dev", "~> 2.2", ">= 2.2.23")     # ruby >= 3.2.0
 
   # Security
   spec.add_development_dependency("bundler-audit", "~> 0.9.3")                      # ruby >= 2.0.0

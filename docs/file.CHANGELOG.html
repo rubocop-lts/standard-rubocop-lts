@@ -82,6 +82,12 @@ Please file a bug if you notice a violation of semantic versioning.</p>
 
 <h3 id="fixed">Fixed</h3>
 
+<ul>
+  <li>Restored recursive packaging of <code>config/**/*.yml</code> without using a frozen<br>
+duplicate <code>spec.files</code> override, so <code>config/internal/*.yml</code> is included in<br>
+built gems and remains compatible with kettle-jem gemspec merging.</li>
+</ul>
+
 <h3 id="security">Security</h3>
 
 <h2 id="208---2026-06-28">
@@ -507,7 +513,7 @@ dependency updates.</li>
 </div></div>
 
       <div id="footer">
-  Generated on Sun Jun 28 04:35:46 2026 by
+  Generated on Mon Jun 29 02:03:45 2026 by
   <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.44 (ruby-4.0.5).
 </div>

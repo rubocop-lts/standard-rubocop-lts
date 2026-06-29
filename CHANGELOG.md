@@ -28,6 +28,10 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
+- Restored recursive packaging of `config/**/*.yml` without using a frozen
+  duplicate `spec.files` override, so `config/internal/*.yml` is included in
+  built gems and remains compatible with kettle-jem gemspec merging.
+
 ### Security
 
 ## [2.0.8] - 2026-06-28
