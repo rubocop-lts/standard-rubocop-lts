@@ -28,11 +28,20 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
+### Security
+
+## [2.0.9] - 2026-06-29
+
+- TAG: [v2.0.9][2.0.9t]
+- COVERAGE: 100.00% -- 19/19 lines in 4 files
+- BRANCH COVERAGE: 0.00% -- 0/0 branches in 4 files
+- 71.43% documented
+
+### Fixed
+
 - Restored recursive packaging of `config/**/*.yml` without using a frozen
   duplicate `spec.files` override, so `config/internal/*.yml` is included in
   built gems and remains compatible with kettle-jem gemspec merging.
-
-### Security
 
 ## [2.0.8] - 2026-06-28
 
@@ -302,7 +311,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - Initial release
 
-[Unreleased]: https://github.com/rubocop-lts/standard-rubocop-lts/compare/v2.0.8...HEAD
+[Unreleased]: https://github.com/rubocop-lts/standard-rubocop-lts/compare/v2.0.9...HEAD
+[2.0.9]: https://github.com/rubocop-lts/standard-rubocop-lts/compare/v2.0.8...v2.0.9
+[2.0.9t]: https://github.com/rubocop-lts/standard-rubocop-lts/releases/tag/v2.0.9
 [2.0.8]: https://github.com/rubocop-lts/standard-rubocop-lts/compare/v2.0.7...v2.0.8
 [2.0.8t]: https://github.com/rubocop-lts/standard-rubocop-lts/releases/tag/v2.0.8
 [2.0.7]: https://github.com/rubocop-lts/standard-rubocop-lts/compare/v2.0.5...v2.0.7
