@@ -28,6 +28,8 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
+- Package configured license files in gem release file lists.
+
 ### Security
 
 ## [2.0.9] - 2026-06-29
