@@ -157,7 +157,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency("rspec", "~> 3.13", ">= 3.13.2") # Ruby >= 0
   spec.add_development_dependency("rspec-block_is_expected", "~> 1.0", ">= 1.0.6") # Ruby >= 1.8.7
   spec.add_development_dependency("rspec_junit_formatter", "~> 0.6", ">= 0.6.0") # Ruby >= 2.3.0
-  spec.add_development_dependency("rspec-stubbed_env", "~> 1.0", ">= 1.0.4") # Ruby >= 1.8.7
+  spec.add_development_dependency("rspec-stubbed_env", "~> 1.0", ">= 1.0.6") # Ruby >= 1.8.7
   spec.add_development_dependency("rubocop-lts", "~> 24.1", ">= 24.1.0") # Ruby >= 3.2
   spec.add_development_dependency("rubocop-packaging", "~> 0.6", ">= 0.6.0") # Ruby >= 2.7.0
   spec.add_development_dependency("rubocop-rspec", "~> 3.9", ">= 3.9.0") # Ruby >= 2.7.0
