@@ -28,9 +28,18 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
-- Package configured license files in gem release file lists.
-
 ### Security
+
+## [2.0.10] - 2026-07-03
+
+- TAG: [v2.0.10][2.0.10t]
+- COVERAGE: 100.00% -- 19/19 lines in 4 files
+- BRANCH COVERAGE: 0.00% -- 0/0 branches in 4 files
+- 71.43% documented
+
+### Fixed
+
+- Package configured license files in gem release file lists.
 
 ## [2.0.9] - 2026-06-29
 
@@ -313,7 +322,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - Initial release
 
-[Unreleased]: https://github.com/rubocop-lts/standard-rubocop-lts/compare/v2.0.9...HEAD
+[Unreleased]: https://github.com/rubocop-lts/standard-rubocop-lts/compare/v2.0.10...HEAD
+[2.0.10]: https://github.com/rubocop-lts/standard-rubocop-lts/compare/v2.0.9...v2.0.10
+[2.0.10t]: https://github.com/rubocop-lts/standard-rubocop-lts/releases/tag/v2.0.10
 [2.0.9]: https://github.com/rubocop-lts/standard-rubocop-lts/compare/v2.0.8...v2.0.9
 [2.0.9t]: https://github.com/rubocop-lts/standard-rubocop-lts/releases/tag/v2.0.9
 [2.0.8]: https://github.com/rubocop-lts/standard-rubocop-lts/compare/v2.0.7...v2.0.8
