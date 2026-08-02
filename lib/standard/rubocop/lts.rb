@@ -5,9 +5,9 @@ require "version_gem"
 require "rubocop"
 require "standard-custom"
 
-require_relative "lts/version"
 # Load any Cops that aren't explicitly loaded by standard's plugins (e.g. standard-custom).
 require_relative "lts/cops"
+require_relative "lts/version"
 
 # Namespace for this library
 module Standard
