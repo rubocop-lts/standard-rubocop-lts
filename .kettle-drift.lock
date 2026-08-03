@@ -7,5 +7,14 @@
         22
       ]
     }
+  ],
+  "direct: standard-rubocop-lts.gemspec\nmodular: gemfiles/modular/style.gemfile": [
+    {
+      "file": ".structuredmerge/kettle-jem.yml",
+      "lines": [
+        108,
+        113
+      ]
+    }
   ]
 }

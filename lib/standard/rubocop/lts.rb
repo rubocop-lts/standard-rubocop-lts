@@ -1,13 +1,11 @@
 # frozen_string_literal: true
 
 # external libs
-require "version_gem"
 require "rubocop"
 require "standard-custom"
 
 # Load any Cops that aren't explicitly loaded by standard's plugins (e.g. standard-custom).
 require_relative "lts/cops"
-require_relative "lts/version"
 
 # Namespace for this library
 module Standard
@@ -20,8 +18,4 @@ module Standard
       class Error < StandardError; end
     end
   end
-end
-
-Standard::Rubocop::Lts::Version.class_eval do
-  extend VersionGem::Basic
 end
