@@ -733,8 +733,8 @@ files:
   gemfiles/modular/coverage_local.gemfile:
     recipe: template_source_application_gemfiles_modular_coverage_local_gemfile
     action: write
-    dest_sha256: 0062df67d4104e35ac8d32e509f58ab915cda2b9bc476be0576853a2ace26fd2
-    input_fingerprint: 5aba1c617696816bd7d9fa8e777f22e72530f8d586e23b25322cc8fff1068cd7
+    dest_sha256: 05250cec85bffe701ff42025076ddca7ea9d3164012526e1e7854a3b5cc5af00
+    input_fingerprint: ff9c519b537b2ffa31ffa3b245f6377091436c7c4ad34a44989d5447c9bbc6dc
     template_sources:
     - gemfiles/modular/coverage_local.gemfile.example
   gemfiles/modular/debug.gemfile:
@@ -754,8 +754,8 @@ files:
   gemfiles/modular/documentation_local.gemfile:
     recipe: template_source_application_gemfiles_modular_documentation_local_gemfile
     action: write
-    dest_sha256: 0062df67d4104e35ac8d32e509f58ab915cda2b9bc476be0576853a2ace26fd2
-    input_fingerprint: 7e12925363996cb97283b5f276bf3d6df8df1b3ac2ec0657b298d4d9fbecfb14
+    dest_sha256: 789b114fedcef8d9b6f303f34daaf521b6aa55fefb95198e9ef52ac0d2010fa1
+    input_fingerprint: 5922cf0a851e753157118db7f1a7e43fb8a8b273fa5567d5f1d125109c3e8091
     template_sources:
     - gemfiles/modular/documentation_local.gemfile.example
   gemfiles/modular/erb/r2/v3.0.gemfile:
@@ -894,8 +894,8 @@ files:
   gemfiles/modular/style_local.gemfile:
     recipe: template_source_application_gemfiles_modular_style_local_gemfile
     action: write
-    dest_sha256: 0062df67d4104e35ac8d32e509f58ab915cda2b9bc476be0576853a2ace26fd2
-    input_fingerprint: 2788850097214f5c093f80de24db1d5ad241b053a2a139f65583b05cb1be7e70
+    dest_sha256: b02ad6e075382e42b404d805119275659988d6771d84b5a309a682afe53766f7
+    input_fingerprint: 938aaaa3c7297b35b3b5f2a6a541209b0f7e1611c10313b94fa4eb98769d4e4b
     template_sources:
     - gemfiles/modular/style_local.gemfile.example
   gemfiles/modular/templating.gemfile:
@@ -908,8 +908,8 @@ files:
   gemfiles/modular/templating_local.gemfile:
     recipe: template_source_application_gemfiles_modular_templating_local_gemfile
     action: write
-    dest_sha256: 0062df67d4104e35ac8d32e509f58ab915cda2b9bc476be0576853a2ace26fd2
-    input_fingerprint: 6fd16ae6a31781aef50fce26226560253d5d0c992eaaadc27c66e6851331faa5
+    dest_sha256: e77ad0561f6180bf1b41e56d47f8f837dbc199df32fb8bef187f35fcfde03ce7
+    input_fingerprint: 7b15c4fec7754459c628266e07d40203141d664a8fbc1b80e6f18dedf337723b
     template_sources:
     - gemfiles/modular/templating_local.gemfile.example
   gemfiles/modular/webrick/r4/v1.9.gemfile:
