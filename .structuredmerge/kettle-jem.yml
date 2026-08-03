@@ -501,6 +501,12 @@ files:
       strategy: accept_template
   gemfiles:
     modular:
+      coverage_local.gemfile:
+        strategy: accept_template
+      documentation_local.gemfile:
+        strategy: accept_template
+      style_local.gemfile:
+        strategy: accept_template
       templating.gemfile:
         strategy: accept_template
       templating_local.gemfile:
