@@ -1,5 +1,5 @@
 require "anonymous_loader"
-require "standard/rubocop/lts"
+require "standard-rubocop-lts"
 RSpec.describe Standard::Rubocop::Lts::Version do
   it_behaves_like "a Version module", described_class
 
