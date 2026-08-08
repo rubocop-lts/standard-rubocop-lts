@@ -137,6 +137,12 @@ gem install standard-rubocop-lts
 
 ## ⚙️ Configuration
 
+Select a Ruby-version-specific profile through Standard's `.rubocop.yml`
+inheritance configuration. The existing Basic Usage example uses
+`config/ruby-{RUBY_MAJOR_VERSION}.{RUBY_MINOR_VERSION}.yml`; replace the
+placeholders with the minimum Ruby version your project supports. This gem has
+no runtime application settings.
+
 ## 🔧 Basic Usage
 
 Add to the top of your project's `.rubocop.yml` configuration file:
