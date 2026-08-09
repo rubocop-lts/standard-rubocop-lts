@@ -28,6 +28,8 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Fixed
 
+- Updated the License-Eye dependency override for standard 1.56.0 so the license compatibility workflow recognizes the locked dependency.
+
 ### Security
 
 ## [2.0.11] - 2026-08-09
