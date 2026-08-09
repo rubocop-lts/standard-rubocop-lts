@@ -8,6 +8,10 @@ AllCops:
   #   - rubocop-ruby*_*
   NewCops: disable
 
+plugins:
+  # Gate Ruby core and standard library APIs against TargetRubyVersion.
+  - rubocop-lts-ruby
+
 # This autocorrect can create invalid Ruby from grouped method arguments that use
 # `and`/`or`, e.g. `assert((a and b), message)`.
 Style/RedundantParentheses:

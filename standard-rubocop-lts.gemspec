@@ -100,6 +100,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   # Utilities
+  spec.add_dependency("rubocop-lts-ruby", "~> 0.1", ">= 0.1.0") # Ruby >= 3.2.0
   spec.add_dependency("standard", "~> 1.54", ">= 1.54.0") # Ruby >= 3.0.0
   spec.add_dependency("standard-custom", "~> 1.0", ">= 1.0.2") # Ruby >= 2.6.0
   spec.add_dependency("standard-performance", "~> 1.9", ">= 1.9.0") # Ruby >= 3.0.0
