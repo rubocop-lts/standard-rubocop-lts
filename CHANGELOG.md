@@ -22,30 +22,15 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Changed
 
-- [kc] kettle-jem/prepare: updated 55 project files:
-  - configuration (1)
-  - dependencies (52)
-  - other (2)
-
-- [kc] kettle-jem/template: updated 59 project files:
-  - code and tests (5)
-  - configuration (1)
-  - dependencies (40)
-  - documentation (2)
-  - other (10)
-  - workflows (1)
-
 ### Deprecated
 
 ### Removed
 
 ### Fixed
 
-- Updated the License-Eye dependency override for standard 1.56.0 so the license compatibility workflow recognizes the locked dependency.
-
 ### Security
 
-## [2.0.11] - 2026-08-09
+## [2.0.11] - 2026-09-07
 
 - TAG: [v2.0.11][2.0.11t]
 - COVERAGE: 100.00% -- 19/19 lines in 4 files
@@ -79,6 +64,19 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - kettle-jem-template-20260801-001 - Generated README gem dashboard links now
   use ClickGems instead of BestGems.
+
+- [kc] kettle-jem/prepare: updated 55 project files:
+  - configuration (1)
+  - dependencies (52)
+  - other (2)
+
+- [kc] kettle-jem/template: updated 59 project files:
+  - code and tests (5)
+  - configuration (1)
+  - dependencies (40)
+  - documentation (2)
+  - other (10)
+  - workflows (1)
 
 ### Fixed
 
@@ -119,6 +117,8 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - kettle-jem-template-20260802-001 - Devcontainer JSON files now merge as JSONC,
   preserving comments and trailing commas during template updates.
+
+- Updated the License-Eye dependency override for standard 1.56.0 so the license compatibility workflow recognizes the locked dependency.
 
 ## [2.0.10] - 2026-07-03
 
