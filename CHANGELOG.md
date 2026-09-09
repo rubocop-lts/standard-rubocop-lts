@@ -22,14 +22,6 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Changed
 
-- [kc] kettle-jem/prepare: updated 9 project files:
-  - dependencies (9)
-
-- [kc] kettle-jem/template: updated 14 project files:
-  - code and tests (1)
-  - dependencies (11)
-  - other (2)
-
 ### Deprecated
 
 ### Removed
@@ -37,6 +29,23 @@ Please file a bug if you notice a violation of semantic versioning.
 ### Fixed
 
 ### Security
+
+## [2.0.13] - 2026-09-09
+
+- TAG: [v2.0.13][2.0.13t]
+- COVERAGE: 100.00% -- 19/19 lines in 4 files
+- BRANCH COVERAGE: 0.00% -- 0/0 branches in 4 files
+- 100.00% documented
+
+### Changed
+
+- [kc] kettle-jem/prepare: updated 9 project files:
+  - dependencies (9)
+
+- [kc] kettle-jem/template: updated 14 project files:
+  - code and tests (1)
+  - dependencies (11)
+  - other (2)
 
 ## [2.0.12] - 2026-09-07
 
@@ -437,7 +446,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - Initial release
 
-[Unreleased]: https://github.com/rubocop-lts/standard-rubocop-lts/compare/v2.0.12...HEAD
+[Unreleased]: https://github.com/rubocop-lts/standard-rubocop-lts/compare/v2.0.13...HEAD
+[2.0.13]: https://github.com/rubocop-lts/standard-rubocop-lts/compare/v2.0.12...v2.0.13
+[2.0.13t]: https://github.com/rubocop-lts/standard-rubocop-lts/releases/tag/v2.0.13
 [2.0.12]: https://github.com/rubocop-lts/standard-rubocop-lts/compare/v2.0.11...v2.0.12
 [2.0.12t]: https://github.com/rubocop-lts/standard-rubocop-lts/releases/tag/v2.0.12
 [2.0.11]: https://github.com/rubocop-lts/standard-rubocop-lts/compare/v2.0.10...v2.0.11
