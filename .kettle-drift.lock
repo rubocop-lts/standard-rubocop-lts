@@ -1,4 +1,31 @@
 {
+  "- [kc] kettle-jem/template: updated 14 project files:\n- code and tests (1)": [
+    {
+      "file": "CHANGELOG.md",
+      "lines": [
+        61,
+        78
+      ]
+    }
+  ],
+  "- code and tests (1)\n- dependencies (11)": [
+    {
+      "file": "CHANGELOG.md",
+      "lines": [
+        62,
+        79
+      ]
+    }
+  ],
+  "- dependencies (11)\n- other (2)": [
+    {
+      "file": "CHANGELOG.md",
+      "lines": [
+        63,
+        80
+      ]
+    }
+  ],
   "// Use 'forwardPorts' to make a list of ports inside the container available locally.\n// \"forwardPorts\": [],": [
     {
       "file": ".devcontainer/devcontainer.json",
@@ -14,6 +41,15 @@
       "lines": [
         122,
         127
+      ]
+    }
+  ],
+  "exec_cmd: \"kettle-test\"\nrubygems: latest": [
+    {
+      "file": ".github/workflows/current.yml",
+      "lines": [
+        43,
+        49
       ]
     }
   ]
