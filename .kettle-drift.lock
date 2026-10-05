@@ -3,8 +3,8 @@
     {
       "file": "CHANGELOG.md",
       "lines": [
-        61,
-        78
+        72,
+        89
       ]
     }
   ],
@@ -12,8 +12,8 @@
     {
       "file": "CHANGELOG.md",
       "lines": [
-        62,
-        79
+        73,
+        90
       ]
     }
   ],
@@ -21,8 +21,17 @@
     {
       "file": "CHANGELOG.md",
       "lines": [
-        63,
-        80
+        74,
+        91
+      ]
+    }
+  ],
+  "- gem: rubocop-packaging\ndirect: standard-rubocop-lts.gemspec": [
+    {
+      "file": ".structuredmerge/kettle-jem.yml",
+      "lines": [
+        126,
+        131
       ]
     }
   ],
@@ -50,6 +59,15 @@
       "lines": [
         43,
         49
+      ]
+    }
+  ],
+  "modular: gemfiles/modular/style.gemfile\naction: keep_both": [
+    {
+      "file": ".structuredmerge/kettle-jem.yml",
+      "lines": [
+        123,
+        128
       ]
     }
   ]
