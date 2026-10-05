@@ -126,8 +126,8 @@ dependency_conflicts:
     - gem: rubocop-packaging
       direct: standard-rubocop-lts.gemspec
       modular: gemfiles/modular/style.gemfile
-      action: remove_modular_gem
-      reason: "The gemspec owns the packaging lint dependency."
+      action: keep_both
+      reason: "The gemspec constrains the compatible version; the modular declaration selects the required fork source."
     - gem: yard
       direct: standard-rubocop-lts.gemspec
       modular: gemfiles/modular/documentation.gemfile
