@@ -12,10 +12,8 @@ RSpec.describe Standard::Rubocop::Lts::Version do
   end
 
   it "executes the version file for coverage without redefining constants" do
-    paths = [
-      File.expand_path("../../../../lib/standard/rubocop/lts/version.rb", __dir__),
-      File.expand_path("../../../../lib/standard/rubocop/lts/version_gem.rb", __dir__),
-    ].select { |path| File.file?(path) }
+    dir = File.expand_path("../../../../lib/standard/rubocop/lts", __dir__)
+    paths = ["version.rb", "version_gem.rb"].map { |file| File.join(dir, file) }.select { |path| File.file?(path) }
     anonymous_namespace = AnonymousLoader.load(files: paths)
 
     expect(anonymous_namespace::Standard::Rubocop::Lts::Version::VERSION).to eq(described_class::VERSION)

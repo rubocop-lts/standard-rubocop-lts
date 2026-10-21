@@ -3,8 +3,8 @@
     {
       "file": "CHANGELOG.md",
       "lines": [
-        82,
-        99
+        84,
+        101
       ]
     }
   ],
@@ -12,8 +12,8 @@
     {
       "file": "CHANGELOG.md",
       "lines": [
-        83,
-        100
+        85,
+        102
       ]
     }
   ],
@@ -21,8 +21,8 @@
     {
       "file": "CHANGELOG.md",
       "lines": [
-        84,
-        101
+        86,
+        103
       ]
     }
   ],
@@ -32,6 +32,15 @@
       "lines": [
         126,
         131
+      ]
+    }
+  ],
+  "- other (2)\n- workflows (18)": [
+    {
+      "file": "CHANGELOG.md",
+      "lines": [
+        28,
+        69
       ]
     }
   ],
