@@ -22,6 +22,23 @@ Please file a bug if you notice a violation of semantic versioning.
 
 ### Changed
 
+### Deprecated
+
+### Removed
+
+### Fixed
+
+### Security
+
+## [2.0.15] - 2026-10-21
+
+- TAG: [v2.0.15][2.0.15t]
+- COVERAGE: 100.00% -- 19/19 lines in 4 files
+- BRANCH COVERAGE: 0.00% -- 0/0 branches in 4 files
+- 100.00% documented
+
+### Changed
+
 - [kc] kettle-jem/template: updated 33 project files:
   - code and tests (1)
   - dependencies (9)
@@ -33,15 +50,9 @@ Please file a bug if you notice a violation of semantic versioning.
   - configuration (1)
   - dependencies (12)
 
-### Deprecated
-
-### Removed
-
 ### Fixed
 
 - license-eye workflow: make the `standard` gem license override versionless, so dependency bumps no longer break the license check with "standard | Unknown"
-
-### Security
 
 ## [2.0.14] - 2026-10-01
 
@@ -486,7 +497,9 @@ Please file a bug if you notice a violation of semantic versioning.
 
 - Initial release
 
-[Unreleased]: https://github.com/rubocop-lts/standard-rubocop-lts/compare/v2.0.14...HEAD
+[Unreleased]: https://github.com/rubocop-lts/standard-rubocop-lts/compare/v2.0.15...HEAD
+[2.0.15]: https://github.com/rubocop-lts/standard-rubocop-lts/compare/v2.0.14...v2.0.15
+[2.0.15t]: https://github.com/rubocop-lts/standard-rubocop-lts/releases/tag/v2.0.15
 [2.0.14]: https://github.com/rubocop-lts/standard-rubocop-lts/compare/v2.0.13...v2.0.14
 [2.0.14t]: https://github.com/rubocop-lts/standard-rubocop-lts/releases/tag/v2.0.14
 [2.0.13]: https://github.com/rubocop-lts/standard-rubocop-lts/compare/v2.0.12...v2.0.13
